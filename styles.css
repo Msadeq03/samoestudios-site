@@ -1,0 +1,86 @@
+:root {
+  --napoleon-blue: #1B3F8B;
+  --white: #ffffff;
+  --soft-white: #f4f6fa;
+  --muted: rgba(255, 255, 255, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--napoleon-blue);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Center layout */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.content {
+  max-width: 600px;
+}
+
+/* Brand Name */
+.brand {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin: 0 0 20px 0;
+}
+
+/* Development Text */
+.status {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: var(--soft-white);
+}
+
+/* Instagram Link */
+.instagram {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--muted);
+  padding-bottom: 4px;
+  transition: 0.3s ease;
+}
+
+.instagram:hover {
+  border-bottom: 1px solid var(--white);
+  opacity: 0.85;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .brand {
+    font-size: 34px;
+  }
+
+  .status {
+    font-size: 16px;
+  }
+}
