@@ -57,37 +57,32 @@
   };
 
   function getLang(){
-    return localStorage.getItem(KEY) || null;
+    return localStorage.getItem(KEY) || "en";
   }
+
   function setLang(lang){
     localStorage.setItem(KEY, lang);
     applyLang(lang);
   }
+
   function applyLang(lang){
     const d = dict[lang] || dict.en;
-
-    // RTL handling
     const isAR = lang === "ar";
+
     document.documentElement.lang = lang;
     document.documentElement.dir = isAR ? "rtl" : "ltr";
     document.body.classList.toggle("rtl", isAR);
 
-    // Fill text by data-i18n key
     document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
       if (d[key] !== undefined) el.textContent = d[key];
     });
   }
 
-  // Public API
   window.SAMOE = { getLang, setLang, applyLang };
 
-  // Gate: if no language chosen, force lang.html (except when already there)
-  const lang = getLang();
-  const path = (location.pathname.split("/").pop() || "").toLowerCase();
-  if (!lang && path !== "lang.html") {
-    location.replace("lang.html");
-  } else {
-    applyLang(lang || "en");
-  }
+  // Apply immediately for normal pages
+  document.addEventListener("DOMContentLoaded", () => {
+    applyLang(getLang());
+  });
 })();
