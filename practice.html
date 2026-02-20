@@ -8,21 +8,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20" />
+  <link rel="stylesheet" href="./styles.css?v=40" />
 </head>
 
 <body>
 <header class="nav">
   <div class="nav-inner">
     <a class="logo" href="./home.html">SAMOE STUDIOS</a>
+
     <nav class="nav-links">
       <a href="./practice.html" data-i18n="nav_practice">Practice</a>
       <a href="./work.html" data-i18n="nav_work">Work</a>
       <a href="./products.html" data-i18n="nav_products">Products</a>
       <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+
       <div class="lang-switch">
-        <button id="langEN">EN</button>
-        <button id="langAR">AR</button>
+        <button id="langEN" type="button">EN</button>
+        <button id="langAR" type="button">AR</button>
       </div>
     </nav>
   </div>
@@ -43,8 +45,12 @@
     </div>
 
     <div class="card">
-      <p class="sub" style="margin-bottom:12px;" data-i18n="who_p1"></p>
-      <p class="sub" style="margin:0;" data-i18n="who_p2"></p>
+      <p class="sub" style="margin-bottom:12px;" data-i18n="who_p1">
+        SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.
+      </p>
+      <p class="sub" style="margin:0;" data-i18n="who_p2">
+        We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.
+      </p>
     </div>
   </section>
 
@@ -55,12 +61,12 @@
     </div>
 
     <div class="mini-grid">
-      <div class="mini"><h3 data-i18n="s1_t">Architecture + Interiors</h3><p data-i18n="s1_d"></p></div>
-      <div class="mini"><h3 data-i18n="s2_t">Retail Design + Rollout Systems</h3><p data-i18n="s2_d"></p></div>
-      <div class="mini"><h3 data-i18n="s3_t">Rebrand Implementation</h3><p data-i18n="s3_d"></p></div>
-      <div class="mini"><h3 data-i18n="s4_t">Technical Documentation + BOQ</h3><p data-i18n="s4_d"></p></div>
-      <div class="mini"><h3 data-i18n="s5_t">Procurement + Supplier Management</h3><p data-i18n="s5_d"></p></div>
-      <div class="mini"><h3 data-i18n="s6_t">Partner Network Delivery</h3><p data-i18n="s6_d"></p></div>
+      <div class="mini"><h3 data-i18n="s1_t">Architecture + Interiors</h3><p data-i18n="s1_d">Concept to detailed design with execution clarity.</p></div>
+      <div class="mini"><h3 data-i18n="s2_t">Retail Design + Rollout Systems</h3><p data-i18n="s2_d">Flagships, expansions, refurbishments, operational alignment.</p></div>
+      <div class="mini"><h3 data-i18n="s3_t">Rebrand Implementation</h3><p data-i18n="s3_d">Spatial identity integration across environments and touchpoints.</p></div>
+      <div class="mini"><h3 data-i18n="s4_t">Technical Documentation + BOQ</h3><p data-i18n="s4_d">Technical packages and BOQ alignment for execution readiness.</p></div>
+      <div class="mini"><h3 data-i18n="s5_t">Procurement + Supplier Management</h3><p data-i18n="s5_d">Material approvals, supplier strategy, quality-controlled sourcing.</p></div>
+      <div class="mini"><h3 data-i18n="s6_t">Partner Network Delivery</h3><p data-i18n="s6_d">Fit-out, joinery, lighting, signage, MEP, and systems implementation under SAMOE standards.</p></div>
     </div>
   </section>
 
@@ -71,10 +77,10 @@
     </div>
 
     <div class="card">
-      <p class="sub" style="margin-bottom:10px;" data-i18n="d1"></p>
-      <p class="sub" style="margin-bottom:10px;" data-i18n="d2"></p>
-      <p class="sub" style="margin-bottom:10px;" data-i18n="d3"></p>
-      <p class="sub" style="margin:0;" data-i18n="d4"></p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d1">01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.</p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d2">02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.</p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d3">03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.</p>
+      <p class="sub" style="margin:0;" data-i18n="d4">04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.</p>
     </div>
   </section>
 
@@ -85,7 +91,9 @@
     </div>
 
     <div class="card">
-      <p class="sub" style="margin:0;" data-i18n="name_p"></p>
+      <p class="sub" style="margin:0;" data-i18n="name_p">
+        SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.
+      </p>
     </div>
   </section>
 
@@ -103,20 +111,16 @@
 
 </main>
 
-<script src="./i18n.js?v=20"></script>
-<script src="./script.js?v=20"></script>
+<script src="./i18n.js?v=40"></script>
+<script src="./script.js?v=40"></script>
 <script>
   const lang = window.SAMOE.getLang() || "en";
   const enBtn = document.getElementById("langEN");
   const arBtn = document.getElementById("langAR");
-  const setActive = (l) => {
-    enBtn.classList.toggle("active", l === "en");
-    arBtn.classList.toggle("active", l === "ar");
-  };
+  const setActive = (l) => { enBtn.classList.toggle("active", l==="en"); arBtn.classList.toggle("active", l==="ar"); };
   setActive(lang);
   enBtn.addEventListener("click", () => { window.SAMOE.setLang("en"); setActive("en"); });
   arBtn.addEventListener("click", () => { window.SAMOE.setLang("ar"); setActive("ar"); });
 </script>
-
 </body>
 </html>

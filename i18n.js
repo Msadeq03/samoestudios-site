@@ -3,18 +3,15 @@
 
   const dict = {
     en: {
-      // NAV
       nav_practice: "Practice",
       nav_work: "Work",
       nav_products: "Products",
       nav_contact: "Contact",
       nav_inquiry: "Inquiry",
 
-      // GATE
       gate_title: "Select language",
       gate_sub: "Choose your preferred language to continue.",
 
-      // HOME
       hero_kicker: "MENA-based • International capability",
       hero_title: "SAMOE STUDIOS",
       hero_slogan: "Architecture, interiors, and delivery — from concept to execution.",
@@ -22,16 +19,17 @@
 
       sec_current_title: "Current Project",
       sec_current_sub: "Selected case study",
+
       case_title: "Special Lady — Retail transformation",
       case_tag: "Iraq • Retail • Rebrand • Renovation • Systems",
       case_desc: "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
+
       tl_start: "Project start",
       tl_end: "Full delivery",
       tl_start_val: "October 2025",
       tl_end_val: "April 2026",
       view_case: "View case study",
 
-      // PRACTICE
       practice_kicker: "Practice",
       practice_title: "Practice",
       practice_sub: "MENA-based, able to work internationally. Headquarters: Erbil, Iraq.",
@@ -67,10 +65,10 @@
       name_sub: "SAMOE (pronounced “Sah-moe”)",
       name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
 
-      // WORK PAGE
       work_kicker: "Work",
       work_title: "Work",
       work_sub: "Selected case study",
+      work_case_desc: "The studio is leading the rebrand and spatial expansion of Special Lady, integrating architectural redesign, expansion coordination, and operational systems alignment.",
       scope_t: "Scope",
       scope_d: "Concept, redesign, renovation support, implementation coordination.",
       systems_t: "Systems",
@@ -79,12 +77,10 @@
       outcome_d: "Brand coherence, execution accountability, improved customer experience.",
       more_cases: "More case studies will be published as documentation is finalized.",
 
-      // PRODUCTS
       products_kicker: "Products",
       products_title: "Coming soon",
       products_sub: "Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.",
 
-      // CONTACT
       contact_kicker: "Contact",
       contact_title: "Inquiry",
       contact_sub: "Fill in your details. We will generate a message and open Instagram DM so you can send it.",
@@ -94,28 +90,23 @@
       f_email: "Email",
       f_desc: "Project / Description",
       f_desc_ph: "Brief scope, location, timeline, any constraints...",
-
       open_dm: "Open Instagram DM",
       open_dm2: "Open with preview text",
 
-      // FOOTER
       footer_follow: "Follow",
       footer_rights: "© 2025–2026 SAMOE STUDIOS"
     },
 
     ar: {
-      // NAV
       nav_practice: "الممارسة",
       nav_work: "الأعمال",
       nav_products: "المنتجات",
       nav_contact: "التواصل",
       nav_inquiry: "استفسار",
 
-      // GATE
       gate_title: "اختر اللغة",
       gate_sub: "اختر لغتك المفضلة للمتابعة.",
 
-      // HOME
       hero_kicker: "الشرق الأوسط وشمال أفريقيا • إمكانية العمل دولياً",
       hero_title: "SAMOE STUDIOS",
       hero_slogan: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
@@ -123,16 +114,17 @@
 
       sec_current_title: "المشروع الحالي",
       sec_current_sub: "دراسة حالة مختارة",
+
       case_title: "Special Lady — تطوير متجر تجزئة",
       case_tag: "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
       case_desc: "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
+
       tl_start: "بداية المشروع",
       tl_end: "التسليم الكامل",
       tl_start_val: "أكتوبر 2025",
       tl_end_val: "أبريل 2026",
       view_case: "عرض دراسة الحالة",
 
-      // PRACTICE
       practice_kicker: "الممارسة",
       practice_title: "الممارسة",
       practice_sub: "مقرّنا في أربيل، العراق. نحن متمركزون في منطقة الشرق الأوسط وشمال أفريقيا مع إمكانية العمل دولياً.",
@@ -168,10 +160,10 @@
       name_sub: "SAMOE (تُنطق: سا-مو)",
       name_p: "SAMOE ليس اختصاراً. هو علامة استوديو قابلة للتكيف عبر القطاعات والأماكن وحجم المشاريع.",
 
-      // WORK
       work_kicker: "الأعمال",
       work_title: "الأعمال",
       work_sub: "دراسة حالة مختارة",
+      work_case_desc: "يقود الاستوديو مشروع إعادة العلامة والتوسعة المكانية لـ Special Lady، مع دمج إعادة التصميم المعماري وتنسيق التوسعة ومواءمة الأنظمة التشغيلية.",
       scope_t: "النطاق",
       scope_d: "فكرة، إعادة تصميم، دعم تجديد، وتنسيق التنفيذ.",
       systems_t: "الأنظمة",
@@ -180,12 +172,10 @@
       outcome_d: "تماسك العلامة، مساءلة تنفيذ، وتحسين تجربة العميل.",
       more_cases: "سيتم نشر المزيد من دراسات الحالة عند اكتمال التوثيق.",
 
-      // PRODUCTS
       products_kicker: "المنتجات",
       products_title: "قريباً",
       products_sub: "تجهيزات تجزئة (ستاندات، رفوف، طاولات، كاونترات) وأثاث + إنارة للتجزئة والسكن.",
 
-      // CONTACT
       contact_kicker: "التواصل",
       contact_title: "استفسار",
       contact_sub: "املأ بياناتك. سننشئ رسالة جاهزة ونفتح محادثة إنستغرام لإرسالها.",
@@ -195,11 +185,9 @@
       f_email: "البريد الإلكتروني",
       f_desc: "المشروع / الوصف",
       f_desc_ph: "نطاق مختصر، الموقع، الجدول الزمني، أي قيود...",
-
       open_dm: "فتح رسالة إنستغرام",
       open_dm2: "فتح مع نص المعاينة",
 
-      // FOOTER
       footer_follow: "تابعنا",
       footer_rights: "© 2025–2026 SAMOE STUDIOS"
     }
@@ -227,7 +215,6 @@
       if (d[key] !== undefined) el.textContent = d[key];
     });
 
-    // Placeholders
     document.querySelectorAll("[data-i18n-ph]").forEach(el => {
       const key = el.getAttribute("data-i18n-ph");
       if (d[key] !== undefined) el.setAttribute("placeholder", d[key]);

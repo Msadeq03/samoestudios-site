@@ -8,52 +8,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=30" />
-
-  <!-- Debug: if JS loads, you'll see this in console -->
-  <script>console.log("index.html loaded");</script>
+  <link rel="stylesheet" href="./styles.css?v=40" />
 </head>
 
 <body>
   <main class="gate">
     <div class="gate-box reveal is-visible">
       <div class="kicker">SAMOE STUDIOS</div>
-      <h1 class="gate-title">Select language</h1>
-      <p class="sub" style="margin-bottom:18px;">Choose your preferred language to continue.</p>
+
+      <h1 class="gate-title" data-i18n="gate_title">Select language</h1>
+      <p class="sub" style="margin-bottom:18px;" data-i18n="gate_sub">Choose your preferred language to continue.</p>
 
       <div class="btn-row">
-        <!-- IMPORTANT: IDs must be exactly these -->
         <button class="btn btn-blue" id="chooseEN" type="button">English</button>
         <button class="btn btn-ghost" id="chooseAR" type="button">العربية</button>
       </div>
-
-      <p class="sub" style="margin-top:16px; font-size:14px;">
-        If nothing happens, your JS file is not loading. Open: <strong>/i18n.js</strong>
-      </p>
     </div>
   </main>
 
-  <!-- Load i18n AFTER HTML so buttons exist -->
-  <script src="./i18n.js?v=30"></script>
-
+  <script src="./i18n.js?v=40"></script>
   <script>
-    // If i18n.js didn't load, SAMOE will be undefined
-    console.log("SAMOE object:", window.SAMOE);
+    // Optional auto-skip gate if language already chosen:
+    try{
+      const saved = localStorage.getItem("samoelang");
+      if (saved === "en" || saved === "ar") location.replace("./home.html");
+    } catch(e) {}
 
-    const enBtn = document.getElementById("chooseEN");
-    const arBtn = document.getElementById("chooseAR");
-
-    enBtn.addEventListener("click", () => {
-      try {
-        localStorage.setItem("samoelang", "en");
-      } catch(e) {}
+    document.getElementById("chooseEN").addEventListener("click", () => {
+      try { localStorage.setItem("samoelang","en"); } catch(e) {}
       location.href = "./home.html";
     });
 
-    arBtn.addEventListener("click", () => {
-      try {
-        localStorage.setItem("samoelang", "ar");
-      } catch(e) {}
+    document.getElementById("chooseAR").addEventListener("click", () => {
+      try { localStorage.setItem("samoelang","ar"); } catch(e) {}
       location.href = "./home.html";
     });
   </script>

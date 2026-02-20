@@ -9,7 +9,23 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
 // Contact form -> build message + open IG DM
-function buildInquiryMessage(data){
+function buildInquiryMessage(data, lang){
+  const isAR = lang === "ar";
+
+  if (isAR){
+    return [
+      "مرحباً SAMOE STUDIOS — أود إرسال استفسار.",
+      "",
+      `الاسم: ${data.name || "-"}`,
+      `الشركة: ${data.company || "-"}`,
+      `الهاتف: ${data.phone || "-"}`,
+      `البريد: ${data.email || "-"}`,
+      "",
+      "وصف المشروع:",
+      data.description || "-"
+    ].join("\n");
+  }
+
   return [
     "Hello SAMOE STUDIOS — I'd like to make an inquiry.",
     "",
@@ -32,16 +48,20 @@ function openInstagramDM(message){
 const form = document.getElementById("inquiryForm");
 if (form){
   const preview = document.getElementById("messagePreview");
+
   const makePreview = () => {
+    const lang = (window.SAMOE && window.SAMOE.getLang) ? window.SAMOE.getLang() : (localStorage.getItem("samoelang") || "en");
+
     const data = {
-      name: form.name.value.trim(),
-      company: form.company.value.trim(),
-      phone: form.phone.value.trim(),
-      email: form.email.value.trim(),
-      description: form.description.value.trim(),
+      name: form.name?.value?.trim() || "",
+      company: form.company?.value?.trim() || "",
+      phone: form.phone?.value?.trim() || "",
+      email: form.email?.value?.trim() || "",
+      description: form.description?.value?.trim() || "",
     };
-    const msg = buildInquiryMessage(data);
-    preview.textContent = msg;
+
+    const msg = buildInquiryMessage(data, lang);
+    if (preview) preview.textContent = msg;
     return msg;
   };
 
@@ -50,15 +70,11 @@ if (form){
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const msg = makePreview();
-    openInstagramDM(msg);
+    openInstagramDM(makePreview());
   });
 
   const dmBtn = document.getElementById("openDM");
   if (dmBtn){
-    dmBtn.addEventListener("click", () => {
-      const msg = makePreview();
-      openInstagramDM(msg);
-    });
+    dmBtn.addEventListener("click", () => openInstagramDM(makePreview()));
   }
 }
