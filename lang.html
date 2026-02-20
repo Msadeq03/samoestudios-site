@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Language — SAMOE STUDIOS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="gate">
+    <div class="gate-box reveal is-visible">
+      <div class="kicker">SAMOE STUDIOS</div>
+      <h1 class="gate-title">Select language</h1>
+      <p class="sub" style="margin-bottom:18px;">Choose your preferred language to continue.</p>
+
+      <div class="btn-row">
+        <button class="btn btn-blue" id="chooseEN">English</button>
+        <button class="btn btn-ghost" id="chooseAR">العربية</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.getElementById("chooseEN").addEventListener("click", () => {
+      window.SAMOE.setLang("en");
+      location.href = "index.html";
+    });
+    document.getElementById("chooseAR").addEventListener("click", () => {
+      window.SAMOE.setLang("ar");
+      location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

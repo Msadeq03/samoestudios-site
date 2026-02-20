@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — SAMOE STUDIOS</title>
+  <meta name="description" content="Inquiry — send details to SAMOE STUDIOS via Instagram DM." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="./index.html">SAMOE STUDIOS</a>
+    <nav class="nav-links">
+      <a href="./practice.html">Practice</a>
+      <a href="./work.html">Work</a>
+      <a href="./products.html">Products</a>
+      <a href="./contact.html">Contact</a>
+      <a class="nav-cta" href="./contact.html">Inquiry</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="reveal">
+    <div class="kicker">Contact</div>
+    <h1 class="h1">Inquiry</h1>
+    <p class="sub">
+      Fill in your details. We will generate a message and open Instagram DM so you can send it.
+    </p>
+  </section>
+
+  <section class="section reveal">
+    <form id="inquiryForm" class="form">
+      <div class="field-grid">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" autocomplete="name" />
+        </div>
+        <div>
+          <label for="company">Company</label>
+          <input id="company" name="company" autocomplete="organization" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" autocomplete="tel" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" autocomplete="email" />
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <label for="description">Project / Description</label>
+        <textarea id="description" name="description" placeholder="Brief scope, location, timeline, any constraints..."></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn btn-blue" type="submit">Open Instagram DM</button>
+        <button class="btn btn-ghost" type="button" id="openDM">Open with preview text</button>
+      </div>
+
+      <div class="preview" id="messagePreview"></div>
+    </form>
+  </section>
+
+  <footer class="footer reveal">© 2025–2026 SAMOE STUDIOS</footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
