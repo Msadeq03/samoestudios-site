@@ -425,8 +425,6 @@ textarea{ min-height:130px; resize:vertical; }
 .hero-panel .hero-title-xl{ color:#fff; }
 .hero-panel .hero-slogan{ color: rgba(255,255,255,.90); }
 .hero-panel .hero-sub2{ color: rgba(255,255,255,.80); }
-
-/* Instagram button inside hero panel */
 .hero-ig{
   border-color:rgba(255,255,255,.35) !important;
   color:#fff !important;

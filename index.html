@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Language — SAMOE STUDIOS</title>
+  <meta name="description" content="Select your preferred language to continue to SAMOE STUDIOS." />
+  <link rel="canonical" href="https://samoestudios.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=40" />
+  <link rel="stylesheet" href="./styles.css?v=50" />
 </head>
 
 <body>
@@ -26,9 +28,9 @@
     </div>
   </main>
 
-  <script src="./i18n.js?v=40"></script>
+  <script src="./i18n.js?v=50"></script>
   <script>
-    // Optional auto-skip gate if language already chosen:
+    // Auto-skip gate if language already chosen
     try{
       const saved = localStorage.getItem("samoelang");
       if (saved === "en" || saved === "ar") location.replace("./home.html");

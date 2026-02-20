@@ -1,4 +1,4 @@
-// Scroll reveal (appear/disappear feel)
+// Scroll reveal
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add("is-visible");
@@ -11,7 +11,6 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 // Contact form -> build message + open IG DM
 function buildInquiryMessage(data, lang){
   const isAR = lang === "ar";
-
   if (isAR){
     return [
       "مرحباً SAMOE STUDIOS — أود إرسال استفسار.",
@@ -25,7 +24,6 @@ function buildInquiryMessage(data, lang){
       data.description || "-"
     ].join("\n");
   }
-
   return [
     "Hello SAMOE STUDIOS — I'd like to make an inquiry.",
     "",
@@ -51,7 +49,6 @@ if (form){
 
   const makePreview = () => {
     const lang = (window.SAMOE && window.SAMOE.getLang) ? window.SAMOE.getLang() : (localStorage.getItem("samoelang") || "en");
-
     const data = {
       name: form.name?.value?.trim() || "",
       company: form.company?.value?.trim() || "",
@@ -59,7 +56,6 @@ if (form){
       email: form.email?.value?.trim() || "",
       description: form.description?.value?.trim() || "",
     };
-
     const msg = buildInquiryMessage(data, lang);
     if (preview) preview.textContent = msg;
     return msg;
