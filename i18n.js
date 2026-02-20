@@ -1,88 +1,441 @@
-(function(){
-  const KEY = "samoelang";
+:root{
+  --blue:#1B3F8B;                 /* Napoleon Blue accent */
+  --blue-dark:#16346f;
+  --ink:#0a0f1a;
+  --muted:rgba(10,15,26,.72);
+  --line:rgba(10,15,26,.14);
+  --paper:#ffffff;
 
-  const dict = {
-    en: {
-      nav_practice: "Practice",
-      nav_work: "Work",
-      nav_products: "Products",
-      nav_contact: "Contact",
-      nav_inquiry: "Inquiry",
+  --max:1120px;
+  --pad:22px;
+}
 
-      hero_kicker: "MENA-based • International capability",
-      hero_title: "SAMOE STUDIOS",
-      hero_slogan: "Architecture, interiors, and delivery — from concept to execution.",
-      hero_sub: "Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.",
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
 
-      sec_current_title: "Current Project",
-      sec_current_sub: "Selected case study",
-      case_title: "Special Lady — Retail transformation",
-      case_tag: "Iraq • Retail • Rebrand • Renovation • Systems",
-      case_desc: "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
-      tl_start: "Project start",
-      tl_end: "Full delivery",
-      tl_start_val: "October 2025",
-      tl_end_val: "April 2026",
-      view_case: "View case study",
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  letter-spacing:-0.01em;
+}
 
-      footer_follow: "Follow",
-      footer_rights: "© 2025–2026 SAMOE STUDIOS"
-    },
-    ar: {
-      nav_practice: "الممارسة",
-      nav_work: "الأعمال",
-      nav_products: "المنتجات",
-      nav_contact: "التواصل",
-      nav_inquiry: "استفسار",
+/* Arabic font + RTL */
+body.rtl{
+  font-family: "Noto Kufi Arabic", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+body.rtl .kicker{ direction:rtl; }
+body.rtl .sub, body.rtl .muted, body.rtl p, body.rtl h1, body.rtl h2, body.rtl h3 { direction:rtl; }
 
-      hero_kicker: "الشرق الأوسط وشمال أفريقيا • إمكانية العمل دولياً",
-      hero_title: "SAMOE STUDIOS",
-      hero_slogan: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
-      hero_sub: "قيادة استوديو مع شبكة شركاء موثوقة لضمان الجودة. المقر: أربيل، العراق.",
+/* Layout */
+.wrap{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:96px var(--pad) 64px;
+}
 
-      sec_current_title: "المشروع الحالي",
-      sec_current_sub: "دراسة حالة مختارة",
-      case_title: "Special Lady — تطوير متجر تجزئة",
-      case_tag: "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
-      case_desc: "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
-      tl_start: "بداية المشروع",
-      tl_end: "التسليم الكامل",
-      tl_start_val: "أكتوبر 2025",
-      tl_end_val: "أبريل 2026",
-      view_case: "عرض دراسة الحالة",
+/* Nav */
+.nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:50;
+  background:rgba(255,255,255,.92);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:saturate(140%) blur(10px);
+}
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px var(--pad);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+.logo{
+  text-decoration:none;
+  color:var(--ink);
+  font-weight:900;
+  letter-spacing:.18em;
+  font-size:12px;
+  text-transform:uppercase;
+}
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.nav-links a{
+  text-decoration:none;
+  color:rgba(10,15,26,.78);
+  font-weight:800;
+  font-size:13px;
+  padding:8px 10px;
+}
+.nav-links a:hover{ color:var(--ink); }
 
-      footer_follow: "تابعنا",
-      footer_rights: "© 2025–2026 SAMOE STUDIOS"
-    }
-  };
+/* Language switch */
+.lang-switch{
+  display:inline-flex;
+  gap:6px;
+  align-items:center;
+  border-left:1px solid var(--line);
+  padding-left:10px;
+  margin-left:4px;
+}
+.lang-switch button{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:7px 10px;
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  cursor:pointer;
+}
+.lang-switch button.active{
+  border-color: rgba(27,63,139,.35);
+  color: var(--blue);
+  background: rgba(27,63,139,.04);
+}
 
-  function getLang(){
-    return localStorage.getItem(KEY) || "en";
-  }
+/* Typography */
+.h1{
+  font-size:64px;
+  line-height:1.02;
+  margin:0 0 14px 0;
+  font-weight:900;
+  letter-spacing:-.03em;
+}
+.sub{
+  margin:0 0 26px 0;
+  color:var(--muted);
+  font-size:16.5px;
+  line-height:1.75;
+  max-width:820px;
+}
+.kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom:12px;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:rgba(10,15,26,.70);
+}
+.kicker::before{
+  content:"";
+  width:22px; height:2px;
+  background:var(--blue);
+  display:inline-block;
+}
 
-  function setLang(lang){
-    localStorage.setItem(KEY, lang);
-    applyLang(lang);
-  }
+/* Buttons */
+.btn-row{ display:flex; gap:12px; flex-wrap:wrap; margin-top:10px; }
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px 14px;
+  text-decoration:none;
+  font-weight:900;
+  font-size:12.5px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  border-radius:0;
+}
+.btn-blue{
+  background:var(--blue);
+  color:#fff;
+  border:1px solid rgba(27,63,139,.35);
+}
+.btn-blue:hover{ background:var(--blue-dark); }
 
-  function applyLang(lang){
-    const d = dict[lang] || dict.en;
-    const isAR = lang === "ar";
+.btn-ghost{
+  background:transparent;
+  color:var(--ink);
+  border:1px solid var(--line);
+}
+.btn-ghost:hover{ border-color:rgba(27,63,139,.35); }
 
-    document.documentElement.lang = lang;
-    document.documentElement.dir = isAR ? "rtl" : "ltr";
-    document.body.classList.toggle("rtl", isAR);
+/* NEW: White button for blue hero panel */
+.btn-white{
+  background:#fff;
+  color:var(--blue);
+  border:1px solid rgba(255,255,255,.55);
+}
+.btn-white:hover{ opacity:.92; }
 
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-      const key = el.getAttribute("data-i18n");
-      if (d[key] !== undefined) el.textContent = d[key];
-    });
-  }
+/* Sections */
+.section{ padding:54px 0; border-top:1px solid var(--line); }
+.section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-bottom:18px;
+}
+.h2{
+  margin:0;
+  font-size:28px;
+  font-weight:900;
+  letter-spacing:-.02em;
+}
+.muted{ margin:0; color:var(--muted); line-height:1.7; }
 
-  window.SAMOE = { getLang, setLang, applyLang };
+/* Cards */
+.card{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:18px;
+  border-radius:0;
+}
 
-  // Apply immediately for normal pages
-  document.addEventListener("DOMContentLoaded", () => {
-    applyLang(getLang());
-  });
-})();
+/* Case study */
+.case{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:20px;
+}
+.case-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.case-title{ margin:0; font-size:20px; font-weight:900; }
+
+.tag{
+  display:inline-flex;
+  padding:6px 10px;
+  border:1px solid rgba(27,63,139,.30);
+  color:var(--blue);
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.10em;
+  background:transparent;
+}
+.case-p{
+  margin:12px 0 14px;
+  color:var(--muted);
+  line-height:1.75;
+  max-width:980px;
+}
+
+/* Timeline */
+.timeline{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  border:1px solid var(--line);
+  background:rgba(27,63,139,.04);
+  padding:12px 14px;
+  margin:0 0 14px 0;
+}
+.timeline div{
+  min-width:210px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.timeline span{
+  color:rgba(10,15,26,.62);
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.timeline strong{
+  font-weight:900;
+  font-size:14px;
+}
+
+/* Mini grid */
+.mini-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.mini{
+  border:1px solid var(--line);
+  background:#fff;
+  padding:14px;
+}
+.mini h3{
+  margin:0 0 8px;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:rgba(10,15,26,.78);
+}
+.mini p{ margin:0; color:var(--muted); line-height:1.7; }
+
+/* Form */
+.form{
+  border:1px solid var(--line);
+  padding:20px;
+  background:#fff;
+}
+.field-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+label{
+  display:block;
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  margin:0 0 6px;
+  color:rgba(10,15,26,.72);
+}
+input, textarea{
+  width:100%;
+  padding:12px 12px;
+  border:1px solid var(--line);
+  border-radius:0;
+  font:inherit;
+  background:#fff;
+  color:var(--ink);
+}
+textarea{ min-height:130px; resize:vertical; }
+.form-actions{ margin-top:12px; display:flex; gap:12px; flex-wrap:wrap; }
+
+.preview{
+  margin-top:12px;
+  padding:14px;
+  border:1px dashed rgba(27,63,139,.35);
+  background:rgba(27,63,139,.03);
+  white-space:pre-wrap;
+  color:rgba(10,15,26,.82);
+  line-height:1.7;
+}
+
+/* Footer */
+.footer{
+  border-top:1px solid var(--line);
+  padding:28px 0 0;
+  margin-top:40px;
+  color:rgba(10,15,26,.55);
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:12px;
+  text-align:center;
+}
+.footer-links{
+  margin-top:18px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  text-decoration:none;
+  font-weight:900;
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color: rgba(10,15,26,.62);
+  padding:6px 8px;
+  border:1px solid transparent;
+}
+.footer-links a:hover{
+  color: var(--ink);
+  border-color: rgba(27,63,139,.22);
+}
+
+/* Scroll reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity .55s ease, transform .55s ease;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Gate page */
+.gate{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 18px;
+}
+.gate-box{
+  width:min(720px, 100%);
+  border:1px solid var(--line);
+  padding:32px;
+  background:#fff;
+}
+.gate-title{
+  margin:0 0 10px 0;
+  font-size:44px;
+  font-weight:900;
+  letter-spacing:-.02em;
+}
+
+/* Full-screen hero */
+.hero-full{
+  min-height: calc(100vh - 64px);
+  display:flex;
+  align-items:center;
+}
+.hero-stack{
+  width:100%;
+  padding-top:12px;
+}
+.hero-title-xl{
+  font-size: clamp(52px, 7vw, 96px);
+  line-height: 0.95;
+  margin: 0 0 16px 0;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+.hero-slogan{
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 860px;
+  margin: 0 0 14px 0;
+}
+.hero-sub2{
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 860px;
+  margin: 0;
+}
+
+/* NEW: Blue panel behind hero content ONLY */
+.hero-panel{
+  background: var(--blue);
+  padding: 44px 44px;
+  border: 1px solid rgba(27,63,139,.35);
+}
+.hero-panel .kicker{ color: rgba(255,255,255,.85); }
+.hero-panel .kicker::before{ background:#fff; }
+.hero-panel .hero-title-xl{ color:#fff; }
+.hero-panel .hero-slogan{ color: rgba(255,255,255,.90); }
+.hero-panel .hero-sub2{ color: rgba(255,255,255,.80); }
+
+/* Responsive */
+@media (max-width: 900px){
+  .h1{ font-size:44px; }
+  .mini-grid{ grid-template-columns:1fr; }
+  .field-grid{ grid-template-columns:1fr; }
+  .wrap{ padding:90px 16px 56px; }
+  .hero-panel{ padding:28px 18px; }
+}

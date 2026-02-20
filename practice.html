@@ -4,26 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Practice — SAMOE STUDIOS</title>
-  <meta name="description" content="Practice — who we are, what we offer, and how we deliver." />
 
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./styles.css?v=10">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=20" />
 </head>
 
 <body>
-
 <header class="nav">
   <div class="nav-inner">
-    <a class="logo" href="./index.html">SAMOE STUDIOS</a>
+    <a class="logo" href="./home.html">SAMOE STUDIOS</a>
     <nav class="nav-links">
-      <a href="./practice.html">Practice</a>
-      <a href="./work.html">Work</a>
-      <a href="./products.html">Products</a>
-      <a href="./contact.html">Contact</a>
-      <a class="nav-cta" href="./contact.html">Inquiry</a>
+      <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+      <a href="./work.html" data-i18n="nav_work">Work</a>
+      <a href="./products.html" data-i18n="nav_products">Products</a>
+      <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      <div class="lang-switch">
+        <button id="langEN">EN</button>
+        <button id="langAR">AR</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -31,75 +31,92 @@
 <main class="wrap">
 
   <section class="reveal">
-    <div class="kicker">Practice</div>
-    <h1 class="h1">Practice</h1>
-    <p class="sub">MENA-based, able to work internationally. Headquarters: Erbil, Iraq.</p>
+    <div class="kicker" data-i18n="practice_kicker">Practice</div>
+    <h1 class="h1" data-i18n="practice_title">Practice</h1>
+    <p class="sub" data-i18n="practice_sub">MENA-based, able to work internationally. Headquarters: Erbil, Iraq.</p>
   </section>
 
   <section class="section reveal">
     <div class="section-head">
-      <h2 class="h2">Who we are</h2>
-      <p class="muted">Studio-led accountability</p>
+      <h2 class="h2" data-i18n="who_title">Who we are</h2>
+      <p class="muted" data-i18n="who_sub">Studio-led accountability</p>
     </div>
 
     <div class="card">
-      <p class="body">
-        SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development,
-        documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.
-      </p>
-      <p class="body">
-        We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.
-      </p>
+      <p class="sub" style="margin-bottom:12px;" data-i18n="who_p1"></p>
+      <p class="sub" style="margin:0;" data-i18n="who_p2"></p>
     </div>
   </section>
 
   <section class="section reveal">
     <div class="section-head">
-      <h2 class="h2">What we offer</h2>
-      <p class="muted">Core services</p>
+      <h2 class="h2" data-i18n="offer_title">What we offer</h2>
+      <p class="muted" data-i18n="offer_sub">Core services</p>
     </div>
 
     <div class="mini-grid">
-      <div class="mini"><h3>Architecture + Interiors</h3><p>Concept to detailed design with execution clarity.</p></div>
-      <div class="mini"><h3>Retail design + rollout systems</h3><p>Flagships, expansions, refurbishments, operational alignment.</p></div>
-      <div class="mini"><h3>Rebrand implementation</h3><p>Spatial identity integration across environments and touchpoints.</p></div>
-      <div class="mini"><h3>Technical documentation + BOQ</h3><p>Technical packages and BOQ alignment for execution readiness.</p></div>
-      <div class="mini"><h3>Procurement + supplier management</h3><p>Material approvals, supplier strategy, quality-controlled sourcing.</p></div>
-      <div class="mini"><h3>Partner network delivery</h3><p>Fit-out, joinery, lighting, signage, MEP, and systems implementation under SAMOE standards.</p></div>
+      <div class="mini"><h3 data-i18n="s1_t">Architecture + Interiors</h3><p data-i18n="s1_d"></p></div>
+      <div class="mini"><h3 data-i18n="s2_t">Retail Design + Rollout Systems</h3><p data-i18n="s2_d"></p></div>
+      <div class="mini"><h3 data-i18n="s3_t">Rebrand Implementation</h3><p data-i18n="s3_d"></p></div>
+      <div class="mini"><h3 data-i18n="s4_t">Technical Documentation + BOQ</h3><p data-i18n="s4_d"></p></div>
+      <div class="mini"><h3 data-i18n="s5_t">Procurement + Supplier Management</h3><p data-i18n="s5_d"></p></div>
+      <div class="mini"><h3 data-i18n="s6_t">Partner Network Delivery</h3><p data-i18n="s6_d"></p></div>
     </div>
   </section>
 
   <section class="section reveal">
     <div class="section-head">
-      <h2 class="h2">Delivery model</h2>
-      <p class="muted">How we execute</p>
+      <h2 class="h2" data-i18n="delivery_title">Delivery model</h2>
+      <p class="muted" data-i18n="delivery_sub">How we execute</p>
     </div>
 
     <div class="card">
-      <p class="body"><strong>01 — Discovery</strong> Objectives, constraints, budget logic, timeline, success KPIs.</p>
-      <p class="body"><strong>02 — Design + Documentation</strong> Concept → detailed design, BOQ alignment, technical packages, execution clarity.</p>
-      <p class="body"><strong>03 — Procurement + Partners</strong> Supplier strategy, approvals, and partner selection under SAMOE standards.</p>
-      <p class="body"><strong>04 — Implementation + QA</strong> Site coordination, inspections, punch lists, handover — measurable quality control.</p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d1"></p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d2"></p>
+      <p class="sub" style="margin-bottom:10px;" data-i18n="d3"></p>
+      <p class="sub" style="margin:0;" data-i18n="d4"></p>
     </div>
   </section>
 
   <section class="section reveal">
     <div class="section-head">
-      <h2 class="h2">The name</h2>
-      <p class="muted">SAMOE (pronounced “Sah-moe”)</p>
+      <h2 class="h2" data-i18n="name_title">The name</h2>
+      <p class="muted" data-i18n="name_sub">SAMOE (pronounced “Sah-moe”)</p>
     </div>
 
     <div class="card">
-      <p class="body">
-        SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.
-      </p>
+      <p class="sub" style="margin:0;" data-i18n="name_p"></p>
     </div>
   </section>
 
-  <footer class="footer reveal">© 2025–2026 SAMOE STUDIOS</footer>
+  <footer class="footer reveal">
+    <div data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS</div>
+    <div class="footer-links">
+      <a href="./home.html">Home</a>
+      <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+      <a href="./work.html" data-i18n="nav_work">Work</a>
+      <a href="./products.html" data-i18n="nav_products">Products</a>
+      <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" data-i18n="footer_follow">Follow</a>
+    </div>
+  </footer>
 
 </main>
 
-<script src="script.js"></script>
+<script src="./i18n.js?v=20"></script>
+<script src="./script.js?v=20"></script>
+<script>
+  const lang = window.SAMOE.getLang() || "en";
+  const enBtn = document.getElementById("langEN");
+  const arBtn = document.getElementById("langAR");
+  const setActive = (l) => {
+    enBtn.classList.toggle("active", l === "en");
+    arBtn.classList.toggle("active", l === "ar");
+  };
+  setActive(lang);
+  enBtn.addEventListener("click", () => { window.SAMOE.setLang("en"); setActive("en"); });
+  arBtn.addEventListener("click", () => { window.SAMOE.setLang("ar"); setActive("ar"); });
+</script>
+
 </body>
 </html>
