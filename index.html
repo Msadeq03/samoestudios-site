@@ -3,46 +3,107 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Language — SAMOE STUDIOS</title>
-  <meta name="description" content="Select your preferred language to continue to SAMOE STUDIOS." />
+  <title>SAMOE STUDIOS | Landing Page & Language Selection</title>
+  <meta name="description" content="Official SAMOE STUDIOS landing page. Choose your preferred language and continue to architecture, interiors, and delivery services." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <link rel="canonical" href="https://samoestudios.com/" />
+  <link rel="alternate" hreflang="en" href="https://samoestudios.com/?lang=en" />
+  <link rel="alternate" hreflang="ar" href="https://samoestudios.com/?lang=ar" />
+  <link rel="alternate" hreflang="x-default" href="https://samoestudios.com/" />
+
+  <meta property="og:title" content="SAMOE STUDIOS | Landing Page" />
+  <meta property="og:description" content="Select your language and explore architecture, interiors, and delivery services." />
+  <meta property="og:url" content="https://samoestudios.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://samoestudios.com/assets/studio-showcase.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=50" />
+  <link rel="stylesheet" href="./styles.css?v=51" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SAMOE STUDIOS Landing Page",
+    "url": "https://samoestudios.com/",
+    "description": "Landing page with language selector for SAMOE STUDIOS.",
+    "inLanguage": ["en", "ar"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "SAMOE STUDIOS",
+      "url": "https://samoestudios.com/"
+    }
+  }
+  </script>
 </head>
 
 <body>
-  <main class="gate">
-    <div class="gate-box reveal is-visible">
+  <main class="gate gate-enhanced">
+    <div class="gate-bg-art" aria-hidden="true">
+      <img src="./assets/studio-showcase.svg" alt="" loading="eager" decoding="async" />
+    </div>
+
+    <section class="gate-box gate-box-enhanced reveal is-visible" aria-labelledby="landingTitle">
       <div class="kicker">SAMOE STUDIOS</div>
 
-      <h1 class="gate-title" data-i18n="gate_title">Select language</h1>
-      <p class="sub" style="margin-bottom:18px;" data-i18n="gate_sub">Choose your preferred language to continue.</p>
+      <h1 id="landingTitle" class="gate-title" data-i18n="gate_title">Landing page — Select language</h1>
+      <p class="sub" data-i18n="gate_sub">Choose your preferred language to continue.</p>
 
       <div class="btn-row">
         <button class="btn btn-blue" id="chooseEN" type="button">English</button>
         <button class="btn btn-ghost" id="chooseAR" type="button">العربية</button>
       </div>
-    </div>
+
+      <p id="savedLangHint" class="saved-lang-hint" hidden>
+        We found your previous language preference. You can keep it or choose another language.
+      </p>
+
+      <div class="landing-highlights" aria-label="What we do">
+        <article class="landing-item">
+          <h2>Architecture</h2>
+          <p>Concept design, planning, and project strategy tailored to real delivery constraints.</p>
+        </article>
+        <article class="landing-item">
+          <h2>Interiors</h2>
+          <p>Brand-aligned interior systems for hospitality, retail, and business environments.</p>
+        </article>
+        <article class="landing-item">
+          <h2>Delivery</h2>
+          <p>Implementation oversight and rollout coordination with accountable studio leadership.</p>
+        </article>
+      </div>
+
+      <p class="landing-note">
+        Continue to the main website to view practice, work, products, and contact details.
+      </p>
+
+      <noscript>
+        <p class="landing-note">JavaScript is disabled. Continue directly:</p>
+        <p class="btn-row">
+          <a class="btn btn-blue" href="./home.html?lang=en">Enter in English</a>
+          <a class="btn btn-ghost" href="./home.html?lang=ar">الدخول بالعربية</a>
+        </p>
+      </noscript>
+    </section>
   </main>
 
-  <script src="./i18n.js?v=50"></script>
+  <script src="./i18n.js?v=51"></script>
   <script>
-    // Auto-skip gate if language already chosen
-    try{
+    const savedLangHint = document.getElementById("savedLangHint");
+    try {
       const saved = localStorage.getItem("samoelang");
-      if (saved === "en" || saved === "ar") location.replace("./home.html");
-    } catch(e) {}
+      if (saved === "en" || saved === "ar") savedLangHint.hidden = false;
+    } catch (e) {}
 
     document.getElementById("chooseEN").addEventListener("click", () => {
-      try { localStorage.setItem("samoelang","en"); } catch(e) {}
+      try { localStorage.setItem("samoelang", "en"); } catch (e) {}
       location.href = "./home.html";
     });
 
     document.getElementById("chooseAR").addEventListener("click", () => {
-      try { localStorage.setItem("samoelang","ar"); } catch(e) {}
+      try { localStorage.setItem("samoelang", "ar"); } catch (e) {}
       location.href = "./home.html";
     });
   </script>

@@ -1,0 +1,27 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contemporary architecture illustration">
+  <defs>
+    <linearGradient id="bg" x1="145" y1="84" x2="1262" y2="833" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7EDFF"/>
+      <stop offset="1" stop-color="#CDD9FF"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="688" y1="194" x2="688" y2="782" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B3F8B" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#16346F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg)"/>
+  <circle cx="1059" cy="187" r="122" fill="#F8FBFF"/>
+  <rect x="100" y="640" width="1200" height="170" fill="#0E1F42" fill-opacity="0.1"/>
+  <rect x="250" y="280" width="850" height="460" fill="url(#glass)"/>
+  <rect x="280" y="320" width="180" height="120" fill="#EFF4FF" fill-opacity="0.7"/>
+  <rect x="480" y="320" width="180" height="120" fill="#EFF4FF" fill-opacity="0.38"/>
+  <rect x="680" y="320" width="180" height="120" fill="#EFF4FF" fill-opacity="0.7"/>
+  <rect x="880" y="320" width="180" height="120" fill="#EFF4FF" fill-opacity="0.38"/>
+  <rect x="280" y="460" width="180" height="120" fill="#EFF4FF" fill-opacity="0.38"/>
+  <rect x="480" y="460" width="180" height="120" fill="#EFF4FF" fill-opacity="0.7"/>
+  <rect x="680" y="460" width="180" height="120" fill="#EFF4FF" fill-opacity="0.38"/>
+  <rect x="880" y="460" width="180" height="120" fill="#EFF4FF" fill-opacity="0.7"/>
+  <rect x="280" y="600" width="280" height="100" fill="#EFF4FF" fill-opacity="0.45"/>
+  <rect x="580" y="600" width="480" height="100" fill="#EFF4FF" fill-opacity="0.75"/>
+  <path d="M100 640L420 520L690 590L980 500L1300 640" stroke="#1B3F8B" stroke-opacity="0.35" stroke-width="9"/>
+</svg>
