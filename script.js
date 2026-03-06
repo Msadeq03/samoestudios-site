@@ -8,42 +8,37 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-// Contact form preview + submit
-function buildInquiryPreview(data, lang) {
-  const isAR = lang === "ar";
-
-  if (isAR) {
-    return [
-      `الجهة: ${data.department === "info" ? "الاستفسارات العامة" : "العروض التجارية"}`,
-      `الاسم: ${data.name || "-"}`,
-      `الشركة: ${data.company || "-"}`,
-      `الهاتف: ${data.phone || "-"}`,
-      `البريد الإلكتروني: ${data.email || "-"}`,
-      `موقع المشروع: ${data.location || "-"}`,
-      "",
-      "وصف المشروع / الطلب:",
-      data.description || "-"
-    ].join("\n");
-  }
-
-  return [
-    `Department: ${data.department === "info" ? "General Inquiry" : "Client Inquiry / Commercial Proposal"}`,
-    `Name: ${data.name || "-"}`,
-    `Company: ${data.company || "-"}`,
-    `Phone: ${data.phone || "-"}`,
-    `Email: ${data.email || "-"}`,
-    `Project Location: ${data.location || "-"}`,
-    "",
-    "Project / Description:",
-    data.description || "-"
-  ].join("\n");
-}
-
+// Contact form submit
 const form = document.getElementById("inquiryForm");
+
 if (form) {
-  const preview = document.getElementById("messagePreview");
   const statusBox = document.getElementById("formStatus");
   const submitBtn = document.getElementById("submitInquiry");
+  const phoneInput = document.getElementById("phone");
+  const fullPhoneInput = document.getElementById("full_phone");
+
+  let iti = null;
+
+  if (phoneInput && window.intlTelInput) {
+    iti = window.intlTelInput(phoneInput, {
+      initialCountry: "auto",
+      separateDialCode: true,
+      nationalMode: false,
+      strictMode: true,
+      formatOnDisplay: true,
+      autoPlaceholder: "aggressive",
+      geoIpLookup: async (callback) => {
+        try {
+          const res = await fetch("https://ipapi.co/json/");
+          const data = await res.json();
+          callback((data && data.country_code ? data.country_code : "iq").toLowerCase());
+        } catch {
+          callback("iq");
+        }
+      },
+      loadUtils: () => Promise.resolve(window.intlTelInputUtils)
+    });
+  }
 
   const getLang = () => {
     return (window.SAMOE && window.SAMOE.getLang)
@@ -51,45 +46,65 @@ if (form) {
       : (localStorage.getItem("samoelang") || "en");
   };
 
-  const getData = () => ({
-    department: form.department?.value || "sales",
-    name: form.name?.value?.trim() || "",
-    company: form.company?.value?.trim() || "",
-    phone: form.phone?.value?.trim() || "",
-    email: form.email?.value?.trim() || "",
-    location: form.location?.value?.trim() || "",
-    description: form.description?.value?.trim() || ""
-  });
-
-  const updatePreview = () => {
-    const lang = getLang();
-    const data = getData();
-    if (preview) preview.textContent = buildInquiryPreview(data, lang);
+  const setStatus = (type, message) => {
+    statusBox.className = `form-status ${type || ""}`.trim();
+    statusBox.textContent = message;
   };
 
-  ["input", "change"].forEach(evt => form.addEventListener(evt, updatePreview));
-  updatePreview();
+  const getPhoneValue = () => {
+    if (!iti) return (phoneInput?.value || "").trim();
+    const val = iti.getNumber();
+    return val ? val.trim() : "";
+  };
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const lang = getLang();
-    const data = getData();
 
-    if (!data.name || !data.email || !data.description) {
-      statusBox.className = "form-status error";
-      statusBox.textContent = lang === "ar"
-        ? "يرجى إكمال الحقول المطلوبة."
-        : "Please complete the required fields.";
+    const turnstileToken = form.querySelector('input[name="turnstileToken"]')?.value?.trim() || "";
+    const phoneValue = getPhoneValue();
+    if (fullPhoneInput) fullPhoneInput.value = phoneValue;
+
+    const data = {
+      department: form.department?.value?.trim() || "sales",
+      name: form.name?.value?.trim() || "",
+      company: form.company?.value?.trim() || "",
+      phone: phoneValue,
+      email: form.email?.value?.trim() || "",
+      location: form.location?.value?.trim() || "",
+      description: form.description?.value?.trim() || "",
+      website: form.website?.value?.trim() || "",
+      turnstileToken
+    };
+
+    if (!data.department || !data.name || !data.company || !data.phone || !data.email || !data.location || !data.description) {
+      setStatus(
+        "error",
+        lang === "ar" ? "يرجى إكمال جميع الحقول المطلوبة." : "Please complete all required fields."
+      );
+      return;
+    }
+
+    if (iti && !iti.isValidNumber()) {
+      setStatus(
+        "error",
+        lang === "ar" ? "يرجى إدخال رقم هاتف صحيح." : "Please enter a valid phone number."
+      );
+      return;
+    }
+
+    if (!turnstileToken) {
+      setStatus(
+        "error",
+        lang === "ar" ? "يرجى إكمال التحقق الأمني." : "Please complete the security check."
+      );
       return;
     }
 
     try {
       submitBtn.disabled = true;
-      statusBox.className = "form-status";
-      statusBox.textContent = lang === "ar"
-        ? "جارٍ إرسال الاستفسار..."
-        : "Submitting inquiry...";
+      setStatus("", lang === "ar" ? "جارٍ إرسال الاستفسار..." : "Submitting inquiry...");
 
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -105,18 +120,32 @@ if (form) {
         throw new Error(result.message || "Request failed");
       }
 
-      statusBox.className = "form-status success";
-      statusBox.textContent = lang === "ar"
-        ? "تم إرسال الاستفسار بنجاح."
-        : "Your inquiry has been submitted successfully.";
+      setStatus(
+        "success",
+        lang === "ar"
+          ? "تم إرسال الاستفسار بنجاح."
+          : "Your inquiry has been submitted successfully."
+      );
 
       form.reset();
-      updatePreview();
+
+      if (iti) {
+        iti.setCountry("iq");
+      }
+
+      if (window.turnstile) {
+        const widget = form.querySelector(".cf-turnstile");
+        if (widget) {
+          window.turnstile.reset(widget);
+        }
+      }
     } catch (err) {
-      statusBox.className = "form-status error";
-      statusBox.textContent = lang === "ar"
-        ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
-        : "There was a problem sending your inquiry. Please try again.";
+      setStatus(
+        "error",
+        lang === "ar"
+          ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
+          : "There was a problem sending your inquiry. Please try again."
+      );
     } finally {
       submitBtn.disabled = false;
     }

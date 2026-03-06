@@ -16,7 +16,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=71" />
+  <link rel="stylesheet" href="./styles.css?v=72" />
+
+  <!-- intl-tel-input -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
 
   <style>
     .required-note{
@@ -31,6 +34,30 @@
     .req{
       color:#a12626;
       margin-left:4px;
+    }
+    .sr-only{
+      position:absolute !important;
+      width:1px !important;
+      height:1px !important;
+      padding:0 !important;
+      margin:-1px !important;
+      overflow:hidden !important;
+      clip:rect(0,0,0,0) !important;
+      white-space:nowrap !important;
+      border:0 !important;
+    }
+    .honeypot-wrap{
+      display:none !important;
+      visibility:hidden !important;
+      pointer-events:none !important;
+      height:0 !important;
+      overflow:hidden !important;
+    }
+    .turnstile-wrap{
+      margin-top:14px;
+    }
+    .iti{
+      width:100%;
     }
   </style>
 </head>
@@ -137,7 +164,8 @@
           <label for="phone">
             <span data-i18n="f_phone">Phone</span><span class="req">*</span>
           </label>
-          <input id="phone" name="phone" autocomplete="tel" required />
+          <input id="phone" name="phone_display" type="tel" autocomplete="tel" required />
+          <input id="full_phone" name="phone" type="hidden" />
         </div>
 
         <div>
@@ -161,6 +189,22 @@
         </label>
         <textarea id="description" name="description" data-i18n-ph="f_desc_ph"
           placeholder="Brief scope, location, timeline, any constraints..." required></textarea>
+      </div>
+
+      <!-- Honeypot -->
+      <div class="honeypot-wrap" aria-hidden="true">
+        <label for="website">Website</label>
+        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
+
+      <!-- Turnstile -->
+      <div class="turnstile-wrap">
+        <div
+          class="cf-turnstile"
+          data-sitekey="0x4AAAAAACne-oIlDNaEsoot"
+          data-theme="auto"
+          data-response-field-name="turnstileToken">
+        </div>
       </div>
 
       <div class="form-actions">
@@ -245,8 +289,12 @@
 
 </main>
 
-<script src="./i18n.js?v=71"></script>
-<script src="./script.js?v=71"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<script src="./i18n.js?v=72"></script>
+<script src="./script.js?v=72"></script>
 <script>
   const lang = window.SAMOE.getLang() || "en";
   const enBtn = document.getElementById("langEN");
