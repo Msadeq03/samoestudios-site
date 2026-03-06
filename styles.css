@@ -195,6 +195,20 @@ body.rtl{
   border-radius:0;
 }
 
+.project-client{
+  display:flex;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.client-logo{
+  height:32px;
+  width:auto;
+  opacity:.75;
+  filter:grayscale(100%);
+  display:block;
+}
+
 .case{
   border:1px solid var(--line);
   background:#fff;
