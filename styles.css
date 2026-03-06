@@ -202,11 +202,11 @@ body.rtl{
 }
 
 .client-logo{
-height:120px;
+height:200px;
 width:auto;
 display:block;
 opacity:1;
-}
+}	
 
 .case{
   border:1px solid var(--line);
