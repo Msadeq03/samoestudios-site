@@ -22,17 +22,26 @@ export async function onRequestPost(context) {
     const website = String(body.website || "").trim();
     const turnstileToken = String(body.turnstileToken || "").trim();
 
-    // Honeypot
+    console.log("Incoming body:", {
+      department,
+      name,
+      company,
+      phone,
+      email,
+      location,
+      description,
+      website,
+      turnstileTokenPresent: !!turnstileToken
+    });
+
     if (website) {
       return json({ ok: false, message: "Spam detected." }, 400);
     }
 
-    // Required
     if (!department || !name || !company || !phone || !email || !location || !description || !turnstileToken) {
-      return json({ ok: false, message: "Missing required fields." }, 400);
+      return json({ ok: false, message: "Missing required fields in backend." }, 400);
     }
 
-    // Basic validation
     if (!isValidEmail(email)) {
       return json({ ok: false, message: "Invalid email address." }, 400);
     }
@@ -41,17 +50,10 @@ export async function onRequestPost(context) {
       return json({ ok: false, message: "Invalid phone number." }, 400);
     }
 
-    if (description.length < 20) {
+    if (description.length < 3) {
       return json({ ok: false, message: "Description is too short." }, 400);
     }
 
-    // Basic spam filtering
-    const spamCheck = isSpammy({ name, company, email, location, description });
-    if (spamCheck.block) {
-      return json({ ok: false, message: "Submission rejected." }, 400);
-    }
-
-    // Turnstile verify
     const ip = request.headers.get("CF-Connecting-IP") || "";
     const formData = new URLSearchParams();
     formData.append("secret", env.TURNSTILE_SECRET_KEY);
@@ -65,9 +67,13 @@ export async function onRequestPost(context) {
     });
 
     const turnstileData = await turnstileRes.json();
+    console.log("Turnstile response:", turnstileData);
 
     if (!turnstileData.success) {
-      return json({ ok: false, message: "Security verification failed." }, 400);
+      return json({
+        ok: false,
+        message: `Security verification failed: ${JSON.stringify(turnstileData["error-codes"] || [])}`
+      }, 400);
     }
 
     const recipient = department === "info"
@@ -128,6 +134,7 @@ export async function onRequestPost(context) {
     });
 
     const resendData = await resendResponse.json();
+    console.log("Resend response:", resendData);
 
     if (!resendResponse.ok) {
       return json({ ok: false, message: resendData?.message || "Failed to send email." }, 500);
@@ -135,6 +142,7 @@ export async function onRequestPost(context) {
 
     return json({ ok: true, message: "Inquiry sent successfully." }, 200);
   } catch (error) {
+    console.error("Unexpected backend error:", error);
     return json({ ok: false, message: error?.message || "Unexpected server error." }, 500);
   }
 }
@@ -154,37 +162,6 @@ function isValidEmail(email) {
 
 function isLikelyPhone(phone) {
   return /^\+\d{7,16}$/.test(phone.replace(/\s+/g, ""));
-}
-
-function isSpammy({ name, company, email, location, description }) {
-  const joined = `${name} ${company} ${email} ${location} ${description}`.toLowerCase();
-
-  const blockedPhrases = [
-    "crypto",
-    "casino",
-    "backlinks",
-    "seo service",
-    "guest post",
-    "viagra",
-    "telegram",
-    "whatsapp us",
-    "earn money fast"
-  ];
-
-  if (blockedPhrases.some(p => joined.includes(p))) {
-    return { block: true };
-  }
-
-  const urlMatches = joined.match(/https?:\/\/|www\./g) || [];
-  if (urlMatches.length > 2) {
-    return { block: true };
-  }
-
-  if (/(.)\1{7,}/.test(joined)) {
-    return { block: true };
-  }
-
-  return { block: false };
 }
 
 function escapeHtml(str) {
