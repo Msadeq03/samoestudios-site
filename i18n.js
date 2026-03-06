@@ -83,18 +83,34 @@
 
       contact_kicker: "Contact",
       contact_title: "Inquiry",
-      contact_sub: "Fill in your details. We will generate a message and open Instagram DM so you can send it.",
+      contact_sub: "Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.",
+      contact_form_title: "Send an email",
+      contact_form_sub: "Fill in your details and open a professional email draft addressed to the correct department.",
+      contact_general_label: "General inquiries",
+      contact_general_desc: "General public contact and website inquiries.",
+      contact_sales_label: "Commercial proposals",
+      contact_sales_desc: "Client inquiries and commercial proposals.",
+      contact_registered_office: "Registered office",
+
+      f_department: "Inquiry type",
+      f_department_sales: "Client inquiry / commercial proposal",
+      f_department_info: "General inquiry",
       f_name: "Name",
       f_company: "Company",
       f_phone: "Phone",
       f_email: "Email",
+      f_location: "Project location",
       f_desc: "Project / Description",
       f_desc_ph: "Brief scope, location, timeline, any constraints...",
-      open_dm: "Open Instagram DM",
-      open_dm2: "Open with preview text",
+      send_email: "Open email draft",
+      preview_email: "Refresh preview",
 
+      footer_nav_title: "Navigation",
+      footer_contact_title: "Contact",
+      footer_social_title: "Social",
+      footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
       footer_follow: "Follow",
-      footer_rights: "© 2025–2026 SAMOE STUDIOS"
+      footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     },
 
     ar: {
@@ -178,18 +194,34 @@
 
       contact_kicker: "التواصل",
       contact_title: "استفسار",
-      contact_sub: "املأ بياناتك. سننشئ رسالة جاهزة ونفتح محادثة إنستغرام لإرسالها.",
+      contact_sub: "تواصل مع SAMOE STUDIOS LTD للاستفسارات العامة، مناقشات المشاريع، والعروض التجارية.",
+      contact_form_title: "إرسال بريد إلكتروني",
+      contact_form_sub: "املأ بياناتك لفتح مسودة بريد إلكتروني احترافية موجهة إلى القسم المناسب.",
+      contact_general_label: "الاستفسارات العامة",
+      contact_general_desc: "للتواصل العام واستفسارات الموقع الإلكتروني.",
+      contact_sales_label: "العروض التجارية",
+      contact_sales_desc: "لاستفسارات العملاء والعروض التجارية.",
+      contact_registered_office: "العنوان المسجل",
+
+      f_department: "نوع الاستفسار",
+      f_department_sales: "استفسار عميل / عرض تجاري",
+      f_department_info: "استفسار عام",
       f_name: "الاسم",
       f_company: "الشركة",
       f_phone: "رقم الهاتف",
       f_email: "البريد الإلكتروني",
+      f_location: "موقع المشروع",
       f_desc: "المشروع / الوصف",
       f_desc_ph: "نطاق مختصر، الموقع، الجدول الزمني، أي قيود...",
-      open_dm: "فتح رسالة إنستغرام",
-      open_dm2: "فتح مع نص المعاينة",
+      send_email: "فتح مسودة البريد",
+      preview_email: "تحديث المعاينة",
 
+      footer_nav_title: "التنقل",
+      footer_contact_title: "التواصل",
+      footer_social_title: "الحسابات",
+      footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
       footer_follow: "تابعنا",
-      footer_rights: "© 2025–2026 SAMOE STUDIOS"
+      footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     }
   };
 

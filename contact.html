@@ -5,13 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Contact — SAMOE STUDIOS</title>
-  <meta name="description" content="Contact SAMOE STUDIOS. Submit an inquiry and send it via Instagram DM." />
+  <meta name="description" content="Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals." />
   <link rel="canonical" href="https://samoestudios.com/contact.html" />
+
+  <meta property="og:title" content="Contact — SAMOE STUDIOS" />
+  <meta property="og:description" content="General inquiries, commercial proposals, and official contact details for SAMOE STUDIOS LTD." />
+  <meta property="og:url" content="https://samoestudios.com/contact.html" />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=50" />
+  <link rel="stylesheet" href="./styles.css?v=60" />
 </head>
 
 <body>
@@ -39,28 +44,84 @@
     <div class="kicker" data-i18n="contact_kicker">Contact</div>
     <h1 class="h1" data-i18n="contact_title">Inquiry</h1>
     <p class="sub" data-i18n="contact_sub">
-      Fill in your details. We will generate a message and open Instagram DM so you can send it.
+      Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.
     </p>
   </section>
 
   <section class="section reveal">
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <div class="contact-label" data-i18n="contact_general_label">General inquiries</div>
+        <h2 class="contact-value">
+          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+        </h2>
+        <p class="sub" style="margin:0;" data-i18n="contact_general_desc">
+          General public contact and website inquiries.
+        </p>
+      </div>
+
+      <div class="card contact-card">
+        <div class="contact-label" data-i18n="contact_sales_label">Commercial proposals</div>
+        <h2 class="contact-value">
+          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
+        </h2>
+        <p class="sub" style="margin:0;" data-i18n="contact_sales_desc">
+          Client inquiries and commercial proposals.
+        </p>
+      </div>
+    </div>
+
+    <div class="card address-card" style="margin-top:12px;">
+      <div class="contact-label" data-i18n="contact_registered_office">Registered office</div>
+      <p class="sub address-block" style="margin:0;">
+        <strong>SAMOE STUDIOS LTD</strong><br>
+        124 City Road, London, EC1V 2NX<br>
+        United Kingdom
+      </p>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="section-head">
+      <h2 class="h2" data-i18n="contact_form_title">Send an email</h2>
+      <p class="muted" data-i18n="contact_form_sub">
+        Fill in your details and open a professional email draft addressed to the correct department.
+      </p>
+    </div>
+
     <form id="inquiryForm" class="form">
       <div class="field-grid">
+        <div>
+          <label for="department" data-i18n="f_department">Inquiry type</label>
+          <select id="department" name="department">
+            <option value="sales" data-i18n="f_department_sales">Client inquiry / commercial proposal</option>
+            <option value="info" data-i18n="f_department_info">General inquiry</option>
+          </select>
+        </div>
+
         <div>
           <label for="name" data-i18n="f_name">Name</label>
           <input id="name" name="name" autocomplete="name" />
         </div>
+
         <div>
           <label for="company" data-i18n="f_company">Company</label>
           <input id="company" name="company" autocomplete="organization" />
         </div>
+
         <div>
           <label for="phone" data-i18n="f_phone">Phone</label>
           <input id="phone" name="phone" autocomplete="tel" />
         </div>
+
         <div>
           <label for="email" data-i18n="f_email">Email</label>
           <input id="email" name="email" autocomplete="email" />
+        </div>
+
+        <div>
+          <label for="location" data-i18n="f_location">Project location</label>
+          <input id="location" name="location" />
         </div>
       </div>
 
@@ -71,30 +132,90 @@
       </div>
 
       <div class="form-actions">
-        <button class="btn btn-blue" type="submit" data-i18n="open_dm">Open Instagram DM</button>
-        <button class="btn btn-ghost" type="button" id="openDM" data-i18n="open_dm2">Open with preview text</button>
+        <button class="btn btn-blue" type="submit" data-i18n="send_email">Open email draft</button>
+        <button class="btn btn-ghost" type="button" id="openEmailPreview" data-i18n="preview_email">Refresh preview</button>
       </div>
 
       <div class="preview" id="messagePreview"></div>
     </form>
   </section>
 
-  <footer class="footer reveal">
-    <div data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS</div>
-    <div class="footer-links">
-      <a href="./home.html">Home</a>
-      <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-      <a href="./work.html" data-i18n="nav_work">Work</a>
-      <a href="./products.html" data-i18n="nav_products">Products</a>
-      <a href="./contact.html" data-i18n="nav_contact">Contact</a>
-      <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" data-i18n="footer_follow">Follow</a>
+  <footer class="site-footer reveal">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-company">SAMOE STUDIOS LTD</div>
+        <p class="footer-copy" data-i18n="footer_copy">
+          Architecture, interiors, and delivery — from concept to execution.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
+        <div class="footer-links footer-links-stack">
+          <a href="./home.html">Home</a>
+          <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+          <a href="./work.html" data-i18n="nav_work">Work</a>
+          <a href="./products.html" data-i18n="nav_products">Products</a>
+          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
+        <div class="footer-contact-list">
+          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <div class="footer-heading" data-i18n="footer_social_title">Social</div>
+        <div class="social-links">
+          <a href="https://instagram.com/SAMOESTUDIOS" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1.2"></circle>
+              </svg>
+            </span>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.linkedin.com/company/SAMOESTUDIOS" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="9" width="4" height="11"></rect>
+                <circle cx="6" cy="6" r="2"></circle>
+                <path d="M11 9h4v1.8c.7-1.2 2-2.1 4-2.1 3.4 0 4 2.1 4 5.5V20h-4v-4.9c0-1.6-.1-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V20h-4z"></path>
+              </svg>
+            </span>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://www.behance.net/SAMOESTUDIO" target="_blank" rel="noreferrer" aria-label="Behance">
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7.5h5.4c2.4 0 4 1.1 4 3.2 0 1.3-.7 2.2-1.8 2.6 1.5.3 2.4 1.5 2.4 3.1 0 2.5-2 3.6-4.5 3.6H4zm4.8 4.8c1 0 1.6-.4 1.6-1.3s-.7-1.2-1.6-1.2H7v2.5zm.3 5.1c1.1 0 1.9-.4 1.9-1.5 0-.9-.7-1.4-1.8-1.4H7v2.9z"></path>
+                <path d="M16.2 9.2h4.9v1.4h-4.9zm5.7 6.8c-.3 2.3-2.1 4.1-5.1 4.1-3.3 0-5.4-2.2-5.4-5.6 0-3.3 2.2-5.7 5.3-5.7 3.7 0 5.4 2.6 5.3 6.3h-7.2c.1 1.4.9 2.2 2.2 2.2 1 0 1.6-.4 1.9-1.3zm-2.5-2.8c-.1-1.2-.9-1.9-2-1.9-1.2 0-1.9.7-2.1 1.9z"></path>
+              </svg>
+            </span>
+            <span>Behance</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-address">
+        <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
+      </div>
+      <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
     </div>
   </footer>
 
 </main>
 
-<script src="./i18n.js?v=50"></script>
-<script src="./script.js?v=50"></script>
+<script src="./i18n.js?v=60"></script>
+<script src="./script.js?v=60"></script>
 <script>
   const lang = window.SAMOE.getLang() || "en";
   const enBtn = document.getElementById("langEN");
