@@ -8,7 +8,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-// Contact form submit
 const form = document.getElementById("inquiryForm");
 
 if (form) {
@@ -72,6 +71,8 @@ if (form) {
       turnstileToken: String(fd.get("turnstileToken") || "").trim()
     };
 
+    console.log("Submitting form data:", data);
+
     if (!data.department || !data.name || !data.company || !data.phone || !data.email || !data.location || !data.description) {
       setStatus(
         "error",
@@ -93,7 +94,8 @@ if (form) {
           );
           return;
         }
-      } catch {
+      } catch (err) {
+        console.error("Phone validation error:", err);
         setStatus(
           "error",
           lang === "ar" ? "حدث خطأ في التحقق من رقم الهاتف." : "There was a problem validating the phone number."
@@ -123,6 +125,7 @@ if (form) {
       });
 
       const result = await res.json();
+      console.log("Backend response:", result);
 
       if (!res.ok || !result.ok) {
         throw new Error(result.message || "Request failed");
@@ -145,11 +148,12 @@ if (form) {
         window.turnstile.reset();
       }
     } catch (err) {
+      console.error("Submit error:", err);
       setStatus(
         "error",
-        lang === "ar"
+        err.message || (lang === "ar"
           ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
-          : "There was a problem sending your inquiry. Please try again."
+          : "There was a problem sending your inquiry. Please try again.")
       );
     } finally {
       submitBtn.disabled = false;
