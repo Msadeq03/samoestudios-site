@@ -67,14 +67,14 @@ if (form) {
     if (fullPhoneInput) fullPhoneInput.value = phoneValue;
 
     const data = {
-      department: form.department?.value?.trim() || "sales",
-      name: form.name?.value?.trim() || "",
-      company: form.company?.value?.trim() || "",
+      department: form.elements["department"]?.value?.trim() || "sales",
+      name: form.elements["name"]?.value?.trim() || "",
+      company: form.elements["company"]?.value?.trim() || "",
       phone: phoneValue,
-      email: form.email?.value?.trim() || "",
-      location: form.location?.value?.trim() || "",
-      description: form.description?.value?.trim() || "",
-      website: form.website?.value?.trim() || "",
+      email: form.elements["email"]?.value?.trim() || "",
+      location: form.elements["location"]?.value?.trim() || "",
+      description: form.elements["description"]?.value?.trim() || "",
+      website: form.elements["website"]?.value?.trim() || "",
       turnstileToken
     };
 
