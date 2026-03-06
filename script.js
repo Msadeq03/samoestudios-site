@@ -21,22 +21,12 @@ if (form) {
 
   if (phoneInput && window.intlTelInput) {
     iti = window.intlTelInput(phoneInput, {
-      initialCountry: "auto",
+      initialCountry: "iq",
       separateDialCode: true,
       nationalMode: false,
       strictMode: true,
       formatOnDisplay: true,
-      autoPlaceholder: "aggressive",
-      geoIpLookup: async (callback) => {
-        try {
-          const res = await fetch("https://ipapi.co/json/");
-          const data = await res.json();
-          callback((data && data.country_code ? data.country_code : "iq").toLowerCase());
-        } catch {
-          callback("iq");
-        }
-      },
-      loadUtils: () => Promise.resolve(window.intlTelInputUtils)
+      autoPlaceholder: "aggressive"
     });
   }
 
@@ -61,22 +51,27 @@ if (form) {
     e.preventDefault();
 
     const lang = getLang();
-
-    const turnstileToken = form.querySelector('input[name="turnstileToken"]')?.value?.trim() || "";
     const phoneValue = getPhoneValue();
-    if (fullPhoneInput) fullPhoneInput.value = phoneValue;
+
+    if (fullPhoneInput) {
+      fullPhoneInput.value = phoneValue;
+    }
+
+    const fd = new FormData(form);
 
     const data = {
-      department: form.elements["department"]?.value?.trim() || "sales",
-      name: form.elements["name"]?.value?.trim() || "",
-      company: form.elements["company"]?.value?.trim() || "",
+      department: String(fd.get("department") || "").trim(),
+      name: String(fd.get("name") || "").trim(),
+      company: String(fd.get("company") || "").trim(),
       phone: phoneValue,
-      email: form.elements["email"]?.value?.trim() || "",
-      location: form.elements["location"]?.value?.trim() || "",
-      description: form.elements["description"]?.value?.trim() || "",
-      website: form.elements["website"]?.value?.trim() || "",
-      turnstileToken
+      email: String(fd.get("email") || "").trim(),
+      location: String(fd.get("location") || "").trim(),
+      description: String(fd.get("description") || "").trim(),
+      website: String(fd.get("website") || "").trim(),
+      turnstileToken: String(fd.get("turnstileToken") || "").trim()
     };
+
+    console.log("FORM DATA", data);
 
     if (!data.department || !data.name || !data.company || !data.phone || !data.email || !data.location || !data.description) {
       setStatus(
@@ -94,7 +89,7 @@ if (form) {
       return;
     }
 
-    if (!turnstileToken) {
+    if (!data.turnstileToken) {
       setStatus(
         "error",
         lang === "ar" ? "يرجى إكمال التحقق الأمني." : "Please complete the security check."
@@ -134,10 +129,7 @@ if (form) {
       }
 
       if (window.turnstile) {
-        const widget = form.querySelector(".cf-turnstile");
-        if (widget) {
-          window.turnstile.reset(widget);
-        }
+        window.turnstile.reset();
       }
     } catch (err) {
       setStatus(
