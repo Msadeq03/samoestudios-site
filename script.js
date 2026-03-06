@@ -26,7 +26,8 @@ if (form) {
       nationalMode: false,
       strictMode: true,
       formatOnDisplay: true,
-      autoPlaceholder: "aggressive"
+      autoPlaceholder: "aggressive",
+      loadUtils: () => import("https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js")
     });
   }
 
@@ -71,8 +72,6 @@ if (form) {
       turnstileToken: String(fd.get("turnstileToken") || "").trim()
     };
 
-    console.log("FORM DATA", data);
-
     if (!data.department || !data.name || !data.company || !data.phone || !data.email || !data.location || !data.description) {
       setStatus(
         "error",
@@ -81,12 +80,26 @@ if (form) {
       return;
     }
 
-    if (iti && !iti.isValidNumber()) {
-      setStatus(
-        "error",
-        lang === "ar" ? "يرجى إدخال رقم هاتف صحيح." : "Please enter a valid phone number."
-      );
-      return;
+    if (iti) {
+      try {
+        if (iti.promise) {
+          await iti.promise;
+        }
+
+        if (!iti.isValidNumber()) {
+          setStatus(
+            "error",
+            lang === "ar" ? "يرجى إدخال رقم هاتف صحيح." : "Please enter a valid phone number."
+          );
+          return;
+        }
+      } catch {
+        setStatus(
+          "error",
+          lang === "ar" ? "حدث خطأ في التحقق من رقم الهاتف." : "There was a problem validating the phone number."
+        );
+        return;
+      }
     }
 
     if (!data.turnstileToken) {
