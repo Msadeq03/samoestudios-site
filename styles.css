@@ -9,6 +9,7 @@
   --muted: rgba(10, 15, 26, 0.72);
   --line: rgba(10, 15, 26, 0.14);
   --paper: #ffffff;
+  --panel: #f7f8fb;
 
   --success: #0b7a43;
   --success-bg: rgba(11, 122, 67, 0.08);
@@ -17,6 +18,7 @@
 
   --max: 1120px;
   --pad: 22px;
+  --shadow-soft: 0 18px 40px rgba(10, 15, 26, 0.08);
 }
 
 /* ============================================================
@@ -379,6 +381,241 @@ body.rtl {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+}
+
+/* ============================================================
+   PRACTICE PAGE - SERVICES SHOWCASE
+   Inspired by the "we provide services" reference but adapted
+   to SAMOE's visual system
+   ============================================================ */
+.services-showcase-head {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.services-showcase-kicker {
+  margin-bottom: 12px;
+  font-weight: 900;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(27, 63, 139, 0.62);
+}
+
+.services-showcase-title {
+  margin: 0;
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.02;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.services-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-showcase-card {
+  position: relative;
+  border: 1px solid var(--line);
+  background: #fff;
+  min-height: 320px;
+  padding: 34px 26px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-showcase-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-soft);
+  border-color: rgba(27, 63, 139, 0.22);
+}
+
+.service-showcase-card-featured {
+  background: var(--panel);
+}
+
+.service-showcase-icon {
+  width: 68px;
+  height: 68px;
+  margin-bottom: 20px;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-showcase-icon svg {
+  width: 64px;
+  height: 64px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-showcase-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 26px;
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.service-showcase-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 280px;
+}
+
+.service-showcase-plus {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid rgba(27, 63, 139, 0.55);
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  line-height: 1;
+  margin-top: auto;
+  margin-bottom: -8px;
+  font-weight: 400;
+}
+
+/* ============================================================
+   PRACTICE PAGE - DELIVERY FLOW
+   Inspired by the step flow reference image
+   ============================================================ */
+.delivery-flow-head {
+  margin-bottom: 28px;
+}
+
+.delivery-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 78px 0 26px;
+}
+
+.delivery-flow-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--line);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.flow-step {
+  position: relative;
+  z-index: 1;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-step-up {
+  align-items: flex-start;
+}
+
+.flow-step-down {
+  align-items: flex-end;
+}
+
+.flow-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--blue);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 24px rgba(27, 63, 139, 0.25);
+  z-index: 3;
+}
+
+.flow-stage-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 86px;
+  height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(27, 63, 139, 0.18);
+}
+
+.flow-step-down .flow-stage-label {
+  top: calc(50% - 108px);
+}
+
+.flow-step-up .flow-stage-label {
+  bottom: calc(50% - 108px);
+}
+
+.flow-card {
+  position: relative;
+  width: 100%;
+  max-width: 240px;
+  min-height: 190px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 24px 20px 22px;
+  box-shadow: var(--shadow-soft);
+}
+
+.flow-step-down .flow-card {
+  margin-top: 34px;
+}
+
+.flow-step-up .flow-card {
+  margin-bottom: 34px;
+}
+
+.flow-card-top {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 58px;
+  height: 18px;
+  background: var(--blue);
+}
+
+.flow-card h3 {
+  margin: 12px 0 10px 0;
+  font-size: 22px;
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.flow-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 14.5px;
 }
 
 /* ============================================================
@@ -746,7 +983,6 @@ textarea {
   align-items: start;
 }
 
-/* Left column */
 .case-aside {
   border-right: 1px solid var(--line);
   padding-right: 24px;
@@ -786,7 +1022,6 @@ textarea {
   font-weight: 700;
 }
 
-/* Right column */
 .case-main {
   min-width: 0;
 }
@@ -823,6 +1058,46 @@ textarea {
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1100px) {
+  .services-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delivery-flow {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    padding: 20px 0 0;
+  }
+
+  .delivery-flow-line {
+    display: none;
+  }
+
+  .flow-step {
+    min-height: auto;
+  }
+
+  .flow-node {
+    display: none;
+  }
+
+  .flow-stage-label {
+    position: static;
+    transform: none;
+    margin-bottom: 12px;
+  }
+
+  .flow-step-up,
+  .flow-step-down {
+    align-items: stretch;
+  }
+
+  .flow-card {
+    max-width: none;
+    margin: 0;
+  }
+}
+
 @media (max-width: 1000px) {
   .case-study-layout {
     grid-template-columns: 1fr;
@@ -871,6 +1146,15 @@ textarea {
 }
 
 @media (max-width: 700px) {
+  .services-showcase-grid,
+  .delivery-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .service-showcase-card {
+    min-height: auto;
+  }
+
   .client-logo-feature {
     height: 120px;
     width: auto;
@@ -879,5 +1163,9 @@ textarea {
 
   .case-study-title {
     font-size: 28px;
+  }
+
+  .flow-card h3 {
+    font-size: 20px;
   }
 }

@@ -30,7 +30,7 @@
   <!-- =========================================================
        SITE STYLES
        ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=100" />
+  <link rel="stylesheet" href="./styles.css?v=101" />
 </head>
 
 <body>
@@ -87,69 +87,192 @@
     </section>
 
     <!-- =========================================================
-         SERVICES / OFFER
+         WHAT WE OFFER
+         Redesigned as a services showcase section
+         Inspired by your reference image, but adapted to your site
          ========================================================= -->
     <section class="section reveal">
-      <div class="section-head">
-        <h2 class="h2" data-i18n="offer_title">What we offer</h2>
-        <p class="muted" data-i18n="offer_sub">Core services</p>
+      <div class="services-showcase-head">
+        <div class="services-showcase-kicker" data-i18n="offer_sub">Core services</div>
+        <h2 class="services-showcase-title" data-i18n="offer_title">What we offer</h2>
       </div>
 
-      <div class="mini-grid">
-        <div class="mini">
+      <div class="services-showcase-grid">
+        <!-- Service Card 1 -->
+        <article class="service-showcase-card">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Architecture + Interiors icon -->
+            <svg viewBox="0 0 64 64">
+              <path d="M10 48h44"></path>
+              <path d="M14 48V24l18-12 18 12v24"></path>
+              <path d="M24 48V32h16v16"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s1_t">Architecture + Interiors</h3>
           <p data-i18n="s1_d">Concept to detailed design with execution clarity.</p>
-        </div>
 
-        <div class="mini">
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
+
+        <!-- Service Card 2 -->
+        <article class="service-showcase-card service-showcase-card-featured">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Retail Design + Rollout Systems icon -->
+            <svg viewBox="0 0 64 64">
+              <rect x="12" y="12" width="40" height="40"></rect>
+              <path d="M22 22h8v8h-8z"></path>
+              <path d="M34 22h8"></path>
+              <path d="M34 30h8"></path>
+              <path d="M22 40h20"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s2_t">Retail Design + Rollout Systems</h3>
           <p data-i18n="s2_d">Flagships, expansions, refurbishments, operational alignment.</p>
-        </div>
 
-        <div class="mini">
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
+
+        <!-- Service Card 3 -->
+        <article class="service-showcase-card">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Rebrand Implementation icon -->
+            <svg viewBox="0 0 64 64">
+              <path d="M14 50l18-36 18 36"></path>
+              <path d="M22 34h20"></path>
+              <path d="M28 50V38h8v12"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s3_t">Rebrand Implementation</h3>
           <p data-i18n="s3_d">Spatial identity integration across environments and touchpoints.</p>
-        </div>
 
-        <div class="mini">
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
+
+        <!-- Service Card 4 -->
+        <article class="service-showcase-card">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Technical Documentation + BOQ icon -->
+            <svg viewBox="0 0 64 64">
+              <rect x="16" y="10" width="32" height="44"></rect>
+              <path d="M24 22h16"></path>
+              <path d="M24 30h16"></path>
+              <path d="M24 38h10"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s4_t">Technical Documentation + BOQ</h3>
           <p data-i18n="s4_d">Technical packages and BOQ alignment for execution readiness.</p>
-        </div>
 
-        <div class="mini">
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
+
+        <!-- Service Card 5 -->
+        <article class="service-showcase-card">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Procurement + Supplier Management icon -->
+            <svg viewBox="0 0 64 64">
+              <path d="M18 20h28l6 10-20 24L12 30z"></path>
+              <path d="M24 20l8 34"></path>
+              <path d="M40 20L32 54"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s5_t">Procurement + Supplier Management</h3>
           <p data-i18n="s5_d">Material approvals, supplier strategy, quality-controlled sourcing.</p>
-        </div>
 
-        <div class="mini">
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
+
+        <!-- Service Card 6 -->
+        <article class="service-showcase-card">
+          <div class="service-showcase-icon" aria-hidden="true">
+            <!-- Partner Network Delivery icon -->
+            <svg viewBox="0 0 64 64">
+              <circle cx="20" cy="22" r="6"></circle>
+              <circle cx="44" cy="22" r="6"></circle>
+              <circle cx="32" cy="42" r="6"></circle>
+              <path d="M25 25l14 14"></path>
+              <path d="M39 25L25 39"></path>
+            </svg>
+          </div>
+
           <h3 data-i18n="s6_t">Partner Network Delivery</h3>
           <p data-i18n="s6_d">Fit-out, joinery, lighting, signage, MEP, and systems implementation under SAMOE standards.</p>
-        </div>
+
+          <div class="service-showcase-plus" aria-hidden="true">+</div>
+        </article>
       </div>
     </section>
 
     <!-- =========================================================
          DELIVERY MODEL
+         Redesigned as a visual 4-step process flow
+         Inspired by your reference image, but adapted to your site
          ========================================================= -->
     <section class="section reveal">
-      <div class="section-head">
+      <div class="section-head delivery-flow-head">
         <h2 class="h2" data-i18n="delivery_title">Delivery model</h2>
         <p class="muted" data-i18n="delivery_sub">How we execute</p>
       </div>
 
-      <div class="card">
-        <p class="sub" style="margin-bottom: 10px;" data-i18n="d1">
-          01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.
-        </p>
-        <p class="sub" style="margin-bottom: 10px;" data-i18n="d2">
-          02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.
-        </p>
-        <p class="sub" style="margin-bottom: 10px;" data-i18n="d3">
-          03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.
-        </p>
-        <p class="sub" style="margin: 0;" data-i18n="d4">
-          04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.
-        </p>
+      <div class="delivery-flow">
+        <!-- Horizontal line in the background -->
+        <div class="delivery-flow-line" aria-hidden="true"></div>
+
+        <!-- Step 1 -->
+        <article class="flow-step flow-step-down">
+          <div class="flow-node" aria-hidden="true"></div>
+          <div class="flow-stage-label">01</div>
+          <div class="flow-card">
+            <div class="flow-card-top"></div>
+            <h3>Discovery</h3>
+            <p data-i18n="d1">
+              01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.
+            </p>
+          </div>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="flow-step flow-step-up">
+          <div class="flow-node" aria-hidden="true"></div>
+          <div class="flow-stage-label">02</div>
+          <div class="flow-card">
+            <div class="flow-card-top"></div>
+            <h3>Design + Documentation</h3>
+            <p data-i18n="d2">
+              02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.
+            </p>
+          </div>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="flow-step flow-step-down">
+          <div class="flow-node" aria-hidden="true"></div>
+          <div class="flow-stage-label">03</div>
+          <div class="flow-card">
+            <div class="flow-card-top"></div>
+            <h3>Procurement + Partners</h3>
+            <p data-i18n="d3">
+              03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.
+            </p>
+          </div>
+        </article>
+
+        <!-- Step 4 -->
+        <article class="flow-step flow-step-up">
+          <div class="flow-node" aria-hidden="true"></div>
+          <div class="flow-stage-label">04</div>
+          <div class="flow-card">
+            <div class="flow-card-top"></div>
+            <h3>Implementation + QA</h3>
+            <p data-i18n="d4">
+              04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.
+            </p>
+          </div>
+        </article>
       </div>
     </section>
 
