@@ -668,50 +668,131 @@ img {
 }
 
 /* ============================================================
-   PROCESS V2
+   DELIVERY FLOW V3
+   Restored flowchart-style process section
    ============================================================ */
-.process-v2 {
+.delivery-flow-v3 {
   padding: 34px 0 64px;
   border-top: 1px solid var(--line);
 }
 
-.process-v2-list {
+.delivery-flow-v3-track {
+  position: relative;
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  padding: 78px 0 20px;
 }
 
-.process-v2-item {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 24px;
-  align-items: start;
-  background: white;
+.delivery-flow-v3-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: rgba(74, 85, 104, 0.24);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.delivery-step {
+  position: relative;
+  z-index: 1;
+  min-height: 430px;
+  display: flex;
+  justify-content: center;
+}
+
+.delivery-step-up {
+  align-items: flex-start;
+}
+
+.delivery-step-down {
+  align-items: flex-end;
+}
+
+.delivery-step-node {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 24px rgba(198, 90, 30, 0.22);
+  z-index: 3;
+}
+
+.delivery-step-pill {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 88px;
+  height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--slate);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(15, 28, 46, 0.12);
+}
+
+.delivery-step-down .delivery-step-pill {
+  top: calc(50% - 108px);
+}
+
+.delivery-step-up .delivery-step-pill {
+  bottom: calc(50% - 108px);
+}
+
+.delivery-step-card {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  min-height: 210px;
+  background: var(--white);
   border: 1px solid var(--line);
-  padding: 22px;
+  padding: 28px 22px 22px;
   box-shadow: var(--shadow-soft);
 }
 
-.process-v2-number {
-  color: var(--accent);
-  font-size: 44px;
-  line-height: 0.9;
-  font-weight: 900;
-  letter-spacing: -0.05em;
+.delivery-step-down .delivery-step-card {
+  margin-top: 36px;
 }
 
-.process-v2-body h3 {
-  margin: 0 0 10px 0;
+.delivery-step-up .delivery-step-card {
+  margin-bottom: 36px;
+}
+
+.delivery-step-accent {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 62px;
+  height: 18px;
+  background: var(--accent);
+}
+
+.delivery-step-card h3 {
+  margin: 10px 0 12px 0;
   color: var(--navy);
-  font-size: 28px;
+  font-size: 24px;
+  line-height: 1.04;
   font-weight: 900;
   letter-spacing: -0.03em;
 }
 
-.process-v2-body p {
+.delivery-step-card p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.85;
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
 /* ============================================================
@@ -1250,6 +1331,39 @@ select:focus {
   .site-footer-top {
     grid-template-columns: 1fr 1fr;
   }
+
+  .delivery-flow-v3-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    row-gap: 28px;
+    padding: 14px 0 0;
+  }
+
+  .delivery-flow-v3-line {
+    display: none;
+  }
+
+  .delivery-step {
+    min-height: auto;
+    display: block;
+  }
+
+  .delivery-step-node {
+    display: none;
+  }
+
+  .delivery-step-pill {
+    position: static;
+    transform: none;
+    margin-bottom: 12px;
+  }
+
+  .delivery-step-card,
+  .delivery-step-down .delivery-step-card,
+  .delivery-step-up .delivery-step-card {
+    max-width: none;
+    margin: 0;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1278,16 +1392,8 @@ select:focus {
   .services-editorial-grid,
   .case-study-points,
   .studio-strip,
-  .site-footer-top {
-    grid-template-columns: 1fr;
-  }
-
-  .process-v2-item {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-panel-meta,
-  .case-study-dates {
+  .site-footer-top,
+  .delivery-flow-v3-track {
     grid-template-columns: 1fr;
   }
 
@@ -1305,5 +1411,9 @@ select:focus {
 
   .products-panel-card h2 {
     font-size: 34px;
+  }
+
+  .delivery-step-card h3 {
+    font-size: 22px;
   }
 }
