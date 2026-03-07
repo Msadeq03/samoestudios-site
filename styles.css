@@ -1076,21 +1076,31 @@ textarea {
   margin-bottom: 10px;
 }
 
+/* ============================================================
+   WORK PAGE - CLIENT LOGO AREA
+   Makes the logo fit its box better and stay centered
+   ============================================================ */
 .case-client-mark {
   margin-bottom: 26px;
+  min-height: 250px;              /* gives the logo area a proper visual box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
 }
 
 .client-logo-feature {
-  height: 200px;
-  width: 250px;
-  max-width: 100%;
   display: block;
+  width: 100%;
+  max-width: 230px;               /* allows the logo to occupy more of the box */
+  max-height: 170px;              /* keeps it visually controlled */
+  height: auto;
   object-fit: contain;
+  object-position: center;
 }
-
 .case-aside-block {
-  margin-top: 10px;
-  padding-top: 4px;
+  margin-top: 20px;
+  padding-top: 14px;
   border-top: 1px solid var(--line);
 }
 
@@ -1191,14 +1201,15 @@ textarea {
     padding-bottom: 22px;
   }
 
-  .client-logo-feature {
-    width: 150%;
-    height: auto;
-    max-height: 300px;
-    display: block;
-    object-fit: contain;
-  }
-
+.client-logo-feature {
+  width: 100%;
+  max-width: 260px;
+  max-height: 180px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
   .case-study-title {
     font-size: 34px;
   }
@@ -1235,12 +1246,12 @@ textarea {
     min-height: auto;
   }
 
-  .client-logo-feature {
-    height: 120px;
-    width: auto;
-    max-width: 100%;
-  }
-
+.client-logo-feature {
+  width: 100%;
+  max-width: 200px;
+  max-height: 130px;
+  height: auto;
+}
   .case-study-title {
     font-size: 28px;
   }
@@ -1248,11 +1259,4 @@ textarea {
   .flow-card h3 {
     font-size: 20px;
   }
-
 }
-
-
-
-
-
-
