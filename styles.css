@@ -1081,7 +1081,7 @@ textarea {
 }
 
 .client-logo-feature {
-  height: 200px;
+  height: 250px;
   width: auto;
   max-width: 100%;
   display: block;
@@ -1248,4 +1248,5 @@ textarea {
   .flow-card h3 {
     font-size: 20px;
   }
+
 }
