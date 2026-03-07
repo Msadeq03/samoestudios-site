@@ -731,9 +731,16 @@ textarea{ min-height:130px; resize:vertical; }
   }
 
   .client-logo-feature{
-    height:160px;
-  }
+   width:100%;
+  height:auto;
+  max-height:220px;
+  display:block;
+  object-fit:contain;
+}
 
+.case-client-mark{
+  margin-bottom:30px;
+}
   .case-study-title{
     font-size:34px;
   }
