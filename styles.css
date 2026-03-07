@@ -1082,7 +1082,7 @@ textarea {
    ============================================================ */
 .case-client-mark {
   margin-bottom: 26px;
-  min-height: 150px;              /* gives the logo area a proper visual box height */
+  min-height: 250px;              /* gives the logo area a proper visual box height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1092,15 +1092,15 @@ textarea {
 .client-logo-feature {
   display: block;
   width: 100%;
-  max-width: 700px;               /* allows the logo to occupy more of the box */
-  max-height: 250px;              /* keeps it visually controlled */
+  max-width: 600px;               /* allows the logo to occupy more of the box */
+  max-height: 300px;              /* keeps it visually controlled */
   height: auto;
   object-fit: contain;
   object-position: center;
 }
 .case-aside-block {
-  margin-top: 20px;
-  padding-top: 14px;
+  margin-top: 0px;
+  padding-top: 0px;
   border-top: 1px solid var(--line);
 }
 
@@ -1261,6 +1261,7 @@ textarea {
   }
 
 }
+
 
 
 
