@@ -1082,8 +1082,8 @@ textarea {
 
 .client-logo-feature {
   height: 450px;
-  width: 400px;
-  max-width: 250%;
+  width: auto;
+  max-width: 100%;
   display: block;
   object-fit: contain;
 }
@@ -1250,5 +1250,6 @@ textarea {
   }
 
 }
+
 
 
