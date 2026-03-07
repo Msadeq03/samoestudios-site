@@ -1082,7 +1082,7 @@ textarea {
    ============================================================ */
 .case-client-mark {
   margin-bottom: 26px;
-  min-height: 500px;              /* gives the logo area a proper visual box height */
+  min-height: 250px;              /* gives the logo area a proper visual box height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1246,12 +1246,12 @@ textarea {
     min-height: auto;
   }
 
-.client-logo-feature {
-  width: 100%;
-  max-width: 200px;
-  max-height: 130px;
-  height: auto;
-}
+  .client-logo-feature {
+    height: 250px;
+    width: auto;
+    max-width: 100%;
+  }
+
   .case-study-title {
     font-size: 28px;
   }
@@ -1259,5 +1259,4 @@ textarea {
   .flow-card h3 {
     font-size: 20px;
   }
-
 }
