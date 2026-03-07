@@ -10,6 +10,7 @@
       nav_products: "Products",
       nav_contact: "Contact",
       nav_inquiry: "Inquiry",
+      home_home: "Home",
 
       gate_title: "Select language",
       gate_sub: "Choose your preferred language to continue.",
@@ -38,6 +39,13 @@
       home_section_3_kicker: "Products",
       home_feature_title: "Direction, structure, accountability",
       home_feature_copy: "The studio does not position itself as image-only design. The core value is building coherent project systems that can move from concept into real implementation with control.",
+
+      studio_strip_headquarters: "Headquarters",
+      studio_strip_registered_office: "Registered office",
+      studio_strip_focus: "Focus",
+      studio_strip_headquarters_value: "Erbil, Iraq",
+      studio_strip_registered_office_value: "London, United Kingdom",
+      studio_strip_focus_value: "Architecture / Interiors / Delivery",
 
       practice_kicker: "Practice",
       practice_title: "Practice",
@@ -70,6 +78,11 @@
       d3: "03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.",
       d4: "04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.",
 
+      delivery_step_1_title: "Discovery",
+      delivery_step_2_title: "Design + Documentation",
+      delivery_step_3_title: "Procurement + Partners",
+      delivery_step_4_title: "Implementation + QA",
+
       name_title: "The name",
       name_sub: "SAMOE (pronounced “Sah-moe”)",
       name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
@@ -78,6 +91,15 @@
       work_title: "Work",
       work_sub: "Selected case study",
       work_case_desc: "The studio is leading the rebrand and spatial expansion of Special Lady, integrating architectural redesign, expansion coordination, and operational systems alignment.",
+
+      work_meta_client: "Client",
+      work_meta_sector: "Sector",
+      work_meta_location: "Location",
+      work_meta_type: "Type",
+      work_meta_sector_value: "Retail",
+      work_meta_location_value: "Erbil, Iraq",
+      work_meta_type_value: "Rebrand / Renovation / Systems",
+
       scope_t: "Scope",
       scope_d: "Concept, redesign, renovation support, implementation coordination.",
       systems_t: "Systems",
@@ -89,6 +111,16 @@
       products_kicker: "Products",
       products_title: "Coming soon",
       products_sub: "Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.",
+      products_panel_label: "Planned categories",
+      products_status_label: "Status",
+      products_status_title: "Product line in development",
+      products_status_copy: "This section will expand as the studio formalizes product design, sourcing, and rollout readiness.",
+      products_cat_1: "Retail fixtures",
+      products_cat_2: "Display systems",
+      products_cat_3: "Counters and tables",
+      products_cat_4: "Shelving and storage",
+      products_cat_5: "Furniture",
+      products_cat_6: "Lighting",
 
       contact_kicker: "Contact",
       contact_title: "Inquiry",
@@ -118,44 +150,7 @@
       footer_social_title: "Social",
       footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
-
-	home_home: "Home",
-
-	studio_strip_headquarters: "Headquarters",
-	studio_strip_registered_office: "Registered office",
-	studio_strip_focus: "Focus",
-	studio_strip_headquarters_value: "Erbil, Iraq",
-	studio_strip_registered_office_value: "London, United Kingdom",
-	studio_strip_focus_value: "Architecture / Interiors / Delivery",
-
-	delivery_step_1_title: "Discovery",
-	delivery_step_2_title: "Design + Documentation",
-	delivery_step_3_title: "Procurement + Partners",
-	delivery_step_4_title: "Implementation + QA",
-
-	work_meta_client: "Client",
-	work_meta_sector: "Sector",
-	work_meta_location: "Location",
-	work_meta_type: "Type",
-	work_meta_sector_value: "Retail",
-	work_meta_location_value: "Erbil, Iraq",
-	work_meta_type_value: "Rebrand / Renovation / Systems",
-
-	products_panel_label: "Planned categories",
-	products_status_label: "Status",
-	products_status_title: "Product line in development",
-	products_status_copy: "This section will expand as the studio formalizes product design, sourcing, 	and rollout readiness.",
-	products_cat_1: "Retail fixtures",
-	products_cat_2: "Display systems",
-	products_cat_3: "Counters and tables",
-	products_cat_4: "Shelving and storage",
-	products_cat_5: "Furniture",
-	products_cat_6: "Lighting"
-
-
     },
-
-
 
     ar: {
       nav_practice: "الممارسة",
@@ -163,6 +158,7 @@
       nav_products: "المنتجات",
       nav_contact: "التواصل",
       nav_inquiry: "استفسار",
+      home_home: "الرئيسية",
 
       gate_title: "اختر اللغة",
       gate_sub: "اختر لغتك المفضلة للمتابعة.",
@@ -191,6 +187,13 @@
       home_section_3_kicker: "المنتجات",
       home_feature_title: "توجيه، هيكلة، مساءلة",
       home_feature_copy: "الاستوديو لا يتموضع كتصميم صور فقط. القيمة الأساسية هي بناء أنظمة مشروع مترابطة يمكن أن تنتقل من الفكرة إلى التنفيذ الحقيقي مع ضبط واضح.",
+
+      studio_strip_headquarters: "المقر",
+      studio_strip_registered_office: "العنوان المسجل",
+      studio_strip_focus: "التركيز",
+      studio_strip_headquarters_value: "أربيل، العراق",
+      studio_strip_registered_office_value: "لندن، المملكة المتحدة",
+      studio_strip_focus_value: "عمارة / تصميم داخلي / تسليم",
 
       practice_kicker: "الممارسة",
       practice_title: "الممارسة",
@@ -223,6 +226,11 @@
       d3: "03 — المشتريات + الشركاء: استراتيجية الموردين، الاعتمادات، واختيار الشركاء وفق معايير SAMOE.",
       d4: "04 — التنفيذ + ضمان الجودة: تنسيق الموقع، فحوصات، قوائم ملاحظات، تسليم — مع ضبط جودة قابل للقياس.",
 
+      delivery_step_1_title: "الاكتشاف",
+      delivery_step_2_title: "التصميم + التوثيق",
+      delivery_step_3_title: "المشتريات + الشركاء",
+      delivery_step_4_title: "التنفيذ + ضمان الجودة",
+
       name_title: "الاسم",
       name_sub: "SAMOE (تُنطق: سا-مو)",
       name_p: "SAMOE ليس اختصاراً. هو علامة استوديو قابلة للتكيف عبر القطاعات والأماكن وحجم المشاريع.",
@@ -231,6 +239,15 @@
       work_title: "الأعمال",
       work_sub: "دراسة حالة مختارة",
       work_case_desc: "يقود الاستوديو مشروع إعادة العلامة والتوسعة المكانية لـ Special Lady، مع دمج إعادة التصميم المعماري وتنسيق التوسعة ومواءمة الأنظمة التشغيلية.",
+
+      work_meta_client: "العميل",
+      work_meta_sector: "القطاع",
+      work_meta_location: "الموقع",
+      work_meta_type: "النوع",
+      work_meta_sector_value: "تجزئة",
+      work_meta_location_value: "أربيل، العراق",
+      work_meta_type_value: "إعادة علامة / تجديد / أنظمة",
+
       scope_t: "النطاق",
       scope_d: "فكرة، إعادة تصميم، دعم تجديد، وتنسيق التنفيذ.",
       systems_t: "الأنظمة",
@@ -242,6 +259,16 @@
       products_kicker: "المنتجات",
       products_title: "قريباً",
       products_sub: "تجهيزات تجزئة (ستاندات، رفوف، طاولات، كاونترات) وأثاث + إنارة للتجزئة والسكن.",
+      products_panel_label: "الفئات المخططة",
+      products_status_label: "الحالة",
+      products_status_title: "خط المنتجات قيد التطوير",
+      products_status_copy: "سيتوسع هذا القسم مع استكمال الاستوديو لتطوير المنتجات، والتوريد، والاستعداد للطرح والتنفيذ.",
+      products_cat_1: "تجهيزات تجزئة",
+      products_cat_2: "أنظمة عرض",
+      products_cat_3: "كاونترات وطاولات",
+      products_cat_4: "رفوف وتخزين",
+      products_cat_5: "أثاث",
+      products_cat_6: "إنارة",
 
       contact_kicker: "التواصل",
       contact_title: "استفسار",
@@ -271,40 +298,6 @@
       footer_social_title: "الحسابات",
       footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
-
-	home_home: "الرئيسية",
-
-	studio_strip_headquarters: "المقر",
-	studio_strip_registered_office: "العنوان المسجل",
-	studio_strip_focus: "التركيز",
-	studio_strip_headquarters_value: "أربيل، العراق",
-	studio_strip_registered_office_value: "لندن، المملكة المتحدة",
-	studio_strip_focus_value: "عمارة / تصميم داخلي / تسليم",
-
-	delivery_step_1_title: "الاكتشاف",
-	delivery_step_2_title: "التصميم + التوثيق",
-	delivery_step_3_title: "المشتريات + الشركاء",
-	delivery_step_4_title: "التنفيذ + ضمان الجودة",
-
-	work_meta_client: "العميل",
-	work_meta_sector: "القطاع",
-	work_meta_location: "الموقع",
-	work_meta_type: "النوع",
-	work_meta_sector_value: "تجزئة",
-	work_meta_location_value: "أربيل، العراق",
-	work_meta_type_value: "إعادة علامة / تجديد / أنظمة",
-
-	products_panel_label: "الفئات المخططة",
-	products_status_label: "الحالة",
-	products_status_title: "خط المنتجات قيد التطوير",
-	products_status_copy: "سيتوسع هذا القسم مع استكمال الاستوديو لتطوير المنتجات، والتوريد، والاستعداد للطرح والتنفيذ.",
-	products_cat_1: "تجهيزات تجزئة",
-	products_cat_2: "أنظمة عرض",
-	products_cat_3: "كاونترات وطاولات",
-	products_cat_4: "رفوف وتخزين",
-	products_cat_5: "أثاث",
-	products_cat_6: "إنارة"
-
     }
   };
 
