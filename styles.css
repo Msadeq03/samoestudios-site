@@ -1082,7 +1082,7 @@ textarea {
    ============================================================ */
 .case-client-mark {
   margin-bottom: 26px;
-  min-height: 800px;              /* gives the logo area a proper visual box height */
+  min-height: 500px;              /* gives the logo area a proper visual box height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1261,6 +1261,7 @@ textarea {
   }
 
 }
+
 
 
 
