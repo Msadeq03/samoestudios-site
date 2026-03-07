@@ -1081,19 +1081,19 @@ textarea {
    Makes the logo fit its box better and stay centered
    ============================================================ */
 .case-client-mark {
-  margin-bottom: 20px;
+  margin-bottom: 26px;
   min-height: 500px;              /* gives the logo area a proper visual box height */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 18px;
 }
 
 .client-logo-feature {
   display: block;
   width: 200%;
   max-width: 250px;               /* allows the logo to occupy more of the box */
-  max-height: 250px;              /* keeps it visually controlled */
+  max-height: 170px;              /* keeps it visually controlled */
   height: auto;
   object-fit: contain;
   object-position: center;
@@ -1261,6 +1261,7 @@ textarea {
   }
 
 }
+
 
 
 
