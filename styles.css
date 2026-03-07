@@ -420,12 +420,11 @@ img {
   margin: 0 0 18px 0;
   color: white;
   font-size: clamp(66px, 9vw, 150px);
-  line-height: 0.86;
+  line-height: 0.88;
   font-weight: 900;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.045em; /* slightly less tight so letters breathe more */
   text-transform: uppercase;
 }
-
 .hero-v2-slogan {
   margin: 0 0 16px 0;
   color: rgba(255,255,255,0.92);
@@ -712,18 +711,8 @@ img {
 }
 
 .delivery-step-node {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--accent);
-  transform: translate(-50%, -50%);
-  box-shadow: 0 10px 24px rgba(198, 90, 30, 0.22);
-  z-index: 3;
+  display: none;
 }
-
 .delivery-step-pill {
   position: absolute;
   left: 50%;
