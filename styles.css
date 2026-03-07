@@ -1,15 +1,40 @@
 /* ============================================================
-   ROOT VARIABLES / DESIGN TOKENS
-   Central place for colors, spacing, widths
+   ROOT VARIABLES / BRAND COLOR SYSTEM
+   Brand direction:
+   - Primary Dark: Persian / Prussian Blue
+   - Primary Mid: Blue Slate
+   - Secondary Light: Parchment + Platinum
+   - Accent: Bronze Spice / Orange
    ============================================================ */
 :root {
-  --blue: #1b3f8b;
-  --blue-dark: #16346f;
-  --ink: #0a0f1a;
-  --muted: rgba(10, 15, 26, 0.72);
-  --line: rgba(10, 15, 26, 0.14);
-  --paper: #ffffff;
-  --panel: #f7f8fb;
+  /* ------------------------------------------------------------
+     BRAND COLORS
+     ------------------------------------------------------------ */
+  --brand-navy: #0F1C2E;     /* Primary dark */
+  --brand-slate: #4A5568;    /* Primary mid */
+  --brand-paper: #F3F2EE;    /* Secondary background */
+  --brand-light: #E2E6EA;    /* Secondary panel / border fill */
+  --brand-accent: #C65A1E;   /* Accent only */
+
+  /* ------------------------------------------------------------
+     UI SEMANTIC COLORS
+     ------------------------------------------------------------ */
+  --ink: #0F1C2E;
+  --ink-soft: rgba(15, 28, 46, 0.78);
+  --muted: rgba(74, 85, 104, 0.86);
+  --muted-soft: rgba(74, 85, 104, 0.68);
+
+  --paper: var(--brand-paper);
+  --panel: #ffffff;
+  --panel-soft: var(--brand-light);
+
+  --line: rgba(74, 85, 104, 0.18);
+  --line-strong: rgba(74, 85, 104, 0.28);
+
+  --primary: var(--brand-navy);
+  --primary-dark: #091321;
+  --secondary-dark: var(--brand-slate);
+  --accent: var(--brand-accent);
 
   --success: #0b7a43;
   --success-bg: rgba(11, 122, 67, 0.08);
@@ -18,7 +43,10 @@
 
   --max: 1120px;
   --pad: 22px;
-  --shadow-soft: 0 18px 40px rgba(10, 15, 26, 0.08);
+
+  --shadow-soft: 0 18px 40px rgba(15, 28, 46, 0.08);
+  --shadow-card: 0 10px 24px rgba(15, 28, 46, 0.06);
+  --shadow-strong: 0 16px 36px rgba(15, 28, 46, 0.14);
 }
 
 /* ============================================================
@@ -55,6 +83,7 @@ body.rtl {
 
 /* ============================================================
    NAVIGATION
+   Uses warm light background with dark brand text
    ============================================================ */
 .nav {
   position: fixed;
@@ -62,7 +91,7 @@ body.rtl {
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(243, 242, 238, 0.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: saturate(140%) blur(10px);
 }
@@ -79,7 +108,7 @@ body.rtl {
 
 .logo {
   text-decoration: none;
-  color: var(--ink);
+  color: var(--primary);
   font-weight: 900;
   letter-spacing: 0.18em;
   font-size: 12px;
@@ -95,18 +124,20 @@ body.rtl {
 
 .nav-links a {
   text-decoration: none;
-  color: rgba(10, 15, 26, 0.78);
+  color: var(--ink-soft);
   font-weight: 800;
   font-size: 13px;
   padding: 8px 10px;
+  transition: color 0.22s ease;
 }
 
 .nav-links a:hover {
-  color: var(--ink);
+  color: var(--accent);
 }
 
 /* ============================================================
    LANGUAGE SWITCHER
+   Accent used only for active emphasis
    ============================================================ */
 .lang-switch {
   display: inline-flex;
@@ -119,19 +150,26 @@ body.rtl {
 
 .lang-switch button {
   border: 1px solid var(--line);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--secondary-dark);
   padding: 7px 10px;
   font-weight: 900;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.lang-switch button:hover {
+  border-color: rgba(198, 90, 30, 0.35);
+  color: var(--primary);
 }
 
 .lang-switch button.active {
-  border-color: rgba(27, 63, 139, 0.35);
-  color: var(--blue);
-  background: rgba(27, 63, 139, 0.04);
+  border-color: rgba(198, 90, 30, 0.34);
+  color: #fff;
+  background: var(--accent);
 }
 
 /* ============================================================
@@ -143,6 +181,7 @@ body.rtl {
   margin: 0 0 14px 0;
   font-weight: 900;
   letter-spacing: -0.03em;
+  color: var(--primary);
 }
 
 .h2 {
@@ -150,6 +189,7 @@ body.rtl {
   font-size: 28px;
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 .sub {
@@ -162,7 +202,7 @@ body.rtl {
 
 .muted {
   margin: 0;
-  color: var(--muted);
+  color: var(--muted-soft);
   line-height: 1.7;
 }
 
@@ -175,19 +215,20 @@ body.rtl {
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(10, 15, 26, 0.7);
+  color: rgba(74, 85, 104, 0.74);
 }
 
 .kicker::before {
   content: "";
   width: 22px;
   height: 2px;
-  background: var(--blue);
+  background: var(--accent);
   display: inline-block;
 }
 
 /* ============================================================
    BUTTONS
+   Orange reserved for stronger action only
    ============================================================ */
 .btn-row {
   display: flex;
@@ -209,6 +250,7 @@ body.rtl {
   letter-spacing: 0.12em;
   border-radius: 0;
   cursor: pointer;
+  transition: all 0.22s ease;
 }
 
 .btn:disabled {
@@ -217,28 +259,30 @@ body.rtl {
 }
 
 .btn-blue {
-  background: var(--blue);
+  background: var(--accent);
   color: #fff;
-  border: 1px solid rgba(27, 63, 139, 0.35);
+  border: 1px solid rgba(198, 90, 30, 0.34);
 }
 
 .btn-blue:hover {
-  background: var(--blue-dark);
+  background: #a94b18;
+  border-color: rgba(198, 90, 30, 0.44);
 }
 
 .btn-ghost {
   background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--line);
+  color: var(--primary);
+  border: 1px solid var(--line-strong);
 }
 
 .btn-ghost:hover {
-  border-color: rgba(27, 63, 139, 0.35);
+  border-color: rgba(198, 90, 30, 0.36);
+  color: var(--accent);
 }
 
 .btn-white {
   background: #fff;
-  color: var(--blue);
+  color: var(--primary);
   border: 1px solid rgba(255, 255, 255, 0.55);
 }
 
@@ -265,9 +309,10 @@ body.rtl {
 
 .card {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
   padding: 18px;
   border-radius: 0;
+  box-shadow: var(--shadow-card);
 }
 
 /* ============================================================
@@ -275,8 +320,9 @@ body.rtl {
    ============================================================ */
 .case {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
   padding: 20px;
+  box-shadow: var(--shadow-card);
 }
 
 .case-top {
@@ -291,6 +337,7 @@ body.rtl {
   margin: 0;
   font-size: 20px;
   font-weight: 900;
+  color: var(--primary);
 }
 
 .case-p {
@@ -303,13 +350,13 @@ body.rtl {
 .tag {
   display: inline-flex;
   padding: 6px 10px;
-  border: 1px solid rgba(27, 63, 139, 0.3);
-  color: var(--blue);
+  border: 1px solid rgba(74, 85, 104, 0.28);
+  color: var(--secondary-dark);
   font-weight: 900;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background: transparent;
+  background: rgba(226, 230, 234, 0.55);
 }
 
 .tag-lg {
@@ -322,8 +369,8 @@ body.rtl {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
-  border: 1px solid var(--line);
-  background: rgba(27, 63, 139, 0.04);
+  border: 1px solid rgba(74, 85, 104, 0.18);
+  background: rgba(226, 230, 234, 0.66);
   padding: 12px 14px;
   margin: 0 0 14px 0;
 }
@@ -341,7 +388,7 @@ body.rtl {
 }
 
 .timeline span {
-  color: rgba(10, 15, 26, 0.62);
+  color: rgba(74, 85, 104, 0.72);
   font-weight: 900;
   font-size: 11px;
   text-transform: uppercase;
@@ -351,6 +398,7 @@ body.rtl {
 .timeline strong {
   font-weight: 900;
   font-size: 14px;
+  color: var(--primary);
 }
 
 /* ============================================================
@@ -364,8 +412,9 @@ body.rtl {
 
 .mini {
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
   padding: 14px;
+  box-shadow: var(--shadow-card);
 }
 
 .mini h3 {
@@ -374,7 +423,7 @@ body.rtl {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: rgba(10, 15, 26, 0.78);
+  color: var(--secondary-dark);
 }
 
 .mini p {
@@ -385,8 +434,6 @@ body.rtl {
 
 /* ============================================================
    PRACTICE PAGE - SERVICES SHOWCASE
-   Inspired by the "we provide services" reference but adapted
-   to SAMOE's visual system
    ============================================================ */
 .services-showcase-head {
   text-align: center;
@@ -399,7 +446,7 @@ body.rtl {
   font-size: 12px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(27, 63, 139, 0.62);
+  color: rgba(198, 90, 30, 0.72);
 }
 
 .services-showcase-title {
@@ -409,6 +456,7 @@ body.rtl {
   font-weight: 900;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  color: var(--primary);
 }
 
 .services-showcase-grid {
@@ -420,7 +468,7 @@ body.rtl {
 .service-showcase-card {
   position: relative;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
   min-height: 320px;
   padding: 34px 26px 28px;
   display: flex;
@@ -428,23 +476,25 @@ body.rtl {
   align-items: center;
   text-align: center;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  box-shadow: var(--shadow-card);
 }
 
 .service-showcase-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-soft);
-  border-color: rgba(27, 63, 139, 0.22);
+  border-color: rgba(74, 85, 104, 0.26);
 }
 
 .service-showcase-card-featured {
-  background: var(--panel);
+  background: linear-gradient(180deg, rgba(226, 230, 234, 0.68) 0%, #ffffff 100%);
+  border-color: rgba(74, 85, 104, 0.22);
 }
 
 .service-showcase-icon {
   width: 68px;
   height: 68px;
   margin-bottom: 20px;
-  color: var(--blue);
+  color: var(--secondary-dark);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -466,6 +516,7 @@ body.rtl {
   line-height: 1.1;
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 .service-showcase-card p {
@@ -479,8 +530,8 @@ body.rtl {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  border: 2px solid rgba(27, 63, 139, 0.55);
-  color: var(--blue);
+  border: 2px solid rgba(198, 90, 30, 0.6);
+  color: var(--accent);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -489,11 +540,11 @@ body.rtl {
   margin-top: auto;
   margin-bottom: -8px;
   font-weight: 400;
+  background: rgba(198, 90, 30, 0.03);
 }
 
 /* ============================================================
    PRACTICE PAGE - DELIVERY FLOW
-   Inspired by the step flow reference image
    ============================================================ */
 .delivery-flow-head {
   margin-bottom: 28px;
@@ -513,7 +564,7 @@ body.rtl {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--line);
+  background: rgba(74, 85, 104, 0.24);
   transform: translateY(-50%);
   z-index: 0;
 }
@@ -542,9 +593,9 @@ body.rtl {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--accent);
   transform: translate(-50%, -50%);
-  box-shadow: 0 10px 24px rgba(27, 63, 139, 0.25);
+  box-shadow: 0 10px 24px rgba(198, 90, 30, 0.22);
   z-index: 3;
 }
 
@@ -558,13 +609,13 @@ body.rtl {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--blue);
+  background: var(--secondary-dark);
   color: #fff;
   font-size: 13px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  box-shadow: 0 12px 26px rgba(27, 63, 139, 0.18);
+  box-shadow: 0 12px 26px rgba(15, 28, 46, 0.12);
 }
 
 .flow-step-down .flow-stage-label {
@@ -600,7 +651,7 @@ body.rtl {
   top: -1px;
   width: 58px;
   height: 18px;
-  background: var(--blue);
+  background: var(--accent);
 }
 
 .flow-card h3 {
@@ -609,6 +660,7 @@ body.rtl {
   line-height: 1.08;
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 .flow-card p {
@@ -636,7 +688,7 @@ body.rtl {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: rgba(10, 15, 26, 0.58);
+  color: rgba(74, 85, 104, 0.64);
   margin-bottom: 10px;
 }
 
@@ -646,16 +698,17 @@ body.rtl {
   line-height: 1.2;
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 .contact-value a {
-  color: var(--ink);
+  color: var(--primary);
   text-decoration: none;
   word-break: break-word;
 }
 
 .contact-value a:hover {
-  color: var(--blue);
+  color: var(--accent);
 }
 
 .address-card .address-block {
@@ -668,7 +721,8 @@ body.rtl {
 .form {
   border: 1px solid var(--line);
   padding: 20px;
-  background: #fff;
+  background: var(--panel);
+  box-shadow: var(--shadow-card);
 }
 
 .field-grid {
@@ -684,7 +738,7 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin: 0 0 6px;
-  color: rgba(10, 15, 26, 0.72);
+  color: rgba(74, 85, 104, 0.84);
 }
 
 input,
@@ -696,7 +750,15 @@ select {
   border-radius: 0;
   font: inherit;
   background: #fff;
-  color: var(--ink);
+  color: var(--primary);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: rgba(198, 90, 30, 0.42);
+  box-shadow: 0 0 0 3px rgba(198, 90, 30, 0.08);
 }
 
 textarea {
@@ -715,7 +777,7 @@ textarea {
   margin-top: 12px;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  color: var(--ink);
+  color: var(--primary);
   background: #fff;
   line-height: 1.7;
   display: none;
@@ -740,6 +802,7 @@ textarea {
 
 /* ============================================================
    FOOTER
+   Footer uses strongest brand dark
    ============================================================ */
 .site-footer {
   border-top: 1px solid var(--line);
@@ -751,7 +814,9 @@ textarea {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 22px;
-  padding-bottom: 24px;
+  padding: 28px 24px 24px;
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .footer-brand {
@@ -764,11 +829,12 @@ textarea {
   letter-spacing: 0.14em;
   font-size: 12px;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .footer-copy {
   margin: 0;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.76);
   line-height: 1.8;
   font-size: 15px;
   max-width: 380px;
@@ -783,7 +849,7 @@ textarea {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: rgba(10, 15, 26, 0.58);
+  color: rgba(255, 255, 255, 0.56);
   margin-bottom: 12px;
 }
 
@@ -799,7 +865,7 @@ textarea {
 .footer-contact-list a,
 .social-links a {
   text-decoration: none;
-  color: rgba(10, 15, 26, 0.82);
+  color: rgba(255, 255, 255, 0.84);
   font-weight: 700;
   font-size: 14px;
 }
@@ -807,7 +873,7 @@ textarea {
 .footer-links a:hover,
 .footer-contact-list a:hover,
 .social-links a:hover {
-  color: var(--blue);
+  color: #fff;
 }
 
 .social-links a {
@@ -823,6 +889,7 @@ textarea {
   align-items: center;
   justify-content: center;
   flex: 0 0 18px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .social-icon svg {
@@ -842,8 +909,9 @@ textarea {
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--line);
-  padding: 18px 0 0;
+  border-top: 1px solid rgba(74, 85, 104, 0.18);
+  padding: 18px 24px 0;
+  background: var(--primary);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -852,13 +920,13 @@ textarea {
 }
 
 .footer-address {
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.8;
   font-size: 14px;
 }
 
 .footer-legal {
-  color: rgba(10, 15, 26, 0.55);
+  color: rgba(255, 255, 255, 0.5);
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -881,6 +949,7 @@ textarea {
 
 /* ============================================================
    LANGUAGE GATE PAGE
+   Uses deep brand blue for stronger first impression
    ============================================================ */
 .gate {
   min-height: 100vh;
@@ -888,13 +957,15 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 40px 18px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary-dark) 100%);
 }
 
 .gate-box {
   width: min(720px, 100%);
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   padding: 32px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: var(--shadow-strong);
 }
 
 .gate-title {
@@ -902,10 +973,12 @@ textarea {
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -0.02em;
+  color: var(--primary);
 }
 
 /* ============================================================
    HOME HERO
+   Hero uses primary dark + secondary dark, not orange
    ============================================================ */
 .hero-full {
   min-height: calc(100vh - 64px);
@@ -929,7 +1002,7 @@ textarea {
 .hero-slogan {
   font-size: 18px;
   line-height: 1.7;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 860px;
   margin: 0 0 14px 0;
 }
@@ -937,23 +1010,24 @@ textarea {
 .hero-sub2 {
   font-size: 15.5px;
   line-height: 1.8;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.74);
   max-width: 860px;
   margin: 0;
 }
 
 .hero-panel {
-  background: var(--blue);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary-dark) 100%);
   padding: 44px 44px;
-  border: 1px solid rgba(27, 63, 139, 0.35);
+  border: 1px solid rgba(74, 85, 104, 0.3);
+  box-shadow: var(--shadow-strong);
 }
 
 .hero-panel .kicker {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .hero-panel .kicker::before {
-  background: #fff;
+  background: var(--accent);
 }
 
 .hero-panel .hero-title-xl {
@@ -965,11 +1039,16 @@ textarea {
 }
 
 .hero-panel .hero-sub2 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .hero-ig {
-  border-color: rgba(255, 255, 255, 0.35) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: #fff !important;
+}
+
+.hero-ig:hover {
+  border-color: rgba(198, 90, 30, 0.5) !important;
   color: #fff !important;
 }
 
@@ -993,7 +1072,7 @@ textarea {
   font-weight: 900;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(10, 15, 26, 0.55);
+  color: rgba(74, 85, 104, 0.62);
   margin-bottom: 10px;
 }
 
@@ -1018,7 +1097,7 @@ textarea {
 .case-aside-value {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--ink);
+  color: var(--primary);
   font-weight: 700;
 }
 
@@ -1041,6 +1120,7 @@ textarea {
   line-height: 1.05;
   font-weight: 900;
   letter-spacing: -0.03em;
+  color: var(--primary);
 }
 
 .case-study-sub {
