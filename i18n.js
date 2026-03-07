@@ -118,7 +118,44 @@
       footer_social_title: "Social",
       footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
+
+	home_home: "Home",
+
+	studio_strip_headquarters: "Headquarters",
+	studio_strip_registered_office: "Registered office",
+	studio_strip_focus: "Focus",
+	studio_strip_headquarters_value: "Erbil, Iraq",
+	studio_strip_registered_office_value: "London, United Kingdom",
+	studio_strip_focus_value: "Architecture / Interiors / Delivery",
+
+	delivery_step_1_title: "Discovery",
+	delivery_step_2_title: "Design + Documentation",
+	delivery_step_3_title: "Procurement + Partners",
+	delivery_step_4_title: "Implementation + QA",
+
+	work_meta_client: "Client",
+	work_meta_sector: "Sector",
+	work_meta_location: "Location",
+	work_meta_type: "Type",
+	work_meta_sector_value: "Retail",
+	work_meta_location_value: "Erbil, Iraq",
+	work_meta_type_value: "Rebrand / Renovation / Systems",
+
+	products_panel_label: "Planned categories",
+	products_status_label: "Status",
+	products_status_title: "Product line in development",
+	products_status_copy: "This section will expand as the studio formalizes product design, sourcing, 	and rollout readiness.",
+	products_cat_1: "Retail fixtures",
+	products_cat_2: "Display systems",
+	products_cat_3: "Counters and tables",
+	products_cat_4: "Shelving and storage",
+	products_cat_5: "Furniture",
+	products_cat_6: "Lighting"
+
+
     },
+
+
 
     ar: {
       nav_practice: "الممارسة",
@@ -234,6 +271,40 @@
       footer_social_title: "الحسابات",
       footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
+
+	home_home: "الرئيسية",
+
+	studio_strip_headquarters: "المقر",
+	studio_strip_registered_office: "العنوان المسجل",
+	studio_strip_focus: "التركيز",
+	studio_strip_headquarters_value: "أربيل، العراق",
+	studio_strip_registered_office_value: "لندن، المملكة المتحدة",
+	studio_strip_focus_value: "عمارة / تصميم داخلي / تسليم",
+
+	delivery_step_1_title: "الاكتشاف",
+	delivery_step_2_title: "التصميم + التوثيق",
+	delivery_step_3_title: "المشتريات + الشركاء",
+	delivery_step_4_title: "التنفيذ + ضمان الجودة",
+
+	work_meta_client: "العميل",
+	work_meta_sector: "القطاع",
+	work_meta_location: "الموقع",
+	work_meta_type: "النوع",
+	work_meta_sector_value: "تجزئة",
+	work_meta_location_value: "أربيل، العراق",
+	work_meta_type_value: "إعادة علامة / تجديد / أنظمة",
+
+	products_panel_label: "الفئات المخططة",
+	products_status_label: "الحالة",
+	products_status_title: "خط المنتجات قيد التطوير",
+	products_status_copy: "سيتوسع هذا القسم مع استكمال الاستوديو لتطوير المنتجات، والتوريد، والاستعداد للطرح والتنفيذ.",
+	products_cat_1: "تجهيزات تجزئة",
+	products_cat_2: "أنظمة عرض",
+	products_cat_3: "كاونترات وطاولات",
+	products_cat_4: "رفوف وتخزين",
+	products_cat_5: "أثاث",
+	products_cat_6: "إنارة"
+
     }
   };
 
