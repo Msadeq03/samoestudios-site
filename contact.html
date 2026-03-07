@@ -1,267 +1,350 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+       BASIC PAGE META
+       ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- =========================================================
+       SEO
+       ========================================================= -->
   <title>Contact — SAMOE STUDIOS</title>
-  <meta name="description" content="Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals." />
+  <meta
+    name="description"
+    content="Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals."
+  />
   <link rel="canonical" href="https://samoestudios.com/contact.html" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Contact — SAMOE STUDIOS" />
-  <meta property="og:description" content="General inquiries, commercial proposals, and official contact details for SAMOE STUDIOS LTD." />
+  <meta
+    property="og:description"
+    content="General inquiries, commercial proposals, and official contact details for SAMOE STUDIOS LTD."
+  />
   <meta property="og:url" content="https://samoestudios.com/contact.html" />
   <meta property="og:type" content="website" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=74" />
+  <!-- =========================================================
+       FONTS
+       ========================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
+  <!-- =========================================================
+       SITE STYLES
+       ========================================================= -->
+  <link rel="stylesheet" href="./styles.css?v=100" />
 
+  <!-- =========================================================
+       PHONE INPUT LIBRARY STYLE
+       ========================================================= -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css"
+  />
+
+  <!-- =========================================================
+       PAGE-SPECIFIC STYLES
+       Small styles only for this contact page.
+       ========================================================= -->
   <style>
-    .required-note{
-      margin:0 0 18px 0;
-      font-size:12px;
-      line-height:1.6;
-      color:rgba(10,15,26,.58);
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      font-weight:800;
+    /* Small note above the form */
+    .required-note {
+      margin: 0 0 18px 0;
+      font-size: 12px;
+      line-height: 1.6;
+      color: rgba(10, 15, 26, 0.58);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 800;
     }
-    .req{
-      color:#a12626;
-      margin-left:4px;
+
+    /* Red star for required fields */
+    .req {
+      color: #a12626;
+      margin-left: 4px;
     }
-    .honeypot-wrap{
-      display:none !important;
-      visibility:hidden !important;
-      pointer-events:none !important;
-      height:0 !important;
-      overflow:hidden !important;
+
+    /* Hidden spam trap field */
+    .honeypot-wrap {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      height: 0 !important;
+      overflow: hidden !important;
     }
-    .turnstile-wrap{
-      margin-top:14px;
+
+    /* Security check wrapper */
+    .turnstile-wrap {
+      margin-top: 14px;
     }
-    .iti{
-      width:100%;
+
+    /* Make intl-tel-input stretch full width */
+    .iti {
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="logo" href="./home.html">SAMOE STUDIOS</a>
+  <!-- =========================================================
+       TOP NAVIGATION
+       ========================================================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="./home.html">SAMOE STUDIOS</a>
 
-    <nav class="nav-links">
-      <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-      <a href="./work.html" data-i18n="nav_work">Work</a>
-      <a href="./products.html" data-i18n="nav_products">Products</a>
-      <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+        <a href="./work.html" data-i18n="nav_work">Work</a>
+        <a href="./products.html" data-i18n="nav_products">Products</a>
+        <a href="./contact.html" data-i18n="nav_contact">Contact</a>
 
-      <div class="lang-switch">
-        <button id="langEN" type="button">EN</button>
-        <button id="langAR" type="button">AR</button>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <section class="reveal">
-    <div class="kicker" data-i18n="contact_kicker">Contact</div>
-    <h1 class="h1" data-i18n="contact_title">Inquiry</h1>
-    <p class="sub" data-i18n="contact_sub">
-      Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.
-    </p>
-  </section>
-
-  <section class="section reveal">
-    <div class="contact-grid">
-      <div class="card contact-card">
-        <div class="contact-label" data-i18n="contact_general_label">General inquiries</div>
-        <h2 class="contact-value">
-          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
-        </h2>
-        <p class="sub" style="margin:0;" data-i18n="contact_general_desc">
-          General public contact and website inquiries.
-        </p>
-      </div>
-
-      <div class="card contact-card">
-        <div class="contact-label" data-i18n="contact_sales_label">Commercial proposals</div>
-        <h2 class="contact-value">
-          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
-        </h2>
-        <p class="sub" style="margin:0;" data-i18n="contact_sales_desc">
-          Client inquiries and commercial proposals.
-        </p>
-      </div>
+        <div class="lang-switch">
+          <button id="langEN" type="button">EN</button>
+          <button id="langAR" type="button">AR</button>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <div class="card address-card" style="margin-top:12px;">
-      <div class="contact-label" data-i18n="contact_registered_office">Registered office</div>
-      <p class="sub address-block" style="margin:0;">
-        <strong>SAMOE STUDIOS LTD</strong><br>
-        124 City Road, London, EC1V 2NX<br>
-        United Kingdom
+  <main class="wrap">
+    <!-- =========================================================
+         PAGE HEADER
+         ========================================================= -->
+    <section class="reveal">
+      <div class="kicker" data-i18n="contact_kicker">Contact</div>
+      <h1 class="h1" data-i18n="contact_title">Inquiry</h1>
+      <p class="sub" data-i18n="contact_sub">
+        Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <section class="section reveal">
-    <div class="section-head">
-      <h2 class="h2" data-i18n="contact_form_title">Send an inquiry</h2>
-      <p class="muted" data-i18n="contact_form_sub">
-        Fill in your details and submit directly through the website.
-      </p>
-    </div>
-
-    <p class="required-note">* Required</p>
-
-    <form id="inquiryForm" class="form" novalidate>
-      <div class="field-grid">
-        <div>
-          <label for="department">
-            <span data-i18n="f_department">Inquiry type</span><span class="req">*</span>
-          </label>
-          <select id="department" name="department" required>
-            <option value="sales">Client inquiry / commercial proposal</option>
-            <option value="info">General inquiry</option>
-          </select>
+    <!-- =========================================================
+         CONTACT DETAILS CARDS
+         ========================================================= -->
+    <section class="section reveal">
+      <div class="contact-grid">
+        <div class="card contact-card">
+          <div class="contact-label" data-i18n="contact_general_label">General inquiries</div>
+          <h2 class="contact-value">
+            <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+          </h2>
+          <p class="sub" style="margin: 0;" data-i18n="contact_general_desc">
+            General public contact and website inquiries.
+          </p>
         </div>
 
-        <div>
-          <label for="name">
-            <span data-i18n="f_name">Name</span><span class="req">*</span>
-          </label>
-          <input id="name" name="name" autocomplete="name" required />
-        </div>
-
-        <div>
-          <label for="company">
-            <span data-i18n="f_company">Company</span><span class="req">*</span>
-          </label>
-          <input id="company" name="company" autocomplete="organization" required />
-        </div>
-
-        <div>
-          <label for="phone">
-            <span data-i18n="f_phone">Phone</span><span class="req">*</span>
-          </label>
-          <input id="phone" name="phone_display" type="tel" autocomplete="tel" required />
-          <input id="full_phone" name="phone" type="hidden" />
-        </div>
-
-        <div>
-          <label for="email">
-            <span data-i18n="f_email">Email</span><span class="req">*</span>
-          </label>
-          <input id="email" name="email" type="email" autocomplete="email" required />
-        </div>
-
-        <div>
-          <label for="location">
-            <span data-i18n="f_location">Project location</span><span class="req">*</span>
-          </label>
-          <input id="location" name="location" required />
+        <div class="card contact-card">
+          <div class="contact-label" data-i18n="contact_sales_label">Commercial proposals</div>
+          <h2 class="contact-value">
+            <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
+          </h2>
+          <p class="sub" style="margin: 0;" data-i18n="contact_sales_desc">
+            Client inquiries and commercial proposals.
+          </p>
         </div>
       </div>
 
-      <div style="margin-top:12px;">
-        <label for="description">
-          <span data-i18n="f_desc">Project / Description</span><span class="req">*</span>
-        </label>
-        <textarea id="description" name="description" data-i18n-ph="f_desc_ph"
-          placeholder="Brief scope, location, timeline, any constraints..." required></textarea>
+      <div class="card address-card" style="margin-top: 12px;">
+        <div class="contact-label" data-i18n="contact_registered_office">Registered office</div>
+        <p class="sub address-block" style="margin: 0;">
+          <strong>SAMOE STUDIOS LTD</strong><br />
+          124 City Road, London, EC1V 2NX<br />
+          United Kingdom
+        </p>
       </div>
+    </section>
 
-      <div class="honeypot-wrap" aria-hidden="true">
-        <label for="website">Website</label>
-        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
-      </div>
-
-      <div class="turnstile-wrap">
-        <div
-          class="cf-turnstile"
-          data-sitekey="0x4AAAAAACne-oIlDNaEsoot"
-          data-theme="auto"
-          data-response-field-name="turnstileToken">
-        </div>
-      </div>
-
-      <div class="form-actions">
-        <button class="btn btn-blue" type="submit" id="submitInquiry" data-i18n="send_inquiry">Submit inquiry</button>
-      </div>
-
-      <div class="form-status" id="formStatus" aria-live="polite"></div>
-    </form>
-  </section>
-
-  <footer class="site-footer reveal">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <div class="footer-company">SAMOE STUDIOS LTD</div>
-        <p class="footer-copy" data-i18n="footer_copy">
-          Architecture, interiors, and delivery — from concept to execution.
+    <!-- =========================================================
+         CONTACT FORM
+         ========================================================= -->
+    <section class="section reveal">
+      <div class="section-head">
+        <h2 class="h2" data-i18n="contact_form_title">Send an inquiry</h2>
+        <p class="muted" data-i18n="contact_form_sub">
+          Fill in your details and submit directly through the website.
         </p>
       </div>
 
-      <div class="footer-col">
-        <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
-        <div class="footer-links footer-links-stack">
-          <a href="./home.html">Home</a>
-          <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-          <a href="./work.html" data-i18n="nav_work">Work</a>
-          <a href="./products.html" data-i18n="nav_products">Products</a>
-          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      <p class="required-note">* Required</p>
+
+      <form id="inquiryForm" class="form" novalidate>
+        <div class="field-grid">
+          <!-- Inquiry type -->
+          <div>
+            <label for="department">
+              <span data-i18n="f_department">Inquiry type</span><span class="req">*</span>
+            </label>
+            <select id="department" name="department" required>
+              <option value="sales" data-i18n="f_department_sales">Client inquiry / commercial proposal</option>
+              <option value="info" data-i18n="f_department_info">General inquiry</option>
+            </select>
+          </div>
+
+          <!-- Name -->
+          <div>
+            <label for="name">
+              <span data-i18n="f_name">Name</span><span class="req">*</span>
+            </label>
+            <input id="name" name="name" autocomplete="name" required />
+          </div>
+
+          <!-- Company -->
+          <div>
+            <label for="company">
+              <span data-i18n="f_company">Company</span><span class="req">*</span>
+            </label>
+            <input id="company" name="company" autocomplete="organization" required />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label for="phone">
+              <span data-i18n="f_phone">Phone</span><span class="req">*</span>
+            </label>
+            <input id="phone" name="phone_display" type="tel" autocomplete="tel" required />
+            <input id="full_phone" name="phone" type="hidden" />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email">
+              <span data-i18n="f_email">Email</span><span class="req">*</span>
+            </label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <!-- Project location -->
+          <div>
+            <label for="location">
+              <span data-i18n="f_location">Project location</span><span class="req">*</span>
+            </label>
+            <input id="location" name="location" required />
+          </div>
+        </div>
+
+        <!-- Project description -->
+        <div style="margin-top: 12px;">
+          <label for="description">
+            <span data-i18n="f_desc">Project / Description</span><span class="req">*</span>
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            data-i18n-ph="f_desc_ph"
+            placeholder="Brief scope, location, timeline, any constraints..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Hidden anti-spam honeypot -->
+        <div class="honeypot-wrap" aria-hidden="true">
+          <label for="website">Website</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <!-- Cloudflare Turnstile security check -->
+        <div class="turnstile-wrap">
+          <div
+            class="cf-turnstile"
+            data-sitekey="0x4AAAAAACne-oIlDNaEsoot"
+            data-theme="auto"
+            data-response-field-name="turnstileToken">
+          </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="form-actions">
+          <button class="btn btn-blue" type="submit" id="submitInquiry" data-i18n="send_inquiry">
+            Submit inquiry
+          </button>
+        </div>
+
+        <!-- Form status message -->
+        <div class="form-status" id="formStatus" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="site-footer reveal">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-company">SAMOE STUDIOS LTD</div>
+          <p class="footer-copy" data-i18n="footer_copy">
+            Architecture, interiors, and delivery — from concept to execution.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
+          <div class="footer-links footer-links-stack">
+            <a href="./home.html">Home</a>
+            <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+            <a href="./work.html" data-i18n="nav_work">Work</a>
+            <a href="./products.html" data-i18n="nav_products">Products</a>
+            <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
+          <div class="footer-contact-list">
+            <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+            <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-heading" data-i18n="footer_social_title">Social</div>
+          <div class="social-links">
+            <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <span>Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer" aria-label="Behance">
+              <span>Behance</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="footer-col">
-        <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
-        <div class="footer-contact-list">
-          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
-          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
+      <div class="footer-bottom">
+        <div class="footer-address">
+          <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
         </div>
+        <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
       </div>
+    </footer>
+  </main>
 
-      <div class="footer-col">
-        <div class="footer-heading" data-i18n="footer_social_title">Social</div>
-        <div class="social-links">
-          <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" aria-label="Instagram"><span>Instagram</span></a>
-          <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer" aria-label="LinkedIn"><span>LinkedIn</span></a>
-          <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer" aria-label="Behance"><span>Behance</span></a>
-        </div>
-      </div>
-    </div>
+  <!-- =========================================================
+       THIRD-PARTY SCRIPTS
+       ========================================================= -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-    <div class="footer-bottom">
-      <div class="footer-address">
-        <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
-      </div>
-      <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
-    </div>
-  </footer>
+  <!-- =========================================================
+       SHARED JS
+       ========================================================= -->
+  <script src="./i18n.js?v=100"></script>
+  <script src="./script.js?v=100"></script>
 
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
-<script src="./i18n.js?v=74"></script>
-<script src="./script.js?v=74"></script>
-<script>
-  const lang = window.SAMOE.getLang() || "en";
-  const enBtn = document.getElementById("langEN");
-  const arBtn = document.getElementById("langAR");
-  const setActive = (l) => { enBtn.classList.toggle("active", l==="en"); arBtn.classList.toggle("active", l==="ar"); };
-  setActive(lang);
-  enBtn.addEventListener("click", () => { window.SAMOE.setLang("en"); setActive("en"); });
-  arBtn.addEventListener("click", () => { window.SAMOE.setLang("ar"); setActive("ar"); });
-</script>
+  <!-- =========================================================
+       PAGE-SPECIFIC INIT
+       ========================================================= -->
+  <script>
+    window.SAMOE.initLanguageSwitcher("langEN", "langAR");
+  </script>
 </body>
 </html>

@@ -1,6 +1,16 @@
-(function(){
-  const KEY = "samoelang";
+(function () {
+  "use strict";
 
+  /* ============================================================
+     LANGUAGE STORAGE KEY
+     This is the localStorage key used across the whole website.
+     ============================================================ */
+  const STORAGE_KEY = "samoelang";
+
+  /* ============================================================
+     TRANSLATION DICTIONARY
+     Add or edit all English / Arabic text here.
+     ============================================================ */
   const dict = {
     en: {
       nav_practice: "Practice",
@@ -108,7 +118,6 @@
       footer_contact_title: "Contact",
       footer_social_title: "Social",
       footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
-      footer_follow: "Follow",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     },
 
@@ -218,41 +227,110 @@
       footer_contact_title: "التواصل",
       footer_social_title: "الحسابات",
       footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
-      footer_follow: "تابعنا",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     }
   };
 
-  function getLang(){
-    return localStorage.getItem(KEY) || "en";
+  /* ============================================================
+     GET CURRENT LANGUAGE
+     Default = English
+     ============================================================ */
+  function getLang() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) || "en";
+    } catch (error) {
+      return "en";
+    }
   }
 
-  function setLang(lang){
-    localStorage.setItem(KEY, lang);
+  /* ============================================================
+     SET CURRENT LANGUAGE
+     Save and immediately apply it
+     ============================================================ */
+  function setLang(lang) {
+    try {
+      localStorage.setItem(STORAGE_KEY, lang);
+    } catch (error) {
+      console.warn("Could not save language:", error);
+    }
     applyLang(lang);
   }
 
-  function applyLang(lang){
-    const d = dict[lang] || dict.en;
-    const isAR = lang === "ar";
+  /* ============================================================
+     APPLY TRANSLATIONS TO THE PAGE
+     - [data-i18n]      -> text content
+     - [data-i18n-ph]   -> placeholder
+     ============================================================ */
+  function applyLang(lang) {
+    const currentDict = dict[lang] || dict.en;
+    const isArabic = lang === "ar";
 
     document.documentElement.lang = lang;
-    document.documentElement.dir = isAR ? "rtl" : "ltr";
-    document.body.classList.toggle("rtl", isAR);
+    document.documentElement.dir = isArabic ? "rtl" : "ltr";
+    document.body.classList.toggle("rtl", isArabic);
 
-    document.querySelectorAll("[data-i18n]").forEach(el => {
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (d[key] !== undefined) el.textContent = d[key];
+      if (currentDict[key] !== undefined) {
+        if (el.tagName === "OPTION") {
+          el.textContent = currentDict[key];
+        } else {
+          el.textContent = currentDict[key];
+        }
+      }
     });
 
-    document.querySelectorAll("[data-i18n-ph]").forEach(el => {
+    document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
       const key = el.getAttribute("data-i18n-ph");
-      if (d[key] !== undefined) el.setAttribute("placeholder", d[key]);
+      if (currentDict[key] !== undefined) {
+        el.setAttribute("placeholder", currentDict[key]);
+      }
     });
   }
 
-  window.SAMOE = { getLang, setLang, applyLang };
+  /* ============================================================
+     INITIALIZE LANGUAGE BUTTONS
+     This avoids repeating the same button logic in every page.
+     ============================================================ */
+  function initLanguageSwitcher(enButtonId, arButtonId) {
+    const enBtn = document.getElementById(enButtonId);
+    const arBtn = document.getElementById(arButtonId);
 
+    if (!enBtn || !arBtn) return;
+
+    const activeLang = getLang();
+
+    const setActiveState = (lang) => {
+      enBtn.classList.toggle("active", lang === "en");
+      arBtn.classList.toggle("active", lang === "ar");
+    };
+
+    setActiveState(activeLang);
+
+    enBtn.addEventListener("click", () => {
+      setLang("en");
+      setActiveState("en");
+    });
+
+    arBtn.addEventListener("click", () => {
+      setLang("ar");
+      setActiveState("ar");
+    });
+  }
+
+  /* ============================================================
+     EXPOSE METHODS GLOBALLY
+     ============================================================ */
+  window.SAMOE = {
+    getLang,
+    setLang,
+    applyLang,
+    initLanguageSwitcher
+  };
+
+  /* ============================================================
+     APPLY SAVED LANGUAGE ON PAGE LOAD
+     ============================================================ */
   document.addEventListener("DOMContentLoaded", () => {
     applyLang(getLang());
   });
