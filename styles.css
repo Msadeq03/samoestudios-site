@@ -1085,7 +1085,7 @@ textarea {
   margin-bottom: 26px;
 
   /* define the visual box for the logo */
-  height: 220px;
+  height: 340px;
   width: 100%;
 
   display: flex;
@@ -1095,14 +1095,15 @@ textarea {
 
 .client-logo-feature {
 
-  /* allow logo to scale to fill the container */
-  width: 90%;
-  height: 90%;
+  /* allow the logo to scale larger */
+  width: 100%;
+  height: 100%;
 
-  /* keep aspect ratio */
   object-fit: contain;
   object-position: center;
 
+  display: block;
+}
   display: block;
 }.case-aside-block {
   margin-top: 20px;
