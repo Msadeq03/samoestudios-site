@@ -1,15 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-       BASIC PAGE META
-       ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- =========================================================
-       SEO
-       ========================================================= -->
   <title>Products — SAMOE STUDIOS</title>
   <meta
     name="description"
@@ -17,114 +10,115 @@
   />
   <link rel="canonical" href="https://samoestudios.com/products.html" />
 
-  <!-- =========================================================
-       FONTS
-       ========================================================= -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
-
-  <!-- =========================================================
-       SITE STYLES
-       ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=100" />
+  <link rel="stylesheet" href="./styles.css?v=108" />
 </head>
-
 <body>
-  <!-- =========================================================
-       TOP NAVIGATION
-       ========================================================= -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="logo" href="./home.html">SAMOE STUDIOS</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="./home.html">SAMOE STUDIOS</a>
+
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="./practice.html" data-i18n="nav_practice">Practice</a>
         <a href="./work.html" data-i18n="nav_work">Work</a>
         <a href="./products.html" data-i18n="nav_products">Products</a>
         <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
 
+      <div class="header-tools">
         <div class="lang-switch">
           <button id="langEN" type="button">EN</button>
           <button id="langAR" type="button">AR</button>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <!-- =========================================================
-         PAGE HEADER
-         ========================================================= -->
-    <section class="reveal">
-      <div class="kicker" data-i18n="products_kicker">Products</div>
-      <h1 class="h1" data-i18n="products_title">Coming soon</h1>
-      <p class="sub" data-i18n="products_sub">
+  <main class="page-shell">
+
+    <section class="products-hero reveal">
+      <div class="eyebrow" data-i18n="products_kicker">Products</div>
+      <h1 class="products-hero-title" data-i18n="products_title">Coming soon</h1>
+      <p class="products-hero-copy" data-i18n="products_sub">
         Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.
       </p>
     </section>
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-    <footer class="site-footer reveal">
-      <div class="footer-top">
-        <div class="footer-brand">
+    <section class="products-panel reveal">
+      <div class="products-panel-left">
+        <div class="products-panel-label">Planned categories</div>
+        <ul class="products-list">
+          <li>Retail fixtures</li>
+          <li>Display systems</li>
+          <li>Counters and tables</li>
+          <li>Shelving and storage</li>
+          <li>Furniture</li>
+          <li>Lighting</li>
+        </ul>
+      </div>
+
+      <div class="products-panel-right">
+        <div class="products-panel-card">
+          <div class="eyebrow">Status</div>
+          <h2>Product line in development</h2>
+          <p>
+            This section will expand as the studio formalizes product design, sourcing, and rollout readiness.
+          </p>
+          <a class="btn btn-accent" href="./contact.html" data-i18n="nav_inquiry">Inquiry</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="footer-brand-block">
           <div class="footer-company">SAMOE STUDIOS LTD</div>
           <p class="footer-copy" data-i18n="footer_copy">
             Architecture, interiors, and delivery — from concept to execution.
           </p>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
-          <div class="footer-links footer-links-stack">
-            <a href="./home.html">Home</a>
-            <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-            <a href="./work.html" data-i18n="nav_work">Work</a>
-            <a href="./products.html" data-i18n="nav_products">Products</a>
-            <a href="./contact.html" data-i18n="nav_contact">Contact</a>
-          </div>
+          <a href="./home.html">Home</a>
+          <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+          <a href="./work.html" data-i18n="nav_work">Work</a>
+          <a href="./products.html" data-i18n="nav_products">Products</a>
+          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
-          <div class="footer-contact-list">
-            <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
-            <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
-          </div>
+          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_social_title">Social</div>
-          <div class="social-links">
-            <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <span>Instagram</span>
-            </a>
-            <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer" aria-label="Behance">
-              <span>Behance</span>
-            </a>
-          </div>
+          <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer">Behance</a>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="site-footer-bottom">
         <div class="footer-address">
           <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
         </div>
         <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
       </div>
     </footer>
+
   </main>
 
-  <script src="./i18n.js?v=100"></script>
-  <script src="./script.js?v=100"></script>
+  <script src="./i18n.js?v=108"></script>
+  <script src="./script.js?v=108"></script>
   <script>
     window.SAMOE.initLanguageSwitcher("langEN", "langAR");
   </script>

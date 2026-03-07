@@ -1,15 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-       BASIC PAGE META
-       ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- =========================================================
-       SEO
-       ========================================================= -->
   <title>Practice — SAMOE STUDIOS</title>
   <meta
     name="description"
@@ -17,52 +10,45 @@
   />
   <link rel="canonical" href="https://samoestudios.com/practice.html" />
 
-  <!-- =========================================================
-       FONTS
-       ========================================================= -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
-
-  <!-- =========================================================
-       SITE STYLES
-       ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=101" />
+  <link rel="stylesheet" href="./styles.css?v=108" />
 </head>
-
 <body>
-  <!-- =========================================================
-       TOP NAVIGATION
-       ========================================================= -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="logo" href="./home.html">SAMOE STUDIOS</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="./home.html">SAMOE STUDIOS</a>
+
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="./practice.html" data-i18n="nav_practice">Practice</a>
         <a href="./work.html" data-i18n="nav_work">Work</a>
         <a href="./products.html" data-i18n="nav_products">Products</a>
         <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
 
+      <div class="header-tools">
         <div class="lang-switch">
           <button id="langEN" type="button">EN</button>
           <button id="langAR" type="button">AR</button>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="page-shell">
+
     <!-- =========================================================
-         PAGE HEADER
+         PAGE HERO
          ========================================================= -->
-    <section class="reveal">
-      <div class="kicker" data-i18n="practice_kicker">Practice</div>
-      <h1 class="h1" data-i18n="practice_title">Practice</h1>
-      <p class="sub" data-i18n="practice_sub">
+    <section class="page-hero reveal">
+      <div class="eyebrow" data-i18n="practice_kicker">Practice</div>
+      <h1 class="page-hero-title" data-i18n="practice_title">Practice</h1>
+      <p class="page-hero-copy" data-i18n="practice_sub">
         MENA-based, able to work internationally. Headquarters: Erbil, Iraq.
       </p>
     </section>
@@ -70,308 +56,172 @@
     <!-- =========================================================
          WHO WE ARE
          ========================================================= -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2 class="h2" data-i18n="who_title">Who we are</h2>
-        <p class="muted" data-i18n="who_sub">Studio-led accountability</p>
+    <section class="split-editorial reveal">
+      <div class="split-editorial-left">
+        <div class="eyebrow" data-i18n="who_sub">Studio-led accountability</div>
+        <h2 class="section-title" data-i18n="who_title">Who we are</h2>
       </div>
-
-      <div class="card">
-        <p class="sub" style="margin-bottom: 12px;" data-i18n="who_p1">
+      <div class="split-editorial-right">
+        <p class="section-copy" data-i18n="who_p1">
           SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.
         </p>
-        <p class="sub" style="margin: 0;" data-i18n="who_p2">
+        <p class="section-copy section-copy-last" data-i18n="who_p2">
           We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.
         </p>
       </div>
     </section>
 
     <!-- =========================================================
-         WHAT WE OFFER
-         Redesigned as a services showcase section
-         Inspired by your reference image, but adapted to your site
+         SERVICES
          ========================================================= -->
-    <section class="section reveal">
-      <div class="services-showcase-head">
-        <div class="services-showcase-kicker" data-i18n="offer_sub">Core services</div>
-        <h2 class="services-showcase-title" data-i18n="offer_title">What we offer</h2>
+    <section class="services-editorial reveal">
+      <div class="services-editorial-head">
+        <div class="eyebrow" data-i18n="offer_sub">Core services</div>
+        <h2 class="section-title-large" data-i18n="offer_title">What we offer</h2>
       </div>
 
-      <div class="services-showcase-grid">
-        <!-- Service Card 1 -->
-        <article class="service-showcase-card">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Architecture + Interiors icon -->
-            <svg viewBox="0 0 64 64">
-              <path d="M10 48h44"></path>
-              <path d="M14 48V24l18-12 18 12v24"></path>
-              <path d="M24 48V32h16v16"></path>
-            </svg>
-          </div>
-
+      <div class="services-editorial-grid">
+        <article class="service-editorial-card">
+          <span class="service-index">01</span>
           <h3 data-i18n="s1_t">Architecture + Interiors</h3>
           <p data-i18n="s1_d">Concept to detailed design with execution clarity.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
 
-        <!-- Service Card 2 -->
-        <article class="service-showcase-card service-showcase-card-featured">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Retail Design + Rollout Systems icon -->
-            <svg viewBox="0 0 64 64">
-              <rect x="12" y="12" width="40" height="40"></rect>
-              <path d="M22 22h8v8h-8z"></path>
-              <path d="M34 22h8"></path>
-              <path d="M34 30h8"></path>
-              <path d="M22 40h20"></path>
-            </svg>
-          </div>
-
+        <article class="service-editorial-card featured">
+          <span class="service-index">02</span>
           <h3 data-i18n="s2_t">Retail Design + Rollout Systems</h3>
           <p data-i18n="s2_d">Flagships, expansions, refurbishments, operational alignment.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
 
-        <!-- Service Card 3 -->
-        <article class="service-showcase-card">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Rebrand Implementation icon -->
-            <svg viewBox="0 0 64 64">
-              <path d="M14 50l18-36 18 36"></path>
-              <path d="M22 34h20"></path>
-              <path d="M28 50V38h8v12"></path>
-            </svg>
-          </div>
-
+        <article class="service-editorial-card">
+          <span class="service-index">03</span>
           <h3 data-i18n="s3_t">Rebrand Implementation</h3>
           <p data-i18n="s3_d">Spatial identity integration across environments and touchpoints.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
 
-        <!-- Service Card 4 -->
-        <article class="service-showcase-card">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Technical Documentation + BOQ icon -->
-            <svg viewBox="0 0 64 64">
-              <rect x="16" y="10" width="32" height="44"></rect>
-              <path d="M24 22h16"></path>
-              <path d="M24 30h16"></path>
-              <path d="M24 38h10"></path>
-            </svg>
-          </div>
-
+        <article class="service-editorial-card">
+          <span class="service-index">04</span>
           <h3 data-i18n="s4_t">Technical Documentation + BOQ</h3>
           <p data-i18n="s4_d">Technical packages and BOQ alignment for execution readiness.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
 
-        <!-- Service Card 5 -->
-        <article class="service-showcase-card">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Procurement + Supplier Management icon -->
-            <svg viewBox="0 0 64 64">
-              <path d="M18 20h28l6 10-20 24L12 30z"></path>
-              <path d="M24 20l8 34"></path>
-              <path d="M40 20L32 54"></path>
-            </svg>
-          </div>
-
+        <article class="service-editorial-card">
+          <span class="service-index">05</span>
           <h3 data-i18n="s5_t">Procurement + Supplier Management</h3>
           <p data-i18n="s5_d">Material approvals, supplier strategy, quality-controlled sourcing.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
 
-        <!-- Service Card 6 -->
-        <article class="service-showcase-card">
-          <div class="service-showcase-icon" aria-hidden="true">
-            <!-- Partner Network Delivery icon -->
-            <svg viewBox="0 0 64 64">
-              <circle cx="20" cy="22" r="6"></circle>
-              <circle cx="44" cy="22" r="6"></circle>
-              <circle cx="32" cy="42" r="6"></circle>
-              <path d="M25 25l14 14"></path>
-              <path d="M39 25L25 39"></path>
-            </svg>
-          </div>
-
+        <article class="service-editorial-card">
+          <span class="service-index">06</span>
           <h3 data-i18n="s6_t">Partner Network Delivery</h3>
           <p data-i18n="s6_d">Fit-out, joinery, lighting, signage, MEP, and systems implementation under SAMOE standards.</p>
-
-          <div class="service-showcase-plus" aria-hidden="true">+</div>
         </article>
       </div>
     </section>
 
     <!-- =========================================================
-         DELIVERY MODEL
-         Redesigned as a visual 4-step process flow
-         Inspired by your reference image, but adapted to your site
+         PROCESS
          ========================================================= -->
-    <section class="section reveal">
-      <div class="section-head delivery-flow-head">
-        <h2 class="h2" data-i18n="delivery_title">Delivery model</h2>
-        <p class="muted" data-i18n="delivery_sub">How we execute</p>
+    <section class="process-v2 reveal">
+      <div class="services-editorial-head">
+        <div class="eyebrow" data-i18n="delivery_sub">How we execute</div>
+        <h2 class="section-title-large" data-i18n="delivery_title">Delivery model</h2>
       </div>
 
-      <div class="delivery-flow">
-        <!-- Horizontal line in the background -->
-        <div class="delivery-flow-line" aria-hidden="true"></div>
-
-        <!-- Step 1 -->
-        <article class="flow-step flow-step-down">
-          <div class="flow-node" aria-hidden="true"></div>
-          <div class="flow-stage-label">01</div>
-          <div class="flow-card">
-            <div class="flow-card-top"></div>
+      <div class="process-v2-list">
+        <article class="process-v2-item">
+          <div class="process-v2-number">01</div>
+          <div class="process-v2-body">
             <h3>Discovery</h3>
-            <p data-i18n="d1">
-              01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.
-            </p>
+            <p data-i18n="d1">01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.</p>
           </div>
         </article>
 
-        <!-- Step 2 -->
-        <article class="flow-step flow-step-up">
-          <div class="flow-node" aria-hidden="true"></div>
-          <div class="flow-stage-label">02</div>
-          <div class="flow-card">
-            <div class="flow-card-top"></div>
+        <article class="process-v2-item">
+          <div class="process-v2-number">02</div>
+          <div class="process-v2-body">
             <h3>Design + Documentation</h3>
-            <p data-i18n="d2">
-              02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.
-            </p>
+            <p data-i18n="d2">02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.</p>
           </div>
         </article>
 
-        <!-- Step 3 -->
-        <article class="flow-step flow-step-down">
-          <div class="flow-node" aria-hidden="true"></div>
-          <div class="flow-stage-label">03</div>
-          <div class="flow-card">
-            <div class="flow-card-top"></div>
+        <article class="process-v2-item">
+          <div class="process-v2-number">03</div>
+          <div class="process-v2-body">
             <h3>Procurement + Partners</h3>
-            <p data-i18n="d3">
-              03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.
-            </p>
+            <p data-i18n="d3">03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.</p>
           </div>
         </article>
 
-        <!-- Step 4 -->
-        <article class="flow-step flow-step-up">
-          <div class="flow-node" aria-hidden="true"></div>
-          <div class="flow-stage-label">04</div>
-          <div class="flow-card">
-            <div class="flow-card-top"></div>
+        <article class="process-v2-item">
+          <div class="process-v2-number">04</div>
+          <div class="process-v2-body">
             <h3>Implementation + QA</h3>
-            <p data-i18n="d4">
-              04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.
-            </p>
+            <p data-i18n="d4">04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.</p>
           </div>
         </article>
       </div>
     </section>
 
     <!-- =========================================================
-         NAME EXPLANATION
+         NAME
          ========================================================= -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2 class="h2" data-i18n="name_title">The name</h2>
-        <p class="muted" data-i18n="name_sub">SAMOE (pronounced “Sah-moe”)</p>
+    <section class="split-editorial reveal">
+      <div class="split-editorial-left">
+        <div class="eyebrow" data-i18n="name_sub">SAMOE (pronounced “Sah-moe”)</div>
+        <h2 class="section-title" data-i18n="name_title">The name</h2>
       </div>
-
-      <div class="card">
-        <p class="sub" style="margin: 0;" data-i18n="name_p">
+      <div class="split-editorial-right">
+        <p class="section-copy section-copy-last" data-i18n="name_p">
           SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.
         </p>
       </div>
     </section>
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
-    <footer class="site-footer reveal">
-      <div class="footer-top">
-        <div class="footer-brand">
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="footer-brand-block">
           <div class="footer-company">SAMOE STUDIOS LTD</div>
           <p class="footer-copy" data-i18n="footer_copy">
             Architecture, interiors, and delivery — from concept to execution.
           </p>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
-          <div class="footer-links footer-links-stack">
-            <a href="./home.html">Home</a>
-            <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-            <a href="./work.html" data-i18n="nav_work">Work</a>
-            <a href="./products.html" data-i18n="nav_products">Products</a>
-            <a href="./contact.html" data-i18n="nav_contact">Contact</a>
-          </div>
+          <a href="./home.html">Home</a>
+          <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+          <a href="./work.html" data-i18n="nav_work">Work</a>
+          <a href="./products.html" data-i18n="nav_products">Products</a>
+          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
-          <div class="footer-contact-list">
-            <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
-            <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
-          </div>
+          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_social_title">Social</div>
-          <div class="social-links">
-            <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1.2"></circle>
-                </svg>
-              </span>
-              <span>Instagram</span>
-            </a>
-
-            <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="4" y="9" width="4" height="11"></rect>
-                  <circle cx="6" cy="6" r="2"></circle>
-                  <path d="M11 9h4v1.8c.7-1.2 2-2.1 4-2.1 3.4 0 4 2.1 4 5.5V20h-4v-4.9c0-1.6-.1-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V20h-4z"></path>
-                </svg>
-              </span>
-              <span>LinkedIn</span>
-            </a>
-
-            <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer" aria-label="Behance">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 7.5h5.4c2.4 0 4 1.1 4 3.2 0 1.3-.7 2.2-1.8 2.6 1.5.3 2.4 1.5 2.4 3.1 0 2.5-2 3.6-4.5 3.6H4zm4.8 4.8c1 0 1.6-.4 1.6-1.3s-.7-1.2-1.6-1.2H7v2.5zm.3 5.1c1.1 0 1.9-.4 1.9-1.5 0-.9-.7-1.4-1.8-1.4H7v2.9z"></path>
-                  <path d="M16.2 9.2h4.9v1.4h-4.9zm5.7 6.8c-.3 2.3-2.1 4.1-5.1 4.1-3.3 0-5.4-2.2-5.4-5.6 0-3.3 2.2-5.7 5.3-5.7 3.7 0 5.4 2.6 5.3 6.3h-7.2c.1 1.4.9 2.2 2.2 2.2 1 0 1.6-.4 1.9-1.3zm-2.5-2.8c-.1-1.2-.9-1.9-2-1.9-1.2 0-1.9.7-2.1 1.9z"></path>
-                </svg>
-              </span>
-              <span>Behance</span>
-            </a>
-          </div>
+          <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer">Behance</a>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="site-footer-bottom">
         <div class="footer-address">
           <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
         </div>
         <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
       </div>
     </footer>
+
   </main>
 
-  <script src="./i18n.js?v=100"></script>
-  <script src="./script.js?v=100"></script>
+  <script src="./i18n.js?v=108"></script>
+  <script src="./script.js?v=108"></script>
   <script>
     window.SAMOE.initLanguageSwitcher("langEN", "langAR");
   </script>

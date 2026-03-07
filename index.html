@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- =========================================================
-       BASIC PAGE META
+       BASIC META
        ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,48 +23,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
 
   <!-- =========================================================
-       SITE STYLES
+       STYLES
        ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=100" />
+  <link rel="stylesheet" href="./styles.css?v=108" />
 </head>
+<body class="gate-body">
 
-<body>
   <!-- =========================================================
        LANGUAGE GATE
-       This is the first page users land on.
-       If language is already saved, user is redirected to home.
        ========================================================= -->
-  <main class="gate">
-    <div class="gate-box reveal is-visible">
-      <div class="kicker">SAMOE STUDIOS</div>
+  <main class="language-gate">
+    <section class="gate-shell reveal is-visible">
+      <div class="gate-shell-left">
+        <div class="eyebrow">SAMOE STUDIOS</div>
+        <h1 class="gate-heading" data-i18n="gate_title">Select language</h1>
+        <p class="gate-copy" data-i18n="gate_sub">
+          Choose your preferred language to continue.
+        </p>
 
-      <h1 class="gate-title" data-i18n="gate_title">Select language</h1>
-      <p class="sub" style="margin-bottom: 18px;" data-i18n="gate_sub">
-        Choose your preferred language to continue.
-      </p>
-
-      <div class="btn-row">
-        <button class="btn btn-blue" id="chooseEN" type="button">English</button>
-        <button class="btn btn-ghost" id="chooseAR" type="button">العربية</button>
+        <div class="gate-actions">
+          <button class="btn btn-accent" id="chooseEN" type="button">English</button>
+          <button class="btn btn-outline" id="chooseAR" type="button">العربية</button>
+        </div>
       </div>
-    </div>
+
+      <div class="gate-shell-right">
+        <div class="gate-brand-block">
+          <div class="gate-brand-top">Architecture / Interiors / Delivery</div>
+          <div class="gate-brand-name">SAMOE</div>
+          <div class="gate-brand-bottom">MENA-based • International capability</div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- =========================================================
-       LANGUAGE SYSTEM
-       ========================================================= -->
-  <script src="./i18n.js?v=100"></script>
-
-  <!-- =========================================================
-       PAGE LOGIC
-       - If a language is already saved, skip this page
-       - Otherwise save selected language and continue to home
-       ========================================================= -->
+  <script src="./i18n.js?v=108"></script>
   <script>
     (function () {
       const STORAGE_KEY = "samoelang";
@@ -81,18 +79,14 @@
       document.getElementById("chooseEN").addEventListener("click", () => {
         try {
           localStorage.setItem(STORAGE_KEY, "en");
-        } catch (error) {
-          console.warn("Could not save English language selection:", error);
-        }
+        } catch (error) {}
         location.href = "./home.html";
       });
 
       document.getElementById("chooseAR").addEventListener("click", () => {
         try {
           localStorage.setItem(STORAGE_KEY, "ar");
-        } catch (error) {
-          console.warn("Could not save Arabic language selection:", error);
-        }
+        } catch (error) {}
         location.href = "./home.html";
       });
     })();

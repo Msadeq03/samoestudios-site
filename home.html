@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- =========================================================
-       BASIC PAGE META
+       META
        ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,15 +13,14 @@
   <title>SAMOE STUDIOS — Architecture, Interiors & Delivery</title>
   <meta
     name="description"
-    content="SAMOE STUDIOS LTD is a MENA-based architecture and delivery studio headquartered in Erbil, Iraq, with a registered office in London, United Kingdom. Architecture, interiors, retail rollout systems, and implementation oversight."
+    content="SAMOE STUDIOS LTD is a MENA-based architecture and delivery studio headquartered in Erbil, Iraq, with a registered office in London, United Kingdom."
   />
   <link rel="canonical" href="https://samoestudios.com/home.html" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="SAMOE STUDIOS — Architecture, Interiors & Delivery" />
   <meta
     property="og:description"
-    content="MENA-based, internationally capable. Headquartered in Erbil, Iraq, with a registered office in London."
+    content="Architecture, interiors, retail rollout systems, and implementation oversight."
   />
   <meta property="og:url" content="https://samoestudios.com/home.html" />
   <meta property="og:type" content="website" />
@@ -32,18 +31,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Noto+Kufi+Arabic:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
 
   <!-- =========================================================
-       SITE STYLES
+       STYLES
        ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=100" />
+  <link rel="stylesheet" href="./styles.css?v=108" />
 
   <!-- =========================================================
        STRUCTURED DATA
-       Helps search engines understand the organization.
        ========================================================= -->
   <script type="application/ld+json">
     {
@@ -67,181 +65,191 @@
     }
   </script>
 </head>
-
 <body>
-  <!-- =========================================================
-       FIXED TOP NAVIGATION
-       ========================================================= -->
-  <header class="nav">
-    <div class="nav-inner">
-      <a class="logo" href="./home.html">SAMOE STUDIOS</a>
 
-      <nav class="nav-links" aria-label="Main navigation">
+  <!-- =========================================================
+       GLOBAL HEADER
+       ========================================================= -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-logo" href="./home.html">SAMOE STUDIOS</a>
+
+      <nav class="site-nav" aria-label="Main navigation">
         <a href="./practice.html" data-i18n="nav_practice">Practice</a>
         <a href="./work.html" data-i18n="nav_work">Work</a>
         <a href="./products.html" data-i18n="nav_products">Products</a>
         <a href="./contact.html" data-i18n="nav_contact">Contact</a>
+      </nav>
 
-        <!-- Language switcher buttons -->
-        <div class="lang-switch" aria-label="Language switcher">
+      <div class="header-tools">
+        <div class="lang-switch">
           <button id="langEN" type="button">EN</button>
           <button id="langAR" type="button">AR</button>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
+  <main class="page-shell">
+
     <!-- =========================================================
-         HERO SECTION
-         Main brand statement
+         HERO
          ========================================================= -->
-    <section class="hero-full reveal">
-      <div class="hero-stack hero-panel">
-        <div class="kicker" data-i18n="hero_kicker">MENA-based • International capability</div>
+    <section class="hero-v2 reveal">
+      <div class="hero-v2-left">
+        <div class="eyebrow" data-i18n="hero_kicker">MENA-based • International capability</div>
 
-        <h1 class="hero-title-xl" data-i18n="hero_title">SAMOE STUDIOS</h1>
+        <h1 class="hero-v2-title" data-i18n="hero_title">SAMOE STUDIOS</h1>
 
-        <p class="hero-slogan" data-i18n="hero_slogan">
+        <p class="hero-v2-slogan" data-i18n="hero_slogan">
           Architecture, interiors, and delivery — from concept to execution.
         </p>
 
-        <p class="hero-sub2" data-i18n="hero_sub">
+        <p class="hero-v2-copy" data-i18n="hero_sub">
           Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.
         </p>
 
-        <div class="btn-row" style="margin-top: 18px;">
-          <a class="btn btn-white" href="./contact.html" data-i18n="nav_inquiry">Inquiry</a>
-          <a class="btn btn-ghost hero-ig" href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer">
-            @samoestudios
-          </a>
+        <div class="hero-v2-actions">
+          <a class="btn btn-accent" href="./contact.html" data-i18n="nav_inquiry">Inquiry</a>
+          <a class="btn btn-outline-light" href="./work.html" data-i18n="view_case">View case study</a>
+        </div>
+      </div>
+
+      <div class="hero-v2-right">
+        <div class="hero-v2-panel">
+          <div class="hero-panel-label">Current focus</div>
+          <div class="hero-panel-title" data-i18n="case_title">Special Lady — Retail transformation</div>
+          <p class="hero-panel-copy" data-i18n="case_desc">
+            Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.
+          </p>
+
+          <div class="hero-panel-meta">
+            <div>
+              <span data-i18n="tl_start">Project start</span>
+              <strong data-i18n="tl_start_val">October 2025</strong>
+            </div>
+            <div>
+              <span data-i18n="tl_end">Full delivery</span>
+              <strong data-i18n="tl_end_val">April 2026</strong>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- =========================================================
-         CURRENT PROJECT SECTION
+         STUDIO STRIP
          ========================================================= -->
-    <section class="section reveal">
-      <div class="section-head">
-        <h2 class="h2" data-i18n="sec_current_title">Current Project</h2>
-        <p class="muted" data-i18n="sec_current_sub">Selected case study</p>
+    <section class="studio-strip reveal">
+      <div class="studio-strip-item">
+        <span>Headquarters</span>
+        <strong>Erbil, Iraq</strong>
+      </div>
+      <div class="studio-strip-item">
+        <span>Registered office</span>
+        <strong>London, United Kingdom</strong>
+      </div>
+      <div class="studio-strip-item">
+        <span>Focus</span>
+        <strong>Architecture / Interiors / Delivery</strong>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         HOME GRID SECTION
+         ========================================================= -->
+    <section class="home-grid-section reveal">
+      <div class="home-grid-card home-grid-card-main">
+        <div class="eyebrow" data-i18n="home_section_1_kicker">Studio positioning</div>
+        <h2 class="section-title" data-i18n="home_section_1_title">A delivery-led studio model</h2>
+        <p class="section-copy" data-i18n="home_section_1_copy">
+          SAMOE STUDIOS operates where concept quality and execution discipline need to meet. The studio structure is built around direction, documentation, supplier alignment, and delivery control.
+        </p>
+        <a class="text-link" href="./practice.html" data-i18n="home_link_practice">Explore the practice</a>
       </div>
 
-      <article class="case">
-        <div class="case-top">
-          <h3 class="case-title" data-i18n="case_title">Special Lady — Retail transformation</h3>
-          <div class="tag" data-i18n="case_tag">Iraq • Retail • Rebrand • Renovation • Systems</div>
-        </div>
-
-        <p class="case-p" data-i18n="case_desc">
-          Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.
+      <div class="home-grid-card">
+        <div class="eyebrow" data-i18n="home_section_2_kicker">Selected work</div>
+        <h3 class="card-title" data-i18n="case_title">Special Lady — Retail transformation</h3>
+        <p class="card-copy" data-i18n="work_case_desc">
+          The studio is leading the rebrand and spatial expansion of Special Lady, integrating architectural redesign, expansion coordination, and operational systems alignment.
         </p>
+        <a class="text-link" href="./work.html" data-i18n="view_case">View case study</a>
+      </div>
 
-        <div class="timeline">
-          <div>
-            <span data-i18n="tl_start">Project start</span>
-            <strong data-i18n="tl_start_val">October 2025</strong>
-          </div>
-          <div>
-            <span data-i18n="tl_end">Full delivery</span>
-            <strong data-i18n="tl_end_val">April 2026</strong>
-          </div>
-        </div>
+      <div class="home-grid-card">
+        <div class="eyebrow" data-i18n="home_section_3_kicker">Products</div>
+        <h3 class="card-title" data-i18n="products_title">Coming soon</h3>
+        <p class="card-copy" data-i18n="products_sub">
+          Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.
+        </p>
+        <a class="text-link" href="./products.html" data-i18n="nav_products">See products</a>
+      </div>
+    </section>
 
-        <div class="btn-row">
-          <a class="btn btn-ghost" href="./work.html" data-i18n="view_case">View case study</a>
-        </div>
-      </article>
+    <!-- =========================================================
+         FEATURE BLOCK
+         ========================================================= -->
+    <section class="feature-band reveal">
+      <div class="feature-band-left">
+        <div class="eyebrow">Approach</div>
+        <h2 class="feature-band-title" data-i18n="home_feature_title">Direction, structure, accountability</h2>
+      </div>
+
+      <div class="feature-band-right">
+        <p class="feature-band-copy" data-i18n="home_feature_copy">
+          The studio does not position itself as image-only design. The core value is building coherent project systems that can move from concept into real implementation with control.
+        </p>
+      </div>
     </section>
 
     <!-- =========================================================
          FOOTER
          ========================================================= -->
-    <footer class="site-footer reveal">
-      <div class="footer-top">
-        <div class="footer-brand">
+    <footer class="site-footer">
+      <div class="site-footer-top">
+        <div class="footer-brand-block">
           <div class="footer-company">SAMOE STUDIOS LTD</div>
           <p class="footer-copy" data-i18n="footer_copy">
             Architecture, interiors, and delivery — from concept to execution.
           </p>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_nav_title">Navigation</div>
-          <div class="footer-links footer-links-stack">
-            <a href="./home.html">Home</a>
-            <a href="./practice.html" data-i18n="nav_practice">Practice</a>
-            <a href="./work.html" data-i18n="nav_work">Work</a>
-            <a href="./products.html" data-i18n="nav_products">Products</a>
-            <a href="./contact.html" data-i18n="nav_contact">Contact</a>
-          </div>
+          <a href="./home.html">Home</a>
+          <a href="./practice.html" data-i18n="nav_practice">Practice</a>
+          <a href="./work.html" data-i18n="nav_work">Work</a>
+          <a href="./products.html" data-i18n="nav_products">Products</a>
+          <a href="./contact.html" data-i18n="nav_contact">Contact</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_contact_title">Contact</div>
-          <div class="footer-contact-list">
-            <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
-            <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
-          </div>
+          <a href="mailto:info@samoestudios.com">info@samoestudios.com</a>
+          <a href="mailto:sales@samoestudios.com">sales@samoestudios.com</a>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-column">
           <div class="footer-heading" data-i18n="footer_social_title">Social</div>
-          <div class="social-links">
-            <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer" aria-label="Instagram">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1.2"></circle>
-                </svg>
-              </span>
-              <span>Instagram</span>
-            </a>
-
-            <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <rect x="4" y="9" width="4" height="11"></rect>
-                  <circle cx="6" cy="6" r="2"></circle>
-                  <path d="M11 9h4v1.8c.7-1.2 2-2.1 4-2.1 3.4 0 4 2.1 4 5.5V20h-4v-4.9c0-1.6-.1-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V20h-4z"></path>
-                </svg>
-              </span>
-              <span>LinkedIn</span>
-            </a>
-
-            <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer" aria-label="Behance">
-              <span class="social-icon">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 7.5h5.4c2.4 0 4 1.1 4 3.2 0 1.3-.7 2.2-1.8 2.6 1.5.3 2.4 1.5 2.4 3.1 0 2.5-2 3.6-4.5 3.6H4zm4.8 4.8c1 0 1.6-.4 1.6-1.3s-.7-1.2-1.6-1.2H7v2.5zm.3 5.1c1.1 0 1.9-.4 1.9-1.5 0-.9-.7-1.4-1.8-1.4H7v2.9z"></path>
-                  <path d="M16.2 9.2h4.9v1.4h-4.9zm5.7 6.8c-.3 2.3-2.1 4.1-5.1 4.1-3.3 0-5.4-2.2-5.4-5.6 0-3.3 2.2-5.7 5.3-5.7 3.7 0 5.4 2.6 5.3 6.3h-7.2c.1 1.4.9 2.2 2.2 2.2 1 0 1.6-.4 1.9-1.3zm-2.5-2.8c-.1-1.2-.9-1.9-2-1.9-1.2 0-1.9.7-2.1 1.9z"></path>
-                </svg>
-              </span>
-              <span>Behance</span>
-            </a>
-          </div>
+          <a href="https://instagram.com/samoestudios" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/company/samoestudios" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/samoestudio" target="_blank" rel="noreferrer">Behance</a>
         </div>
       </div>
 
-      <div class="footer-bottom">
+      <div class="site-footer-bottom">
         <div class="footer-address">
           <strong>SAMOE STUDIOS LTD</strong> — 124 City Road, London, EC1V 2NX, United Kingdom
         </div>
         <div class="footer-legal" data-i18n="footer_rights">© 2025–2026 SAMOE STUDIOS LTD</div>
       </div>
     </footer>
+
   </main>
 
-  <!-- =========================================================
-       SHARED JS
-       ========================================================= -->
-  <script src="./i18n.js?v=100"></script>
-  <script src="./script.js?v=100"></script>
-
-  <!-- =========================================================
-       PAGE-SPECIFIC INIT
-       ========================================================= -->
+  <script src="./i18n.js?v=108"></script>
+  <script src="./script.js?v=108"></script>
   <script>
     window.SAMOE.initLanguageSwitcher("langEN", "langAR");
   </script>

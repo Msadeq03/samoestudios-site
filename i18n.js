@@ -1,16 +1,8 @@
 (function () {
   "use strict";
 
-  /* ============================================================
-     LANGUAGE STORAGE KEY
-     This is the localStorage key used across the whole website.
-     ============================================================ */
   const STORAGE_KEY = "samoelang";
 
-  /* ============================================================
-     TRANSLATION DICTIONARY
-     Add or edit all English / Arabic text here.
-     ============================================================ */
   const dict = {
     en: {
       nav_practice: "Practice",
@@ -27,9 +19,6 @@
       hero_slogan: "Architecture, interiors, and delivery — from concept to execution.",
       hero_sub: "Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.",
 
-      sec_current_title: "Current Project",
-      sec_current_sub: "Selected case study",
-
       case_title: "Special Lady — Retail transformation",
       case_tag: "Iraq • Retail • Rebrand • Renovation • Systems",
       case_desc: "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
@@ -39,6 +28,16 @@
       tl_start_val: "October 2025",
       tl_end_val: "April 2026",
       view_case: "View case study",
+
+      home_section_1_kicker: "Studio positioning",
+      home_section_1_title: "A delivery-led studio model",
+      home_section_1_copy: "SAMOE STUDIOS operates where concept quality and execution discipline need to meet. The studio structure is built around direction, documentation, supplier alignment, and delivery control.",
+      home_link_practice: "Explore the practice",
+
+      home_section_2_kicker: "Selected work",
+      home_section_3_kicker: "Products",
+      home_feature_title: "Direction, structure, accountability",
+      home_feature_copy: "The studio does not position itself as image-only design. The core value is building coherent project systems that can move from concept into real implementation with control.",
 
       practice_kicker: "Practice",
       practice_title: "Practice",
@@ -136,9 +135,6 @@
       hero_slogan: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
       hero_sub: "قيادة استوديو مع شبكة شركاء موثوقة لضمان الجودة. المقر: أربيل، العراق.",
 
-      sec_current_title: "المشروع الحالي",
-      sec_current_sub: "دراسة حالة مختارة",
-
       case_title: "Special Lady — تطوير متجر تجزئة",
       case_tag: "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
       case_desc: "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
@@ -148,6 +144,16 @@
       tl_start_val: "أكتوبر 2025",
       tl_end_val: "أبريل 2026",
       view_case: "عرض دراسة الحالة",
+
+      home_section_1_kicker: "تموضع الاستوديو",
+      home_section_1_title: "نموذج استوديو يقوده التسليم",
+      home_section_1_copy: "يعمل SAMOE STUDIOS في المساحة التي يجب أن تلتقي فيها جودة الفكرة مع انضباط التنفيذ. ويقوم هيكل الاستوديو على التوجيه والتوثيق ومواءمة الموردين وضبط التسليم.",
+      home_link_practice: "استكشف الممارسة",
+
+      home_section_2_kicker: "الأعمال المختارة",
+      home_section_3_kicker: "المنتجات",
+      home_feature_title: "توجيه، هيكلة، مساءلة",
+      home_feature_copy: "الاستوديو لا يتموضع كتصميم صور فقط. القيمة الأساسية هي بناء أنظمة مشروع مترابطة يمكن أن تنتقل من الفكرة إلى التنفيذ الحقيقي مع ضبط واضح.",
 
       practice_kicker: "الممارسة",
       practice_title: "الممارسة",
@@ -231,10 +237,6 @@
     }
   };
 
-  /* ============================================================
-     GET CURRENT LANGUAGE
-     Default = English
-     ============================================================ */
   function getLang() {
     try {
       return localStorage.getItem(STORAGE_KEY) || "en";
@@ -243,26 +245,15 @@
     }
   }
 
-  /* ============================================================
-     SET CURRENT LANGUAGE
-     Save and immediately apply it
-     ============================================================ */
   function setLang(lang) {
     try {
       localStorage.setItem(STORAGE_KEY, lang);
-    } catch (error) {
-      console.warn("Could not save language:", error);
-    }
+    } catch (error) {}
     applyLang(lang);
   }
 
-  /* ============================================================
-     APPLY TRANSLATIONS TO THE PAGE
-     - [data-i18n]      -> text content
-     - [data-i18n-ph]   -> placeholder
-     ============================================================ */
   function applyLang(lang) {
-    const currentDict = dict[lang] || dict.en;
+    const current = dict[lang] || dict.en;
     const isArabic = lang === "ar";
 
     document.documentElement.lang = lang;
@@ -271,56 +262,44 @@
 
     document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
-      if (currentDict[key] !== undefined) {
-        if (el.tagName === "OPTION") {
-          el.textContent = currentDict[key];
-        } else {
-          el.textContent = currentDict[key];
-        }
+      if (current[key] !== undefined) {
+        el.textContent = current[key];
       }
     });
 
     document.querySelectorAll("[data-i18n-ph]").forEach((el) => {
       const key = el.getAttribute("data-i18n-ph");
-      if (currentDict[key] !== undefined) {
-        el.setAttribute("placeholder", currentDict[key]);
+      if (current[key] !== undefined) {
+        el.setAttribute("placeholder", current[key]);
       }
     });
   }
 
-  /* ============================================================
-     INITIALIZE LANGUAGE BUTTONS
-     This avoids repeating the same button logic in every page.
-     ============================================================ */
   function initLanguageSwitcher(enButtonId, arButtonId) {
     const enBtn = document.getElementById(enButtonId);
     const arBtn = document.getElementById(arButtonId);
 
     if (!enBtn || !arBtn) return;
 
-    const activeLang = getLang();
-
-    const setActiveState = (lang) => {
+    const updateState = (lang) => {
       enBtn.classList.toggle("active", lang === "en");
       arBtn.classList.toggle("active", lang === "ar");
     };
 
-    setActiveState(activeLang);
+    const current = getLang();
+    updateState(current);
 
     enBtn.addEventListener("click", () => {
       setLang("en");
-      setActiveState("en");
+      updateState("en");
     });
 
     arBtn.addEventListener("click", () => {
       setLang("ar");
-      setActiveState("ar");
+      updateState("ar");
     });
   }
 
-  /* ============================================================
-     EXPOSE METHODS GLOBALLY
-     ============================================================ */
   window.SAMOE = {
     getLang,
     setLang,
@@ -328,9 +307,6 @@
     initLanguageSwitcher
   };
 
-  /* ============================================================
-     APPLY SAVED LANGUAGE ON PAGE LOAD
-     ============================================================ */
   document.addEventListener("DOMContentLoaded", () => {
     applyLang(getLang());
   });

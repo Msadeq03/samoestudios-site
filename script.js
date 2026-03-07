@@ -1,35 +1,29 @@
 (function () {
   "use strict";
 
-  /* ============================================================
-     SCROLL REVEAL ANIMATION
-     Adds "is-visible" when elements enter the viewport.
-     ============================================================ */
-  function initScrollReveal() {
-    const revealItems = document.querySelectorAll(".reveal");
-    if (!revealItems.length) return;
+  function initReveal() {
+    const items = document.querySelectorAll(".reveal");
+    if (!items.length) return;
 
     if (!("IntersectionObserver" in window)) {
-      revealItems.forEach((item) => item.classList.add("is-visible"));
+      items.forEach((item) => item.classList.add("is-visible"));
       return;
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          entry.target.classList.toggle("is-visible", entry.isIntersecting);
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+          }
         });
       },
       { threshold: 0.12 }
     );
 
-    revealItems.forEach((item) => observer.observe(item));
+    items.forEach((item) => observer.observe(item));
   }
 
-  /* ============================================================
-     CONTACT FORM LOGIC
-     Only runs if #inquiryForm exists on the page.
-     ============================================================ */
   function initInquiryForm() {
     const form = document.getElementById("inquiryForm");
     if (!form) return;
@@ -41,9 +35,6 @@
 
     let iti = null;
 
-    /* ------------------------------------------------------------
-       Initialize international phone input
-       ------------------------------------------------------------ */
     if (phoneInput && window.intlTelInput) {
       iti = window.intlTelInput(phoneInput, {
         initialCountry: "iq",
@@ -57,38 +48,24 @@
       });
     }
 
-    /* ------------------------------------------------------------
-       Helper: current language
-       ------------------------------------------------------------ */
     function getCurrentLang() {
       return window.SAMOE?.getLang
         ? window.SAMOE.getLang()
         : (localStorage.getItem("samoelang") || "en");
     }
 
-    /* ------------------------------------------------------------
-       Helper: status message box
-       type = "", "success", "error"
-       ------------------------------------------------------------ */
     function setStatus(type, message) {
       if (!statusBox) return;
       statusBox.className = `form-status ${type || ""}`.trim();
       statusBox.textContent = message;
     }
 
-    /* ------------------------------------------------------------
-       Helper: get final phone number
-       If intlTelInput is active, use international formatted number
-       ------------------------------------------------------------ */
     function getPhoneValue() {
       if (!iti) return (phoneInput?.value || "").trim();
       const value = iti.getNumber();
       return value ? value.trim() : "";
     }
 
-    /* ------------------------------------------------------------
-       Submit handler
-       ------------------------------------------------------------ */
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
@@ -109,13 +86,10 @@
         email: String(formData.get("email") || "").trim(),
         location: String(formData.get("location") || "").trim(),
         description: String(formData.get("description") || "").trim(),
-        website: String(formData.get("website") || "").trim(), // honeypot
+        website: String(formData.get("website") || "").trim(),
         turnstileToken: String(formData.get("turnstileToken") || "").trim()
       };
 
-      /* ----------------------------------------------------------
-         Basic required field validation
-         ---------------------------------------------------------- */
       const requiredMissing =
         !payload.department ||
         !payload.name ||
@@ -135,9 +109,6 @@
         return;
       }
 
-      /* ----------------------------------------------------------
-         Phone validation
-         ---------------------------------------------------------- */
       if (iti) {
         try {
           if (iti.promise) {
@@ -154,7 +125,6 @@
             return;
           }
         } catch (error) {
-          console.error("Phone validation error:", error);
           setStatus(
             "error",
             lang === "ar"
@@ -165,9 +135,6 @@
         }
       }
 
-      /* ----------------------------------------------------------
-         Security check validation
-         ---------------------------------------------------------- */
       if (!payload.turnstileToken) {
         setStatus(
           "error",
@@ -178,10 +145,6 @@
         return;
       }
 
-      /* ----------------------------------------------------------
-         Submit to backend
-         Your backend endpoint is expected at: /api/contact
-         ---------------------------------------------------------- */
       try {
         if (submitBtn) submitBtn.disabled = true;
 
@@ -221,8 +184,6 @@
           window.turnstile.reset();
         }
       } catch (error) {
-        console.error("Submit error:", error);
-
         setStatus(
           "error",
           error.message ||
@@ -236,11 +197,8 @@
     });
   }
 
-  /* ============================================================
-     GLOBAL INIT
-     ============================================================ */
   document.addEventListener("DOMContentLoaded", () => {
-    initScrollReveal();
+    initReveal();
     initInquiryForm();
   });
 })();
