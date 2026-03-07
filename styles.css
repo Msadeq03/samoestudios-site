@@ -1091,8 +1091,8 @@ textarea {
 
 .client-logo-feature {
   display: block;
-  width: 200%;
-  max-width: 250px;               /* allows the logo to occupy more of the box */
+  width: 50%;
+  max-width: 230px;               /* allows the logo to occupy more of the box */
   max-height: 170px;              /* keeps it visually controlled */
   height: auto;
   object-fit: contain;
@@ -1259,19 +1259,4 @@ textarea {
   .flow-card h3 {
     font-size: 20px;
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
