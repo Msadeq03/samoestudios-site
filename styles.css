@@ -1077,28 +1077,34 @@ textarea {
 }
 
 /* ============================================================
-   WORK PAGE - CLIENT LOGO AREA
-   Makes the logo fit its box better and stay centered
+   WORK PAGE — CLIENT LOGO AREA
+   Enlarges logo and makes it fill its box properly
    ============================================================ */
+
 .case-client-mark {
   margin-bottom: 26px;
-  min-height: 250px;              /* gives the logo area a proper visual box height */
+
+  /* define the visual box for the logo */
+  height: 220px;
+  width: 100%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 18px;
 }
 
 .client-logo-feature {
-  display: block;
-  width: 100%;
-  max-width: 230px;               /* allows the logo to occupy more of the box */
-  max-height: 170px;              /* keeps it visually controlled */
-  height: auto;
+
+  /* allow logo to scale to fill the container */
+  width: 90%;
+  height: 90%;
+
+  /* keep aspect ratio */
   object-fit: contain;
   object-position: center;
-}
-.case-aside-block {
+
+  display: block;
+}.case-aside-block {
   margin-top: 20px;
   padding-top: 14px;
   border-top: 1px solid var(--line);
