@@ -1,92 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- =========================================================
-       BASIC META
-       ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- =========================================================
-       SEO
-       ========================================================= -->
-  <title>Language — SAMOE STUDIOS</title>
-  <meta
-    name="description"
-    content="Select your preferred language to continue to SAMOE STUDIOS."
-  />
+  <title>SAMOE STUDIOS — Architecture, Interiors & Delivery</title>
+  <meta name="description" content="Select your preferred language to continue to SAMOE STUDIOS." />
   <link rel="canonical" href="https://samoestudios.com/" />
-
-  <!-- =========================================================
-       FONTS
-       ========================================================= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- =========================================================
-       STYLES
-       ========================================================= -->
-  <link rel="stylesheet" href="./styles.css?v=108" />
+  <meta property="og:title" content="SAMOE STUDIOS — Architecture, Interiors & Delivery" />
+  <meta property="og:description" content="Architecture, interiors, retail rollout systems, and implementation oversight." />
+  <meta property="og:url" content="https://samoestudios.com/" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="./styles.css?v=200" />
 </head>
 <body class="gate-body">
 
-  <!-- =========================================================
-       LANGUAGE GATE
-       ========================================================= -->
   <main class="language-gate">
-    <section class="gate-shell reveal is-visible">
-      <div class="gate-shell-left">
-        <div class="eyebrow">SAMOE STUDIOS</div>
-        <h1 class="gate-heading" data-i18n="gate_title">Select language</h1>
-        <p class="gate-copy" data-i18n="gate_sub">
+
+    <div class="gate-left reveal is-visible">
+      <div class="gate-logo-bar">
+        <span class="gate-logo-text">SAMOE STUDIOS</span>
+      </div>
+
+      <div class="gate-main">
+        <div class="eyebrow eyebrow-dim">Select language</div>
+        <h1 class="gate-headline" data-i18n="gate_title">
+          Select<span>language</span>
+        </h1>
+        <p class="gate-sub" data-i18n="gate_sub">
           Choose your preferred language to continue.
         </p>
-
         <div class="gate-actions">
           <button class="btn btn-accent" id="chooseEN" type="button">English</button>
           <button class="btn btn-outline" id="chooseAR" type="button">العربية</button>
         </div>
       </div>
 
-      <div class="gate-shell-right">
-        <div class="gate-brand-block">
-          <div class="gate-brand-top">Architecture / Interiors / Delivery</div>
-          <div class="gate-brand-name">SAMOE</div>
-          <div class="gate-brand-bottom">MENA-based • International capability</div>
+      <div class="gate-footer">
+        <div class="gate-footer-item">
+          <span>Headquarters</span>
+          <strong>Erbil, Iraq</strong>
+        </div>
+        <div class="gate-footer-item">
+          <span>Registered office</span>
+          <strong>London, UK</strong>
+        </div>
+        <div class="gate-footer-item">
+          <span>Focus</span>
+          <strong>Architecture / Delivery</strong>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="gate-right">
+      <div class="gate-right-bg-text" aria-hidden="true">SAMOE</div>
+      <div class="gate-services">
+        <div class="gate-service-item">Architecture</div>
+        <div class="gate-service-item">Interiors</div>
+        <div class="gate-service-item">Delivery</div>
+        <div class="gate-service-item">Retail Rollout</div>
+        <div class="gate-service-item">Procurement</div>
+        <div class="gate-service-item">Documentation</div>
+      </div>
+    </div>
+
   </main>
 
-  <script src="./i18n.js?v=108"></script>
+  <script src="./i18n.js?v=200"></script>
   <script>
     (function () {
-      const STORAGE_KEY = "samoelang";
-
+      const KEY = "samoelang";
       try {
-        const savedLang = localStorage.getItem(STORAGE_KEY);
-        if (savedLang === "en" || savedLang === "ar") {
-          location.replace("./home.html");
-        }
-      } catch (error) {
-        console.warn("Language auto-redirect skipped:", error);
-      }
-
-      document.getElementById("chooseEN").addEventListener("click", () => {
-        try {
-          localStorage.setItem(STORAGE_KEY, "en");
-        } catch (error) {}
+        const s = localStorage.getItem(KEY);
+        if (s === "en" || s === "ar") location.replace("./home.html");
+      } catch {}
+      document.getElementById("chooseEN").addEventListener("click", function () {
+        try { localStorage.setItem(KEY, "en"); } catch {}
         location.href = "./home.html";
       });
-
-      document.getElementById("chooseAR").addEventListener("click", () => {
-        try {
-          localStorage.setItem(STORAGE_KEY, "ar");
-        } catch (error) {}
+      document.getElementById("chooseAR").addEventListener("click", function () {
+        try { localStorage.setItem(KEY, "ar"); } catch {}
         location.href = "./home.html";
       });
     })();
