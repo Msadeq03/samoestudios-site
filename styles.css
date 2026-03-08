@@ -785,6 +785,23 @@ img {
 }
 
 /* ============================================================
+   WORK PAGE - CASE STUDY RENDER IMAGE
+   ============================================================ */
+.case-study-render-block {
+  margin-top: 26px;
+  margin-bottom: 26px;
+  border: 1px solid var(--line);
+  background: rgba(226,230,234,0.20);
+  overflow: hidden;
+}
+
+.case-study-render-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ============================================================
    CASE STUDY V2
    ============================================================ */
 .case-study-v2 {
