@@ -1,33 +1,51 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- =========================================================
+       BASIC META
+       ========================================================= -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SAMOE STUDIOS — Architecture, Interiors & Delivery</title>
-  <meta name="description" content="Select your preferred language to continue to SAMOE STUDIOS." />
+
+  <!-- =========================================================
+       SEO
+       ========================================================= -->
+  <title>Language — SAMOE STUDIOS</title>
+  <meta
+    name="description"
+    content="Select your preferred language to continue to SAMOE STUDIOS."
+  />
   <link rel="canonical" href="https://samoestudios.com/" />
 
-  <meta property="og:title" content="SAMOE STUDIOS — Architecture, Interiors & Delivery" />
-  <meta property="og:description" content="Architecture, interiors, retail rollout systems, and implementation oversight." />
-  <meta property="og:url" content="https://samoestudios.com/" />
-  <meta property="og:type" content="website" />
-
+  <!-- =========================================================
+       FONTS
+       ========================================================= -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=109" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- =========================================================
+       STYLES
+       ========================================================= -->
+  <link rel="stylesheet" href="./styles.css?v=108" />
 </head>
 <body class="gate-body">
 
+  <!-- =========================================================
+       LANGUAGE GATE
+       ========================================================= -->
   <main class="language-gate">
     <section class="gate-shell reveal is-visible">
-
       <div class="gate-shell-left">
         <div class="eyebrow">SAMOE STUDIOS</div>
         <h1 class="gate-heading" data-i18n="gate_title">Select language</h1>
         <p class="gate-copy" data-i18n="gate_sub">
           Choose your preferred language to continue.
         </p>
+
         <div class="gate-actions">
           <button class="btn btn-accent" id="chooseEN" type="button">English</button>
           <button class="btn btn-outline" id="chooseAR" type="button">العربية</button>
@@ -41,28 +59,34 @@
           <div class="gate-brand-bottom">MENA-based • International capability</div>
         </div>
       </div>
-
     </section>
   </main>
 
-  <script src="./i18n.js?v=109"></script>
+  <script src="./i18n.js?v=108"></script>
   <script>
     (function () {
       const STORAGE_KEY = "samoelang";
+
       try {
-        const saved = localStorage.getItem(STORAGE_KEY);
-        if (saved === "en" || saved === "ar") {
+        const savedLang = localStorage.getItem(STORAGE_KEY);
+        if (savedLang === "en" || savedLang === "ar") {
           location.replace("./home.html");
         }
-      } catch (e) {}
+      } catch (error) {
+        console.warn("Language auto-redirect skipped:", error);
+      }
 
-      document.getElementById("chooseEN").addEventListener("click", function () {
-        try { localStorage.setItem(STORAGE_KEY, "en"); } catch (e) {}
+      document.getElementById("chooseEN").addEventListener("click", () => {
+        try {
+          localStorage.setItem(STORAGE_KEY, "en");
+        } catch (error) {}
         location.href = "./home.html";
       });
 
-      document.getElementById("chooseAR").addEventListener("click", function () {
-        try { localStorage.setItem(STORAGE_KEY, "ar"); } catch (e) {}
+      document.getElementById("chooseAR").addEventListener("click", () => {
+        try {
+          localStorage.setItem(STORAGE_KEY, "ar");
+        } catch (error) {}
         location.href = "./home.html";
       });
     })();
