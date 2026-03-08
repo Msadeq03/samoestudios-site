@@ -1,3 +1,10 @@
+# ============================================================
+# ROBOTS FILE
+# Tells search engines they are allowed to crawl the website
+# and where the sitemap is located.
+# ============================================================
+
 User-agent: *
 Allow: /
+
 Sitemap: https://samoestudios.com/sitemap.xml
