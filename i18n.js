@@ -3,61 +3,64 @@
 
   const STORAGE_KEY = "samoelang";
 
+  /* ============================================================
+     DICTIONARY
+     ============================================================ */
   const dict = {
     en: {
-      nav_practice: "Practice",
-      nav_work: "Work",
-      nav_products: "Products",
-      nav_contact: "Contact",
-      nav_inquiry: "Inquiry",
-      home_home: "Home",
+      nav_practice:   "Practice",
+      nav_work:       "Work",
+      nav_products:   "Products",
+      nav_contact:    "Contact",
+      nav_inquiry:    "Inquiry",
+      home_home:      "Home",
 
       gate_title: "Select language",
-      gate_sub: "Choose your preferred language to continue.",
+      gate_sub:   "Choose your preferred language to continue.",
 
-      hero_kicker: "MENA-based • International capability",
-      hero_title: "SAMOE STUDIOS",
-      hero_slogan: "Architecture, interiors, and delivery — from concept to execution.",
-      hero_sub: "Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.",
+      hero_kicker:  "MENA-based • International capability",
+      hero_title:   "SAMOE STUDIOS",
+      hero_slogan:  "Architecture, interiors, and delivery — from concept to execution.",
+      hero_sub:     "Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.",
 
       case_title: "Special Lady — Retail transformation",
-      case_tag: "Iraq • Retail • Rebrand • Renovation • Systems",
-      case_desc: "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
+      case_tag:   "Iraq • Retail • Rebrand • Renovation • Systems",
+      case_desc:  "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
 
-      tl_start: "Project start",
-      tl_end: "Full delivery",
+      tl_start:     "Project start",
+      tl_end:       "Full delivery",
       tl_start_val: "October 2025",
-      tl_end_val: "April 2026",
-      view_case: "View case study",
+      tl_end_val:   "April 2026",
+      view_case:    "View case study",
 
       home_section_1_kicker: "Studio positioning",
-      home_section_1_title: "A delivery-led studio model",
-      home_section_1_copy: "SAMOE STUDIOS operates where concept quality and execution discipline need to meet. The studio structure is built around direction, documentation, supplier alignment, and delivery control.",
-      home_link_practice: "Explore the practice",
+      home_section_1_title:  "A delivery-led studio model",
+      home_section_1_copy:   "SAMOE STUDIOS operates where concept quality and execution discipline need to meet. The studio structure is built around direction, documentation, supplier alignment, and delivery control.",
+      home_link_practice:    "Explore the practice",
 
       home_section_2_kicker: "Selected work",
       home_section_3_kicker: "Products",
-      home_feature_title: "Direction, structure, accountability",
-      home_feature_copy: "The studio does not position itself as image-only design. The core value is building coherent project systems that can move from concept into real implementation with control.",
+      home_feature_title:    "Direction, structure, accountability",
+      home_feature_copy:     "The studio does not position itself as image-only design. The core value is building coherent project systems that can move from concept into real implementation with control.",
 
-      studio_strip_headquarters: "Headquarters",
-      studio_strip_registered_office: "Registered office",
-      studio_strip_focus: "Focus",
-      studio_strip_headquarters_value: "Erbil, Iraq",
+      studio_strip_headquarters:         "Headquarters",
+      studio_strip_registered_office:    "Registered office",
+      studio_strip_focus:                "Focus",
+      studio_strip_headquarters_value:   "Erbil, Iraq",
       studio_strip_registered_office_value: "London, United Kingdom",
-      studio_strip_focus_value: "Architecture / Interiors / Delivery",
+      studio_strip_focus_value:          "Architecture / Interiors / Delivery",
 
       practice_kicker: "Practice",
-      practice_title: "Practice",
-      practice_sub: "MENA-based, able to work internationally. Headquarters: Erbil, Iraq.",
+      practice_title:  "Practice",
+      practice_sub:    "MENA-based, able to work internationally. Headquarters: Erbil, Iraq.",
 
       who_title: "Who we are",
-      who_sub: "Studio-led accountability",
-      who_p1: "SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.",
-      who_p2: "We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.",
+      who_sub:   "Studio-led accountability",
+      who_p1:    "SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.",
+      who_p2:    "We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.",
 
       offer_title: "What we offer",
-      offer_sub: "Core services",
+      offer_sub:   "Core services",
       s1_t: "Architecture + Interiors",
       s1_d: "Concept to detailed design with execution clarity.",
       s2_t: "Retail Design + Rollout Systems",
@@ -72,11 +75,11 @@
       s6_d: "Fit-out, joinery, lighting, signage, MEP, and systems implementation under SAMOE standards.",
 
       delivery_title: "Delivery model",
-      delivery_sub: "How we execute",
-      d1: "01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.",
-      d2: "02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.",
-      d3: "03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.",
-      d4: "04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.",
+      delivery_sub:   "How we execute",
+      d1: "Objectives, constraints, budget logic, timeline, success KPIs.",
+      d2: "Concept → detailed design, BOQ alignment, technical packages, execution clarity.",
+      d3: "Supplier strategy, approvals, and partner selection under SAMOE standards.",
+      d4: "Site coordination, inspections, punch lists, handover — measurable quality control.",
 
       delivery_step_1_title: "Discovery",
       delivery_step_2_title: "Design + Documentation",
@@ -84,37 +87,37 @@
       delivery_step_4_title: "Implementation + QA",
 
       name_title: "The name",
-      name_sub: "SAMOE (pronounced “Sah-moe”)",
-      name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
+      name_sub:   "SAMOE (pronounced "Sah-moe")",
+      name_p:     "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
 
-      work_kicker: "Work",
-      work_title: "Work",
-      work_sub: "Selected case study",
+      work_kicker:    "Work",
+      work_title:     "Work",
+      work_sub:       "Selected case study",
       work_case_desc: "The studio is leading the rebrand and spatial expansion of Special Lady, integrating architectural redesign, expansion coordination, and operational systems alignment.",
 
-      work_meta_client: "Client",
-      work_meta_sector: "Sector",
-      work_meta_location: "Location",
-      work_meta_type: "Type",
-      work_meta_sector_value: "Retail",
+      work_meta_client:        "Client",
+      work_meta_sector:        "Sector",
+      work_meta_location:      "Location",
+      work_meta_type:          "Type",
+      work_meta_sector_value:  "Retail",
       work_meta_location_value: "Erbil, Iraq",
-      work_meta_type_value: "Rebrand / Renovation / Systems",
+      work_meta_type_value:    "Rebrand / Renovation / Systems",
 
-      scope_t: "Scope",
-      scope_d: "Concept, redesign, renovation support, implementation coordination.",
+      scope_t:   "Scope",
+      scope_d:   "Concept, redesign, renovation support, implementation coordination.",
       systems_t: "Systems",
       systems_d: "Documentation discipline, procurement control, operational alignment.",
       outcome_t: "Outcome",
       outcome_d: "Brand coherence, execution accountability, improved customer experience.",
       more_cases: "More case studies will be published as documentation is finalized.",
 
-      products_kicker: "Products",
-      products_title: "Coming soon",
-      products_sub: "Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.",
-      products_panel_label: "Planned categories",
+      products_kicker:       "Products",
+      products_title:        "Coming soon",
+      products_sub:          "Retail fixtures (racks, shelves, tables, counters) and furniture + lighting for retail and residential environments.",
+      products_panel_label:  "Planned categories",
       products_status_label: "Status",
       products_status_title: "Product line in development",
-      products_status_copy: "This section will expand as the studio formalizes product design, sourcing, and rollout readiness.",
+      products_status_copy:  "This section will expand as the studio formalizes product design, sourcing, and rollout readiness.",
       products_cat_1: "Retail fixtures",
       products_cat_2: "Display systems",
       products_cat_3: "Counters and tables",
@@ -122,90 +125,90 @@
       products_cat_5: "Furniture",
       products_cat_6: "Lighting",
 
-      contact_kicker: "Contact",
-      contact_title: "Inquiry",
-      contact_sub: "Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.",
-      contact_form_title: "Send an inquiry",
-      contact_form_sub: "Fill in your details and submit directly through the website.",
-      contact_general_label: "General inquiries",
-      contact_general_desc: "General public contact and website inquiries.",
-      contact_sales_label: "Commercial proposals",
-      contact_sales_desc: "Client inquiries and commercial proposals.",
+      contact_kicker:           "Contact",
+      contact_title:            "Inquiry",
+      contact_sub:              "Contact SAMOE STUDIOS LTD for general inquiries, project discussions, and commercial proposals.",
+      contact_form_title:       "Send an inquiry",
+      contact_form_sub:         "Fill in your details and submit directly through the website.",
+      contact_general_label:    "General inquiries",
+      contact_general_desc:     "General public contact and website inquiries.",
+      contact_sales_label:      "Commercial proposals",
+      contact_sales_desc:       "Client inquiries and commercial proposals.",
       contact_registered_office: "Registered office",
 
-      f_department: "Inquiry type",
+      f_department:      "Inquiry type",
       f_department_sales: "Client inquiry / commercial proposal",
-      f_department_info: "General inquiry",
-      f_name: "Name",
-      f_company: "Company",
-      f_phone: "Phone",
-      f_email: "Email",
+      f_department_info:  "General inquiry",
+      f_name:     "Name",
+      f_company:  "Company",
+      f_phone:    "Phone",
+      f_email:    "Email",
       f_location: "Project location",
-      f_desc: "Project / Description",
-      f_desc_ph: "Brief scope, location, timeline, any constraints...",
+      f_desc:     "Project / Description",
+      f_desc_ph:  "Brief scope, location, timeline, any constraints...",
       send_inquiry: "Submit inquiry",
 
-      footer_nav_title: "Navigation",
+      footer_nav_title:     "Navigation",
       footer_contact_title: "Contact",
-      footer_social_title: "Social",
-      footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
+      footer_social_title:  "Social",
+      footer_copy:   "Architecture, interiors, and delivery — from concept to execution.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     },
 
     ar: {
-      nav_practice: "الممارسة",
-      nav_work: "الأعمال",
-      nav_products: "المنتجات",
-      nav_contact: "التواصل",
-      nav_inquiry: "استفسار",
-      home_home: "الرئيسية",
+      nav_practice:   "الممارسة",
+      nav_work:       "الأعمال",
+      nav_products:   "المنتجات",
+      nav_contact:    "التواصل",
+      nav_inquiry:    "استفسار",
+      home_home:      "الرئيسية",
 
       gate_title: "اختر اللغة",
-      gate_sub: "اختر لغتك المفضلة للمتابعة.",
+      gate_sub:   "اختر لغتك المفضلة للمتابعة.",
 
-      hero_kicker: "الشرق الأوسط وشمال أفريقيا • إمكانية العمل دولياً",
-      hero_title: "SAMOE STUDIOS",
-      hero_slogan: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
-      hero_sub: "قيادة استوديو مع شبكة شركاء موثوقة لضمان الجودة. المقر: أربيل، العراق.",
+      hero_kicker:  "الشرق الأوسط وشمال أفريقيا • إمكانية العمل دولياً",
+      hero_title:   "SAMOE STUDIOS",
+      hero_slogan:  "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
+      hero_sub:     "قيادة استوديو مع شبكة شركاء موثوقة لضمان الجودة. المقر: أربيل، العراق.",
 
       case_title: "Special Lady — تطوير متجر تجزئة",
-      case_tag: "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
-      case_desc: "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
+      case_tag:   "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
+      case_desc:  "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
 
-      tl_start: "بداية المشروع",
-      tl_end: "التسليم الكامل",
+      tl_start:     "بداية المشروع",
+      tl_end:       "التسليم الكامل",
       tl_start_val: "أكتوبر 2025",
-      tl_end_val: "أبريل 2026",
-      view_case: "عرض دراسة الحالة",
+      tl_end_val:   "أبريل 2026",
+      view_case:    "عرض دراسة الحالة",
 
       home_section_1_kicker: "تموضع الاستوديو",
-      home_section_1_title: "نموذج استوديو يقوده التسليم",
-      home_section_1_copy: "يعمل SAMOE STUDIOS في المساحة التي يجب أن تلتقي فيها جودة الفكرة مع انضباط التنفيذ. ويقوم هيكل الاستوديو على التوجيه والتوثيق ومواءمة الموردين وضبط التسليم.",
-      home_link_practice: "استكشف الممارسة",
+      home_section_1_title:  "نموذج استوديو يقوده التسليم",
+      home_section_1_copy:   "يعمل SAMOE STUDIOS في المساحة التي يجب أن تلتقي فيها جودة الفكرة مع انضباط التنفيذ. ويقوم هيكل الاستوديو على التوجيه والتوثيق ومواءمة الموردين وضبط التسليم.",
+      home_link_practice:    "استكشف الممارسة",
 
       home_section_2_kicker: "الأعمال المختارة",
       home_section_3_kicker: "المنتجات",
-      home_feature_title: "توجيه، هيكلة، مساءلة",
-      home_feature_copy: "الاستوديو لا يتموضع كتصميم صور فقط. القيمة الأساسية هي بناء أنظمة مشروع مترابطة يمكن أن تنتقل من الفكرة إلى التنفيذ الحقيقي مع ضبط واضح.",
+      home_feature_title:    "توجيه، هيكلة، مساءلة",
+      home_feature_copy:     "الاستوديو لا يتموضع كتصميم صور فقط. القيمة الأساسية هي بناء أنظمة مشروع مترابطة يمكن أن تنتقل من الفكرة إلى التنفيذ الحقيقي مع ضبط واضح.",
 
-      studio_strip_headquarters: "المقر",
-      studio_strip_registered_office: "العنوان المسجل",
-      studio_strip_focus: "التركيز",
-      studio_strip_headquarters_value: "أربيل، العراق",
+      studio_strip_headquarters:            "المقر",
+      studio_strip_registered_office:       "العنوان المسجل",
+      studio_strip_focus:                   "التركيز",
+      studio_strip_headquarters_value:      "أربيل، العراق",
       studio_strip_registered_office_value: "لندن، المملكة المتحدة",
-      studio_strip_focus_value: "عمارة / تصميم داخلي / تسليم",
+      studio_strip_focus_value:             "عمارة / تصميم داخلي / تسليم",
 
       practice_kicker: "الممارسة",
-      practice_title: "الممارسة",
-      practice_sub: "مقرّنا في أربيل، العراق. نحن متمركزون في منطقة الشرق الأوسط وشمال أفريقيا مع إمكانية العمل دولياً.",
+      practice_title:  "الممارسة",
+      practice_sub:    "مقرّنا في أربيل، العراق. نحن متمركزون في منطقة الشرق الأوسط وشمال أفريقيا مع إمكانية العمل دولياً.",
 
       who_title: "من نحن",
-      who_sub: "مساءلة يقودها الاستوديو",
-      who_p1: "SAMOE STUDIOS ممارسة متعددة التخصصات في العمارة والتسليم. نقود المشاريع من التخطيط المبكر مروراً بتطوير التصميم والتوثيق والمشتريات والتنفيذ — مع قيادة استوديو وشبكة تنفيذ موثوقة لضبط الجودة والنتائج.",
-      who_p2: "نعمل عبر التجزئة والسكني والتجاري والمؤسسي — ونختار المشاريع التي نستطيع فيها تقديم هيكلة واضحة وذكاء مكاني وانضباط في التسليم.",
+      who_sub:   "مساءلة يقودها الاستوديو",
+      who_p1:    "SAMOE STUDIOS ممارسة متعددة التخصصات في العمارة والتسليم. نقود المشاريع من التخطيط المبكر مروراً بتطوير التصميم والتوثيق والمشتريات والتنفيذ — مع قيادة استوديو وشبكة تنفيذ موثوقة لضبط الجودة والنتائج.",
+      who_p2:    "نعمل عبر التجزئة والسكني والتجاري والمؤسسي — ونختار المشاريع التي نستطيع فيها تقديم هيكلة واضحة وذكاء مكاني وانضباط في التسليم.",
 
       offer_title: "ماذا نقدم",
-      offer_sub: "الخدمات الأساسية",
+      offer_sub:   "الخدمات الأساسية",
       s1_t: "عمارة + تصميم داخلي",
       s1_d: "من الفكرة إلى تصميم تفصيلي جاهز للتنفيذ.",
       s2_t: "تصميم تجزئة + أنظمة تشغيل",
@@ -220,11 +223,11 @@
       s6_d: "تشطيبات، نجارة، إنارة، لافتات، MEP، وتنفيذ أنظمة وفق معايير SAMOE.",
 
       delivery_title: "نموذج التسليم",
-      delivery_sub: "كيف ننفذ",
-      d1: "01 — الاكتشاف: الأهداف، القيود، منطق الميزانية، الجدول الزمني، ومؤشرات النجاح.",
-      d2: "02 — التصميم + التوثيق: من الفكرة إلى تصميم تفصيلي، توافق BOQ، حزم فنية، وضوح التنفيذ.",
-      d3: "03 — المشتريات + الشركاء: استراتيجية الموردين، الاعتمادات، واختيار الشركاء وفق معايير SAMOE.",
-      d4: "04 — التنفيذ + ضمان الجودة: تنسيق الموقع، فحوصات، قوائم ملاحظات، تسليم — مع ضبط جودة قابل للقياس.",
+      delivery_sub:   "كيف ننفذ",
+      d1: "الأهداف، القيود، منطق الميزانية، الجدول الزمني، ومؤشرات النجاح.",
+      d2: "من الفكرة إلى تصميم تفصيلي، توافق BOQ، حزم فنية، وضوح التنفيذ.",
+      d3: "استراتيجية الموردين، الاعتمادات، واختيار الشركاء وفق معايير SAMOE.",
+      d4: "تنسيق الموقع، فحوصات، قوائم ملاحظات، تسليم — مع ضبط جودة قابل للقياس.",
 
       delivery_step_1_title: "الاكتشاف",
       delivery_step_2_title: "التصميم + التوثيق",
@@ -232,37 +235,37 @@
       delivery_step_4_title: "التنفيذ + ضمان الجودة",
 
       name_title: "الاسم",
-      name_sub: "SAMOE (تُنطق: سا-مو)",
-      name_p: "SAMOE ليس اختصاراً. هو علامة استوديو قابلة للتكيف عبر القطاعات والأماكن وحجم المشاريع.",
+      name_sub:   "SAMOE (تُنطق: سا-مو)",
+      name_p:     "SAMOE ليس اختصاراً. هو علامة استوديو قابلة للتكيف عبر القطاعات والأماكن وحجم المشاريع.",
 
-      work_kicker: "الأعمال",
-      work_title: "الأعمال",
-      work_sub: "دراسة حالة مختارة",
+      work_kicker:    "الأعمال",
+      work_title:     "الأعمال",
+      work_sub:       "دراسة حالة مختارة",
       work_case_desc: "يقود الاستوديو مشروع إعادة العلامة والتوسعة المكانية لـ Special Lady، مع دمج إعادة التصميم المعماري وتنسيق التوسعة ومواءمة الأنظمة التشغيلية.",
 
-      work_meta_client: "العميل",
-      work_meta_sector: "القطاع",
-      work_meta_location: "الموقع",
-      work_meta_type: "النوع",
-      work_meta_sector_value: "تجزئة",
+      work_meta_client:         "العميل",
+      work_meta_sector:         "القطاع",
+      work_meta_location:       "الموقع",
+      work_meta_type:           "النوع",
+      work_meta_sector_value:   "تجزئة",
       work_meta_location_value: "أربيل، العراق",
-      work_meta_type_value: "إعادة علامة / تجديد / أنظمة",
+      work_meta_type_value:     "إعادة علامة / تجديد / أنظمة",
 
-      scope_t: "النطاق",
-      scope_d: "فكرة، إعادة تصميم، دعم تجديد، وتنسيق التنفيذ.",
+      scope_t:   "النطاق",
+      scope_d:   "فكرة، إعادة تصميم، دعم تجديد، وتنسيق التنفيذ.",
       systems_t: "الأنظمة",
       systems_d: "انضباط توثيق، ضبط مشتريات، ومواءمة تشغيلية.",
       outcome_t: "النتيجة",
       outcome_d: "تماسك العلامة، مساءلة تنفيذ، وتحسين تجربة العميل.",
       more_cases: "سيتم نشر المزيد من دراسات الحالة عند اكتمال التوثيق.",
 
-      products_kicker: "المنتجات",
-      products_title: "قريباً",
-      products_sub: "تجهيزات تجزئة (ستاندات، رفوف، طاولات، كاونترات) وأثاث + إنارة للتجزئة والسكن.",
-      products_panel_label: "الفئات المخططة",
+      products_kicker:       "المنتجات",
+      products_title:        "قريباً",
+      products_sub:          "تجهيزات تجزئة (ستاندات، رفوف، طاولات، كاونترات) وأثاث + إنارة للتجزئة والسكن.",
+      products_panel_label:  "الفئات المخططة",
       products_status_label: "الحالة",
       products_status_title: "خط المنتجات قيد التطوير",
-      products_status_copy: "سيتوسع هذا القسم مع استكمال الاستوديو لتطوير المنتجات، والتوريد، والاستعداد للطرح والتنفيذ.",
+      products_status_copy:  "سيتوسع هذا القسم مع استكمال الاستوديو لتطوير المنتجات، والتوريد، والاستعداد للطرح والتنفيذ.",
       products_cat_1: "تجهيزات تجزئة",
       products_cat_2: "أنظمة عرض",
       products_cat_3: "كاونترات وطاولات",
@@ -270,41 +273,44 @@
       products_cat_5: "أثاث",
       products_cat_6: "إنارة",
 
-      contact_kicker: "التواصل",
-      contact_title: "استفسار",
-      contact_sub: "تواصل مع SAMOE STUDIOS LTD للاستفسارات العامة، مناقشات المشاريع، والعروض التجارية.",
-      contact_form_title: "إرسال استفسار",
-      contact_form_sub: "املأ بياناتك وأرسل مباشرة من خلال الموقع.",
-      contact_general_label: "الاستفسارات العامة",
-      contact_general_desc: "للتواصل العام واستفسارات الموقع الإلكتروني.",
-      contact_sales_label: "العروض التجارية",
-      contact_sales_desc: "لاستفسارات العملاء والعروض التجارية.",
+      contact_kicker:           "التواصل",
+      contact_title:            "استفسار",
+      contact_sub:              "تواصل مع SAMOE STUDIOS LTD للاستفسارات العامة، مناقشات المشاريع، والعروض التجارية.",
+      contact_form_title:       "إرسال استفسار",
+      contact_form_sub:         "املأ بياناتك وأرسل مباشرة من خلال الموقع.",
+      contact_general_label:    "الاستفسارات العامة",
+      contact_general_desc:     "للتواصل العام واستفسارات الموقع الإلكتروني.",
+      contact_sales_label:      "العروض التجارية",
+      contact_sales_desc:       "لاستفسارات العملاء والعروض التجارية.",
       contact_registered_office: "العنوان المسجل",
 
-      f_department: "نوع الاستفسار",
+      f_department:       "نوع الاستفسار",
       f_department_sales: "استفسار عميل / عرض تجاري",
-      f_department_info: "استفسار عام",
-      f_name: "الاسم",
-      f_company: "الشركة",
-      f_phone: "رقم الهاتف",
-      f_email: "البريد الإلكتروني",
+      f_department_info:  "استفسار عام",
+      f_name:     "الاسم",
+      f_company:  "الشركة",
+      f_phone:    "رقم الهاتف",
+      f_email:    "البريد الإلكتروني",
       f_location: "موقع المشروع",
-      f_desc: "المشروع / الوصف",
-      f_desc_ph: "نطاق مختصر، الموقع، الجدول الزمني، أي قيود...",
+      f_desc:     "المشروع / الوصف",
+      f_desc_ph:  "نطاق مختصر، الموقع، الجدول الزمني، أي قيود...",
       send_inquiry: "إرسال الاستفسار",
 
-      footer_nav_title: "التنقل",
+      footer_nav_title:     "التنقل",
       footer_contact_title: "التواصل",
-      footer_social_title: "الحسابات",
-      footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
+      footer_social_title:  "الحسابات",
+      footer_copy:   "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
       footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     }
   };
 
+  /* ============================================================
+     CORE FUNCTIONS
+     ============================================================ */
   function getLang() {
     try {
       return localStorage.getItem(STORAGE_KEY) || "en";
-    } catch (error) {
+    } catch {
       return "en";
     }
   }
@@ -312,7 +318,7 @@
   function setLang(lang) {
     try {
       localStorage.setItem(STORAGE_KEY, lang);
-    } catch (error) {}
+    } catch { /* silent */ }
     applyLang(lang);
   }
 
@@ -342,12 +348,18 @@
   function initLanguageSwitcher(enButtonId, arButtonId) {
     const enBtn = document.getElementById(enButtonId);
     const arBtn = document.getElementById(arButtonId);
-
     if (!enBtn || !arBtn) return;
 
     const updateState = (lang) => {
       enBtn.classList.toggle("active", lang === "en");
       arBtn.classList.toggle("active", lang === "ar");
+      // Also update any cloned mobile switcher
+      const mobileSwitch = document.getElementById("mobileLangSwitch");
+      if (mobileSwitch) {
+        const [mEN, mAR] = mobileSwitch.querySelectorAll("button");
+        if (mEN) mEN.classList.toggle("active", lang === "en");
+        if (mAR) mAR.classList.toggle("active", lang === "ar");
+      }
     };
 
     const current = getLang();
@@ -364,12 +376,10 @@
     });
   }
 
-  window.SAMOE = {
-    getLang,
-    setLang,
-    applyLang,
-    initLanguageSwitcher
-  };
+  /* ============================================================
+     EXPORT
+     ============================================================ */
+  window.SAMOE = { getLang, setLang, applyLang, initLanguageSwitcher };
 
   document.addEventListener("DOMContentLoaded", () => {
     applyLang(getLang());
