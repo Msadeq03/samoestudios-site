@@ -49,7 +49,7 @@
     }
 
     function getCurrentLang() {
-      return window.SAMOE?.getLang
+      return window.SAMOE && window.SAMOE.getLang
         ? window.SAMOE.getLang()
         : (localStorage.getItem("samoelang") || "en");
     }
@@ -61,8 +61,8 @@
     }
 
     function getPhoneValue() {
-      if (!iti) return (phoneInput?.value || "").trim();
-      const value = iti.getNumber();
+      if (!iti) return (phoneInput ? phoneInput.value : "").trim();
+      var value = iti.getNumber();
       return value ? value.trim() : "";
     }
 
@@ -385,17 +385,15 @@
     renderGrid();
   }
 
-  function exposeGallery() {
-    if (window.SAMOE) {
-      window.SAMOE.initGallery = initGallery;
-    } else {
-      window.SAMOE = { initGallery: initGallery };
-    }
+  /* Expose initGallery on SAMOE immediately so work.html can call it */
+  if (window.SAMOE) {
+    window.SAMOE.initGallery = initGallery;
+  } else {
+    window.SAMOE = { initGallery: initGallery };
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     initReveal();
     initInquiryForm();
-    exposeGallery();
   });
 })();
