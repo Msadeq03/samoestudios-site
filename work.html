@@ -16,7 +16,7 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@400;500;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="./styles.css?v=108" />
+  <link rel="stylesheet" href="./styles.css?v=109" />
 </head>
 <body>
 
@@ -125,6 +125,34 @@
       </div>
     </section>
 
+    <!-- =========================================================
+         PROJECT GALLERY
+         ========================================================= -->
+    <section class="project-gallery reveal" id="projectGallery">
+      <div class="services-editorial-head">
+        <div class="eyebrow" data-i18n="gallery_kicker">Documentation</div>
+        <h2 class="section-title-large" data-i18n="gallery_title">Project gallery</h2>
+      </div>
+
+      <div class="gallery-tabs" id="galleryTabs" role="tablist" aria-label="Gallery filter"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </section>
+
+    <!-- =========================================================
+         LIGHTBOX
+         ========================================================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+      <div class="lightbox-overlay" id="lightboxOverlay"></div>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">&#8592;</button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next image">&#8594;</button>
+      <div class="lightbox-content">
+        <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+      </div>
+    </div>
+
     <footer class="site-footer">
       <div class="site-footer-top">
         <div class="footer-brand-block">
@@ -167,10 +195,65 @@
 
   </main>
 
-  <script src="./i18n.js?v=108"></script>
-  <script src="./script.js?v=108"></script>
+  <script src="./i18n.js?v=109"></script>
+  <script src="./script.js?v=109"></script>
   <script>
     window.SAMOE.initLanguageSwitcher("langEN", "langAR");
+  </script>
+
+  <!-- =========================================================
+       GALLERY DATA
+       To add images: add a new object to the array below.
+       Categories auto-generate filter tabs.
+       Folder: /assets/work/special-lady/
+       ========================================================= -->
+  <script>
+    window.GALLERY_DATA = [
+      {
+        src: "/assets/work/special-lady/render-01.png",
+        caption_en: "Storefront concept — main entrance",
+        caption_ar: "تصور الواجهة — المدخل الرئيسي",
+        category: "render"
+      },
+      {
+        src: "/assets/work/special-lady/render-02.png",
+        caption_en: "Interior layout",
+        caption_ar: "التصميم الداخلي",
+        category: "render"
+      },
+      {
+        src: "/assets/work/special-lady/render-03.png",
+        caption_en: "Checkout Area",
+        caption_ar: "منطقة الدفع",
+        category: "render"
+      },
+      {
+        src: "/assets/work/special-lady/render-04.png",
+        caption_en: "Display wall — product zone",
+        caption_ar: "جدار العرض — منطقة المنتجات",
+        category: "render"
+      },
+      {
+        src: "/assets/work/special-lady/site-01.png",
+        caption_en: "Section 2 of the New Area",
+        caption_ar: "القسم 2 من المنطقة الجديدة",
+        category: "site"
+      },
+      {
+        src: "/assets/work/special-lady/site-02.png",
+        caption_en: "Section 1 of the New Area",
+        caption_ar: "القسم 1 من المنطقة الجديدة",
+        category: "site"
+      },
+      {
+        src: "/assets/work/special-lady/site-03.png",
+        caption_en: "Checkout Area Before Renovation",
+        caption_ar: "منطقة الدفع قبل التجديد",
+        category: "site"
+      }
+    ];
+
+    window.SAMOE.initGallery();
   </script>
 </body>
 </html>

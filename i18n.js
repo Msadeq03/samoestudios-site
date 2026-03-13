@@ -84,7 +84,7 @@
       delivery_step_4_title: "Implementation + QA",
 
       name_title: "The name",
-      name_sub: "SAMOE (pronounced “Sah-moe”)",
+      name_sub: "SAMOE (pronounced \u201CSah-moe\u201D)",
       name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
 
       work_kicker: "Work",
@@ -107,6 +107,10 @@
       outcome_t: "Outcome",
       outcome_d: "Brand coherence, execution accountability, improved customer experience.",
       more_cases: "More case studies will be published as documentation is finalized.",
+
+      // Gallery
+      gallery_kicker: "Documentation",
+      gallery_title: "Project gallery",
 
       products_kicker: "Products",
       products_title: "Coming soon",
@@ -255,6 +259,10 @@
       outcome_t: "النتيجة",
       outcome_d: "تماسك العلامة، مساءلة تنفيذ، وتحسين تجربة العميل.",
       more_cases: "سيتم نشر المزيد من دراسات الحالة عند اكتمال التوثيق.",
+
+      // Gallery
+      gallery_kicker: "التوثيق",
+      gallery_title: "معرض المشروع",
 
       products_kicker: "المنتجات",
       products_title: "قريباً",
