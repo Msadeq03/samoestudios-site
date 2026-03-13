@@ -56,7 +56,7 @@
 
     function setStatus(type, message) {
       if (!statusBox) return;
-      statusBox.className = `form-status ${type || ""}`.trim();
+      statusBox.className = "form-status " + (type || "");
       statusBox.textContent = message;
     }
 
@@ -103,7 +103,7 @@
         setStatus(
           "error",
           lang === "ar"
-            ? "يرجى إكمال جميع الحقول المطلوبة."
+            ? "\u064A\u0631\u062C\u0649 \u0625\u0643\u0645\u0627\u0644 \u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628\u0629."
             : "Please complete all required fields."
         );
         return;
@@ -119,7 +119,7 @@
             setStatus(
               "error",
               lang === "ar"
-                ? "يرجى إدخال رقم هاتف صحيح."
+                ? "\u064A\u0631\u062C\u0649 \u0625\u062F\u062E\u0627\u0644 \u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u0635\u062D\u064A\u062D."
                 : "Please enter a valid phone number."
             );
             return;
@@ -128,7 +128,7 @@
           setStatus(
             "error",
             lang === "ar"
-              ? "حدث خطأ في التحقق من رقم الهاتف."
+              ? "\u062D\u062F\u062B \u062E\u0637\u0623 \u0641\u064A \u0627\u0644\u062A\u062D\u0642\u0642 \u0645\u0646 \u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641."
               : "There was a problem validating the phone number."
           );
           return;
@@ -139,7 +139,7 @@
         setStatus(
           "error",
           lang === "ar"
-            ? "يرجى إكمال التحقق الأمني."
+            ? "\u064A\u0631\u062C\u0649 \u0625\u0643\u0645\u0627\u0644 \u0627\u0644\u062A\u062D\u0642\u0642 \u0627\u0644\u0623\u0645\u0646\u064A."
             : "Please complete the security check."
         );
         return;
@@ -150,7 +150,7 @@
 
         setStatus(
           "",
-          lang === "ar" ? "جارٍ إرسال الاستفسار..." : "Submitting inquiry..."
+          lang === "ar" ? "\u062C\u0627\u0631\u064D \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631..." : "Submitting inquiry..."
         );
 
         const response = await fetch("/api/contact", {
@@ -170,7 +170,7 @@
         setStatus(
           "success",
           lang === "ar"
-            ? "تم إرسال الاستفسار بنجاح."
+            ? "\u062A\u0645 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631 \u0628\u0646\u062C\u0627\u062D."
             : "Your inquiry has been submitted successfully."
         );
 
@@ -188,7 +188,7 @@
           "error",
           error.message ||
             (lang === "ar"
-              ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
+              ? "\u062D\u062F\u062B \u062E\u0637\u0623 \u0623\u062B\u0646\u0627\u0621 \u0627\u0644\u0625\u0631\u0633\u0627\u0644. \u064A\u0631\u062C\u0649 \u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649."
               : "There was a problem sending your inquiry. Please try again.")
         );
       } finally {
@@ -197,9 +197,6 @@
     });
   }
 
-  /* ============================================================
-     GALLERY + LIGHTBOX
-     ============================================================ */
   function initGallery() {
     var grid = document.getElementById("galleryGrid");
     var tabsContainer = document.getElementById("galleryTabs");
@@ -221,7 +218,7 @@
     var filteredItems = [];
 
     function getLang() {
-      return window.SAMOE?.getLang ? window.SAMOE.getLang() : "en";
+      return window.SAMOE && window.SAMOE.getLang ? window.SAMOE.getLang() : "en";
     }
 
     function getCaption(item) {
@@ -230,9 +227,9 @@
     }
 
     var categoryLabels = {
-      all:    { en: "All", ar: "الكل" },
-      render: { en: "Renders", ar: "تصورات" },
-      site:   { en: "Site Photos", ar: "صور الموقع" }
+      all: { en: "All", ar: "\u0627\u0644\u0643\u0644" },
+      render: { en: "Renders", ar: "\u062A\u0635\u0648\u0631\u0627\u062A" },
+      site: { en: "Site Photos", ar: "\u0635\u0648\u0631 \u0627\u0644\u0645\u0648\u0642\u0639" }
     };
 
     function getCategoryLabel(cat) {
@@ -282,12 +279,26 @@
         card.setAttribute("role", "button");
         card.setAttribute("aria-label", getCaption(item));
 
-        card.innerHTML =
-          '<div class="gallery-item-img-wrap">' +
-            '<img src="' + item.src + '" alt="' + getCaption(item) + '" loading="lazy" />' +
-            '<div class="gallery-item-overlay"></div>' +
-          '</div>' +
-          '<div class="gallery-item-caption">' + getCaption(item) + '</div>';
+        var imgWrap = document.createElement("div");
+        imgWrap.className = "gallery-item-img-wrap";
+
+        var img = document.createElement("img");
+        img.src = item.src;
+        img.alt = getCaption(item);
+        img.loading = "lazy";
+
+        var overlay = document.createElement("div");
+        overlay.className = "gallery-item-overlay";
+
+        imgWrap.appendChild(img);
+        imgWrap.appendChild(overlay);
+
+        var caption = document.createElement("div");
+        caption.className = "gallery-item-caption";
+        caption.textContent = getCaption(item);
+
+        card.appendChild(imgWrap);
+        card.appendChild(caption);
 
         card.addEventListener("click", function () {
           openLightbox(index);
@@ -326,8 +337,13 @@
       lightboxCounter.textContent = (currentIndex + 1) + " / " + filteredItems.length;
 
       var single = filteredItems.length <= 1;
-      lightboxPrev.classList.toggle("hidden", single);
-      lightboxNext.classList.toggle("hidden", single);
+      if (single) {
+        lightboxPrev.classList.add("hidden");
+        lightboxNext.classList.add("hidden");
+      } else {
+        lightboxPrev.classList.remove("hidden");
+        lightboxNext.classList.remove("hidden");
+      }
     }
 
     function prevImage() {
@@ -369,8 +385,6 @@
     renderGrid();
   }
 
-  // Expose initGallery on the SAMOE namespace
-  // (must run after i18n.js has created window.SAMOE)
   function exposeGallery() {
     if (window.SAMOE) {
       window.SAMOE.initGallery = initGallery;
@@ -379,7 +393,7 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", function () {
     initReveal();
     initInquiryForm();
     exposeGallery();
