@@ -103,7 +103,7 @@
         setStatus(
           "error",
           lang === "ar"
-            ? "\u064A\u0631\u062C\u0649 \u0625\u0643\u0645\u0627\u0644 \u062C\u0645\u064A\u0639 \u0627\u0644\u062D\u0642\u0648\u0644 \u0627\u0644\u0645\u0637\u0644\u0648\u0628\u0629."
+            ? "يرجى إكمال جميع الحقول المطلوبة."
             : "Please complete all required fields."
         );
         return;
@@ -119,7 +119,7 @@
             setStatus(
               "error",
               lang === "ar"
-                ? "\u064A\u0631\u062C\u0649 \u0625\u062F\u062E\u0627\u0644 \u0631\u0642\u0645 \u0647\u0627\u062A\u0641 \u0635\u062D\u064A\u062D."
+                ? "يرجى إدخال رقم هاتف صحيح."
                 : "Please enter a valid phone number."
             );
             return;
@@ -128,7 +128,7 @@
           setStatus(
             "error",
             lang === "ar"
-              ? "\u062D\u062F\u062B \u062E\u0637\u0623 \u0641\u064A \u0627\u0644\u062A\u062D\u0642\u0642 \u0645\u0646 \u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641."
+              ? "حدث خطأ في التحقق من رقم الهاتف."
               : "There was a problem validating the phone number."
           );
           return;
@@ -139,7 +139,7 @@
         setStatus(
           "error",
           lang === "ar"
-            ? "\u064A\u0631\u062C\u0649 \u0625\u0643\u0645\u0627\u0644 \u0627\u0644\u062A\u062D\u0642\u0642 \u0627\u0644\u0623\u0645\u0646\u064A."
+            ? "يرجى إكمال التحقق الأمني."
             : "Please complete the security check."
         );
         return;
@@ -150,7 +150,7 @@
 
         setStatus(
           "",
-          lang === "ar" ? "\u062C\u0627\u0631\u064D \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631..." : "Submitting inquiry..."
+          lang === "ar" ? "جارٍ إرسال الاستفسار..." : "Submitting inquiry..."
         );
 
         const response = await fetch("/api/contact", {
@@ -170,7 +170,7 @@
         setStatus(
           "success",
           lang === "ar"
-            ? "\u062A\u0645 \u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631 \u0628\u0646\u062C\u0627\u062D."
+            ? "تم إرسال الاستفسار بنجاح."
             : "Your inquiry has been submitted successfully."
         );
 
@@ -188,7 +188,7 @@
           "error",
           error.message ||
             (lang === "ar"
-              ? "\u062D\u062F\u062B \u062E\u0637\u0623 \u0623\u062B\u0646\u0627\u0621 \u0627\u0644\u0625\u0631\u0633\u0627\u0644. \u064A\u0631\u062C\u0649 \u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649."
+              ? "حدث خطأ أثناء الإرسال. يرجى المحاولة مرة أخرى."
               : "There was a problem sending your inquiry. Please try again.")
         );
       } finally {
@@ -203,6 +203,13 @@
     var data = window.GALLERY_DATA;
 
     if (!grid || !tabsContainer || !data || !data.length) return;
+
+    if (window.SAMOE && window.SAMOE._galleryInitialized) {
+      if (window.SAMOE.refreshGallery) {
+        window.SAMOE.refreshGallery();
+      }
+      return;
+    }
 
     var lightbox = document.getElementById("lightbox");
     var lightboxImg = document.getElementById("lightboxImg");
@@ -227,9 +234,9 @@
     }
 
     var categoryLabels = {
-      all: { en: "All", ar: "\u0627\u0644\u0643\u0644" },
-      render: { en: "Renders", ar: "\u062A\u0635\u0648\u0631\u0627\u062A" },
-      site: { en: "Site Photos", ar: "\u0635\u0648\u0631 \u0627\u0644\u0645\u0648\u0642\u0639" }
+      all: { en: "All", ar: "الكل" },
+      render: { en: "Renders", ar: "تصورات" },
+      site: { en: "Site Photos", ar: "صور الموقع" }
     };
 
     function getCategoryLabel(cat) {
@@ -356,6 +363,14 @@
       updateLightbox();
     }
 
+    function refreshGallery() {
+      renderTabs();
+      renderGrid();
+      if (!lightbox.hidden) {
+        updateLightbox();
+      }
+    }
+
     lightboxClose.addEventListener("click", closeLightbox);
     lightboxOverlay.addEventListener("click", closeLightbox);
     lightboxPrev.addEventListener("click", prevImage);
@@ -383,14 +398,14 @@
 
     renderTabs();
     renderGrid();
+
+    window.SAMOE = window.SAMOE || {};
+    window.SAMOE._galleryInitialized = true;
+    window.SAMOE.refreshGallery = refreshGallery;
   }
 
-  /* Expose initGallery on SAMOE immediately so work.html can call it */
-  if (window.SAMOE) {
-    window.SAMOE.initGallery = initGallery;
-  } else {
-    window.SAMOE = { initGallery: initGallery };
-  }
+  window.SAMOE = window.SAMOE || {};
+  window.SAMOE.initGallery = initGallery;
 
   document.addEventListener("DOMContentLoaded", function () {
     initReveal();

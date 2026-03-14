@@ -15,13 +15,13 @@
       gate_title: "Select language",
       gate_sub: "Choose your preferred language to continue.",
 
-      hero_kicker: "MENA-based \u2022 International capability",
+      hero_kicker: "MENA-based • International capability",
       hero_title: "SAMOE STUDIOS",
-      hero_slogan: "Architecture, interiors, and delivery \u2014 from concept to execution.",
-      hero_sub: "Studio-led accountability with a trusted partner network. Headquarters: Erbil, Iraq.",
+      hero_slogan: "Architecture, interiors, and delivery — from concept to execution.",
+      hero_sub: "SAMOE STUDIOS is an architecture and retail design studio headquartered in Erbil, Iraq, delivering architecture, interior design, and project delivery services across Iraq and the MENA region.",
 
-      case_title: "Special Lady \u2014 Retail transformation",
-      case_tag: "Iraq \u2022 Retail \u2022 Rebrand \u2022 Renovation \u2022 Systems",
+      case_title: "Special Lady — Retail transformation",
+      case_tag: "Iraq • Retail • Rebrand • Renovation • Systems",
       case_desc: "Rebrand and spatial expansion integrating architectural redesign, rollout coordination, and operational systems alignment.",
 
       tl_start: "Project start",
@@ -53,8 +53,8 @@
 
       who_title: "Who we are",
       who_sub: "Studio-led accountability",
-      who_p1: "SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation\u2014combining studio-led direction with a vetted execution network to control quality and outcomes.",
-      who_p2: "We operate across retail, residential, commercial, and institutional work\u2014engaging where we can bring structure, spatial intelligence, and delivery discipline.",
+      who_p1: "SAMOE STUDIOS is a multidisciplinary architectural and delivery practice. We lead projects from early planning through design development, documentation, procurement, and implementation—combining studio-led direction with a vetted execution network to control quality and outcomes.",
+      who_p2: "We operate across retail, residential, commercial, and institutional work—engaging where we can bring structure, spatial intelligence, and delivery discipline.",
 
       offer_title: "What we offer",
       offer_sub: "Core services",
@@ -73,10 +73,10 @@
 
       delivery_title: "Delivery model",
       delivery_sub: "How we execute",
-      d1: "01 \u2014 Discovery: Objectives, constraints, budget logic, timeline, success KPIs.",
-      d2: "02 \u2014 Design + Documentation: Concept \u2192 detailed design, BOQ alignment, technical packages, execution clarity.",
-      d3: "03 \u2014 Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.",
-      d4: "04 \u2014 Implementation + QA: Site coordination, inspections, punch lists, handover \u2014 measurable quality control.",
+      d1: "01 — Discovery: Objectives, constraints, budget logic, timeline, success KPIs.",
+      d2: "02 — Design + Documentation: Concept → detailed design, BOQ alignment, technical packages, execution clarity.",
+      d3: "03 — Procurement + Partners: Supplier strategy, approvals, and partner selection under SAMOE standards.",
+      d4: "04 — Implementation + QA: Site coordination, inspections, punch lists, handover — measurable quality control.",
 
       delivery_step_1_title: "Discovery",
       delivery_step_2_title: "Design + Documentation",
@@ -84,13 +84,13 @@
       delivery_step_4_title: "Implementation + QA",
 
       name_title: "The name",
-      name_sub: "SAMOE (pronounced \u201CSah-moe\u201D)",
-      name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark\u2014adaptable across sectors, places, and project scales.",
+      name_sub: "SAMOE (pronounced “Sah-moe”)",
+      name_p: "SAMOE is intentionally not an acronym. It functions as a studio mark—adaptable across sectors, places, and project scales.",
 
       work_kicker: "Work",
       work_title: "Work",
-      work_sub: "Selected case study",
-      work_case_desc: "The studio is leading the rebrand and spatial expansion of Special Lady, integrating architectural redesign, expansion coordination, and operational systems alignment.",
+      work_sub: "Selected architecture, interior design and retail transformation case study in Erbil, Iraq.",
+      work_case_desc: "SAMOE STUDIOS is leading the rebrand and spatial expansion of Special Lady in Erbil, integrating architectural redesign, interior planning, expansion coordination, and operational systems alignment.",
 
       work_meta_client: "Client",
       work_meta_sector: "Sector",
@@ -101,11 +101,11 @@
       work_meta_type_value: "Rebrand / Renovation / Systems",
 
       scope_t: "Scope",
-      scope_d: "Concept, redesign, renovation support, implementation coordination.",
+      scope_d: "Architecture, concept development, redesign, renovation support, and implementation coordination.",
       systems_t: "Systems",
-      systems_d: "Documentation discipline, procurement control, operational alignment.",
+      systems_d: "Documentation discipline, procurement control, retail planning, and operational alignment.",
       outcome_t: "Outcome",
-      outcome_d: "Brand coherence, execution accountability, improved customer experience.",
+      outcome_d: "Brand coherence, execution accountability, improved customer experience, and stronger retail environment quality.",
       more_cases: "More case studies will be published as documentation is finalized.",
 
       gallery_kicker: "Documentation",
@@ -151,233 +151,216 @@
       footer_nav_title: "Navigation",
       footer_contact_title: "Contact",
       footer_social_title: "Social",
-      footer_copy: "Architecture, interiors, and delivery \u2014 from concept to execution.",
-      footer_rights: "\u00A9 2025\u20132026 SAMOE STUDIOS LTD"
+      footer_copy: "Architecture, interiors, and delivery — from concept to execution.",
+      footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     },
 
     ar: {
-      nav_practice: "\u0627\u0644\u0645\u0645\u0627\u0631\u0633\u0629",
-      nav_work: "\u0627\u0644\u0623\u0639\u0645\u0627\u0644",
-      nav_products: "\u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A",
-      nav_contact: "\u0627\u0644\u062A\u0648\u0627\u0635\u0644",
-      nav_inquiry: "\u0627\u0633\u062A\u0641\u0633\u0627\u0631",
-      home_home: "\u0627\u0644\u0631\u0626\u064A\u0633\u064A\u0629",
+      nav_practice: "الممارسة",
+      nav_work: "الأعمال",
+      nav_products: "المنتجات",
+      nav_contact: "التواصل",
+      nav_inquiry: "استفسار",
+      home_home: "الرئيسية",
 
-      gate_title: "\u0627\u062E\u062A\u0631 \u0627\u0644\u0644\u063A\u0629",
-      gate_sub: "\u0627\u062E\u062A\u0631 \u0644\u063A\u062A\u0643 \u0627\u0644\u0645\u0641\u0636\u0644\u0629 \u0644\u0644\u0645\u062A\u0627\u0628\u0639\u0629.",
+      gate_title: "اختر اللغة",
+      gate_sub: "اختر لغتك المفضلة للمتابعة.",
 
-      hero_kicker: "\u0627\u0644\u0634\u0631\u0642 \u0627\u0644\u0623\u0648\u0633\u0637 \u0648\u0634\u0645\u0627\u0644 \u0623\u0641\u0631\u064A\u0642\u064A\u0627 \u2022 \u0625\u0645\u0643\u0627\u0646\u064A\u0629 \u0627\u0644\u0639\u0645\u0644 \u062F\u0648\u0644\u064A\u0627\u064B",
+      hero_kicker: "الشرق الأوسط وشمال أفريقيا • إمكانية العمل دولياً",
       hero_title: "SAMOE STUDIOS",
-      hero_slogan: "\u0639\u0645\u0627\u0631\u0629\u060C \u062A\u0635\u0645\u064A\u0645 \u062F\u0627\u062E\u0644\u064A\u060C \u0648\u062A\u0633\u0644\u064A\u0645 \u2014 \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0625\u0644\u0649 \u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      hero_sub: "\u0642\u064A\u0627\u062F\u0629 \u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0645\u0639 \u0634\u0628\u0643\u0629 \u0634\u0631\u0643\u0627\u0621 \u0645\u0648\u062B\u0648\u0642\u0629 \u0644\u0636\u0645\u0627\u0646 \u0627\u0644\u062C\u0648\u062F\u0629. \u0627\u0644\u0645\u0642\u0631: \u0623\u0631\u0628\u064A\u0644\u060C \u0627\u0644\u0639\u0631\u0627\u0642.",
+      hero_slogan: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
+      hero_sub: "SAMOE STUDIOS هو استوديو عمارة وتصميم تجزئة مقره في أربيل، العراق، ويقدم خدمات العمارة والتصميم الداخلي وتسليم المشاريع عبر العراق ومنطقة الشرق الأوسط وشمال أفريقيا.",
 
-      case_title: "Special Lady \u2014 \u062A\u0637\u0648\u064A\u0631 \u0645\u062A\u062C\u0631 \u062A\u062C\u0632\u0626\u0629",
-      case_tag: "\u0627\u0644\u0639\u0631\u0627\u0642 \u2022 \u062A\u062C\u0632\u0626\u0629 \u2022 \u0625\u0639\u0627\u062F\u0629 \u0639\u0644\u0627\u0645\u0629 \u2022 \u062A\u062C\u062F\u064A\u062F \u2022 \u0623\u0646\u0638\u0645\u0629",
-      case_desc: "\u0625\u0639\u0627\u062F\u0629 \u0639\u0644\u0627\u0645\u0629 \u0648\u062A\u0648\u0633\u0639\u0629 \u0645\u0643\u0627\u0646\u064A\u0629 \u0645\u0639 \u0625\u0639\u0627\u062F\u0629 \u062A\u0635\u0645\u064A\u0645 \u0645\u0639\u0645\u0627\u0631\u064A \u0648\u062A\u0646\u0633\u064A\u0642 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u0648\u0645\u0648\u0627\u0621\u0645\u0629 \u0627\u0644\u0623\u0646\u0638\u0645\u0629 \u0627\u0644\u062A\u0634\u063A\u064A\u0644\u064A\u0629.",
+      case_title: "Special Lady — تطوير متجر تجزئة",
+      case_tag: "العراق • تجزئة • إعادة علامة • تجديد • أنظمة",
+      case_desc: "إعادة علامة وتوسعة مكانية مع إعادة تصميم معماري وتنسيق التنفيذ ومواءمة الأنظمة التشغيلية.",
 
-      tl_start: "\u0628\u062F\u0627\u064A\u0629 \u0627\u0644\u0645\u0634\u0631\u0648\u0639",
-      tl_end: "\u0627\u0644\u062A\u0633\u0644\u064A\u0645 \u0627\u0644\u0643\u0627\u0645\u0644",
-      tl_start_val: "\u0623\u0643\u062A\u0648\u0628\u0631 2025",
-      tl_end_val: "\u0623\u0628\u0631\u064A\u0644 2026",
-      view_case: "\u0639\u0631\u0636 \u062F\u0631\u0627\u0633\u0629 \u0627\u0644\u062D\u0627\u0644\u0629",
+      tl_start: "بداية المشروع",
+      tl_end: "التسليم الكامل",
+      tl_start_val: "أكتوبر 2025",
+      tl_end_val: "أبريل 2026",
+      view_case: "عرض دراسة الحالة",
 
-      home_section_1_kicker: "\u062A\u0645\u0648\u0636\u0639 \u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648",
-      home_section_1_title: "\u0646\u0645\u0648\u0630\u062C \u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u064A\u0642\u0648\u062F\u0647 \u0627\u0644\u062A\u0633\u0644\u064A\u0645",
-      home_section_1_copy: "\u064A\u0639\u0645\u0644 SAMOE STUDIOS \u0641\u064A \u0627\u0644\u0645\u0633\u0627\u062D\u0629 \u0627\u0644\u062A\u064A \u064A\u062C\u0628 \u0623\u0646 \u062A\u0644\u062A\u0642\u064A \u0641\u064A\u0647\u0627 \u062C\u0648\u062F\u0629 \u0627\u0644\u0641\u0643\u0631\u0629 \u0645\u0639 \u0627\u0646\u0636\u0628\u0627\u0637 \u0627\u0644\u062A\u0646\u0641\u064A\u0630. \u0648\u064A\u0642\u0648\u0645 \u0647\u064A\u0643\u0644 \u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0639\u0644\u0649 \u0627\u0644\u062A\u0648\u062C\u064A\u0647 \u0648\u0627\u0644\u062A\u0648\u062B\u064A\u0642 \u0648\u0645\u0648\u0627\u0621\u0645\u0629 \u0627\u0644\u0645\u0648\u0631\u062F\u064A\u0646 \u0648\u0636\u0628\u0637 \u0627\u0644\u062A\u0633\u0644\u064A\u0645.",
-      home_link_practice: "\u0627\u0633\u062A\u0643\u0634\u0641 \u0627\u0644\u0645\u0645\u0627\u0631\u0633\u0629",
+      home_section_1_kicker: "تموضع الاستوديو",
+      home_section_1_title: "نموذج استوديو يقوده التسليم",
+      home_section_1_copy: "يعمل SAMOE STUDIOS في المساحة التي يجب أن تلتقي فيها جودة الفكرة مع انضباط التنفيذ. ويقوم هيكل الاستوديو على التوجيه والتوثيق ومواءمة الموردين وضبط التسليم.",
+      home_link_practice: "استكشف الممارسة",
 
-      home_section_2_kicker: "\u0627\u0644\u0623\u0639\u0645\u0627\u0644 \u0627\u0644\u0645\u062E\u062A\u0627\u0631\u0629",
-      home_section_3_kicker: "\u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A",
-      home_feature_title: "\u062A\u0648\u062C\u064A\u0647\u060C \u0647\u064A\u0643\u0644\u0629\u060C \u0645\u0633\u0627\u0621\u0644\u0629",
-      home_feature_copy: "\u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0644\u0627 \u064A\u062A\u0645\u0648\u0636\u0639 \u0643\u062A\u0635\u0645\u064A\u0645 \u0635\u0648\u0631 \u0641\u0642\u0637. \u0627\u0644\u0642\u064A\u0645\u0629 \u0627\u0644\u0623\u0633\u0627\u0633\u064A\u0629 \u0647\u064A \u0628\u0646\u0627\u0621 \u0623\u0646\u0638\u0645\u0629 \u0645\u0634\u0631\u0648\u0639 \u0645\u062A\u0631\u0627\u0628\u0637\u0629 \u064A\u0645\u0643\u0646 \u0623\u0646 \u062A\u0646\u062A\u0642\u0644 \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0625\u0644\u0649 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u0627\u0644\u062D\u0642\u064A\u0642\u064A \u0645\u0639 \u0636\u0628\u0637 \u0648\u0627\u0636\u062D.",
+      home_section_2_kicker: "الأعمال المختارة",
+      home_section_3_kicker: "المنتجات",
+      home_feature_title: "توجيه، هيكلة، مساءلة",
+      home_feature_copy: "الاستوديو لا يتموضع كتصميم صور فقط. القيمة الأساسية هي بناء أنظمة مشروع مترابطة يمكن أن تنتقل من الفكرة إلى التنفيذ الحقيقي مع ضبط واضح.",
 
-      studio_strip_headquarters: "\u0627\u0644\u0645\u0642\u0631",
-      studio_strip_registered_office: "\u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0633\u062C\u0644",
-      studio_strip_focus: "\u0627\u0644\u062A\u0631\u0643\u064A\u0632",
-      studio_strip_headquarters_value: "\u0623\u0631\u0628\u064A\u0644\u060C \u0627\u0644\u0639\u0631\u0627\u0642",
-      studio_strip_registered_office_value: "\u0644\u0646\u062F\u0646\u060C \u0627\u0644\u0645\u0645\u0644\u0643\u0629 \u0627\u0644\u0645\u062A\u062D\u062F\u0629",
-      studio_strip_focus_value: "\u0639\u0645\u0627\u0631\u0629 / \u062A\u0635\u0645\u064A\u0645 \u062F\u0627\u062E\u0644\u064A / \u062A\u0633\u0644\u064A\u0645",
+      studio_strip_headquarters: "المقر",
+      studio_strip_registered_office: "العنوان المسجل",
+      studio_strip_focus: "التركيز",
+      studio_strip_headquarters_value: "أربيل، العراق",
+      studio_strip_registered_office_value: "لندن، المملكة المتحدة",
+      studio_strip_focus_value: "عمارة / تصميم داخلي / تسليم",
 
-      practice_kicker: "\u0627\u0644\u0645\u0645\u0627\u0631\u0633\u0629",
-      practice_title: "\u0627\u0644\u0645\u0645\u0627\u0631\u0633\u0629",
-      practice_sub: "\u0645\u0642\u0631\u0651\u0646\u0627 \u0641\u064A \u0623\u0631\u0628\u064A\u0644\u060C \u0627\u0644\u0639\u0631\u0627\u0642. \u0646\u062D\u0646 \u0645\u062A\u0645\u0631\u0643\u0632\u0648\u0646 \u0641\u064A \u0645\u0646\u0637\u0642\u0629 \u0627\u0644\u0634\u0631\u0642 \u0627\u0644\u0623\u0648\u0633\u0637 \u0648\u0634\u0645\u0627\u0644 \u0623\u0641\u0631\u064A\u0642\u064A\u0627 \u0645\u0639 \u0625\u0645\u0643\u0627\u0646\u064A\u0629 \u0627\u0644\u0639\u0645\u0644 \u062F\u0648\u0644\u064A\u0627\u064B.",
+      practice_kicker: "الممارسة",
+      practice_title: "الممارسة",
+      practice_sub: "مقرّنا في أربيل، العراق. نحن متمركزون في منطقة الشرق الأوسط وشمال أفريقيا مع إمكانية العمل دولياً.",
 
-      who_title: "\u0645\u0646 \u0646\u062D\u0646",
-      who_sub: "\u0645\u0633\u0627\u0621\u0644\u0629 \u064A\u0642\u0648\u062F\u0647\u0627 \u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648",
-      who_p1: "SAMOE STUDIOS \u0645\u0645\u0627\u0631\u0633\u0629 \u0645\u062A\u0639\u062F\u062F\u0629 \u0627\u0644\u062A\u062E\u0635\u0635\u0627\u062A \u0641\u064A \u0627\u0644\u0639\u0645\u0627\u0631\u0629 \u0648\u0627\u0644\u062A\u0633\u0644\u064A\u0645. \u0646\u0642\u0648\u062F \u0627\u0644\u0645\u0634\u0627\u0631\u064A\u0639 \u0645\u0646 \u0627\u0644\u062A\u062E\u0637\u064A\u0637 \u0627\u0644\u0645\u0628\u0643\u0631 \u0645\u0631\u0648\u0631\u0627\u064B \u0628\u062A\u0637\u0648\u064A\u0631 \u0627\u0644\u062A\u0635\u0645\u064A\u0645 \u0648\u0627\u0644\u062A\u0648\u062B\u064A\u0642 \u0648\u0627\u0644\u0645\u0634\u062A\u0631\u064A\u0627\u062A \u0648\u0627\u0644\u062A\u0646\u0641\u064A\u0630 \u2014 \u0645\u0639 \u0642\u064A\u0627\u062F\u0629 \u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0648\u0634\u0628\u0643\u0629 \u062A\u0646\u0641\u064A\u0630 \u0645\u0648\u062B\u0648\u0642\u0629 \u0644\u0636\u0628\u0637 \u0627\u0644\u062C\u0648\u062F\u0629 \u0648\u0627\u0644\u0646\u062A\u0627\u0626\u062C.",
-      who_p2: "\u0646\u0639\u0645\u0644 \u0639\u0628\u0631 \u0627\u0644\u062A\u062C\u0632\u0626\u0629 \u0648\u0627\u0644\u0633\u0643\u0646\u064A \u0648\u0627\u0644\u062A\u062C\u0627\u0631\u064A \u0648\u0627\u0644\u0645\u0624\u0633\u0633\u064A \u2014 \u0648\u0646\u062E\u062A\u0627\u0631 \u0627\u0644\u0645\u0634\u0627\u0631\u064A\u0639 \u0627\u0644\u062A\u064A \u0646\u0633\u062A\u0637\u064A\u0639 \u0641\u064A\u0647\u0627 \u062A\u0642\u062F\u064A\u0645 \u0647\u064A\u0643\u0644\u0629 \u0648\u0627\u0636\u062D\u0629 \u0648\u0630\u0643\u0627\u0621 \u0645\u0643\u0627\u0646\u064A \u0648\u0627\u0646\u0636\u0628\u0627\u0637 \u0641\u064A \u0627\u0644\u062A\u0633\u0644\u064A\u0645.",
+      who_title: "من نحن",
+      who_sub: "مساءلة يقودها الاستوديو",
+      who_p1: "SAMOE STUDIOS ممارسة متعددة التخصصات في العمارة والتسليم. نقود المشاريع من التخطيط المبكر مروراً بتطوير التصميم والتوثيق والمشتريات والتنفيذ — مع قيادة استوديو وشبكة تنفيذ موثوقة لضبط الجودة والنتائج.",
+      who_p2: "نعمل عبر التجزئة والسكني والتجاري والمؤسسي — ونختار المشاريع التي نستطيع فيها تقديم هيكلة واضحة وذكاء مكاني وانضباط في التسليم.",
 
-      offer_title: "\u0645\u0627\u0630\u0627 \u0646\u0642\u062F\u0645",
-      offer_sub: "\u0627\u0644\u062E\u062F\u0645\u0627\u062A \u0627\u0644\u0623\u0633\u0627\u0633\u064A\u0629",
-      s1_t: "\u0639\u0645\u0627\u0631\u0629 + \u062A\u0635\u0645\u064A\u0645 \u062F\u0627\u062E\u0644\u064A",
-      s1_d: "\u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0625\u0644\u0649 \u062A\u0635\u0645\u064A\u0645 \u062A\u0641\u0635\u064A\u0644\u064A \u062C\u0627\u0647\u0632 \u0644\u0644\u062A\u0646\u0641\u064A\u0630.",
-      s2_t: "\u062A\u0635\u0645\u064A\u0645 \u062A\u062C\u0632\u0626\u0629 + \u0623\u0646\u0638\u0645\u0629 \u062A\u0634\u063A\u064A\u0644",
-      s2_d: "\u0641\u0631\u0648\u0639 \u0631\u0626\u064A\u0633\u064A\u0629\u060C \u062A\u0648\u0633\u0639\u0627\u062A\u060C \u062A\u062C\u062F\u064A\u062F\u0627\u062A\u060C \u0648\u0645\u0648\u0627\u0621\u0645\u0629 \u062A\u0634\u063A\u064A\u0644\u064A\u0629.",
-      s3_t: "\u062A\u0646\u0641\u064A\u0630 \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u0639\u0644\u0627\u0645\u0629",
-      s3_d: "\u0631\u0628\u0637 \u0647\u0648\u064A\u0629 \u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0628\u0627\u0644\u0645\u0643\u0627\u0646 \u0648\u0627\u0644\u062A\u0641\u0627\u0635\u064A\u0644 \u0648\u0627\u0644\u062A\u062C\u0631\u0628\u0629.",
-      s4_t: "\u062A\u0648\u062B\u064A\u0642 \u0641\u0646\u064A + BOQ",
-      s4_d: "\u062D\u0632\u0645 \u062A\u0646\u0641\u064A\u0630\u064A\u0629 \u0648\u062A\u0648\u0627\u0641\u0642 BOQ \u0644\u0636\u0645\u0627\u0646 \u062C\u0627\u0647\u0632\u064A\u0629 \u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      s5_t: "\u0645\u0634\u062A\u0631\u064A\u0627\u062A + \u0625\u062F\u0627\u0631\u0629 \u0645\u0648\u0631\u062F\u064A\u0646",
-      s5_d: "\u0627\u0639\u062A\u0645\u0627\u062F\u0627\u062A \u0645\u0648\u0627\u062F\u060C \u0627\u0633\u062A\u0631\u0627\u062A\u064A\u062C\u064A\u0629 \u0645\u0648\u0631\u062F\u064A\u0646\u060C \u0648\u062A\u0648\u0631\u064A\u062F \u0645\u0636\u0628\u0648\u0637 \u0627\u0644\u062C\u0648\u062F\u0629.",
-      s6_t: "\u0627\u0644\u062A\u0633\u0644\u064A\u0645 \u0639\u0628\u0631 \u0634\u0628\u0643\u0629 \u0634\u0631\u0643\u0627\u0621",
-      s6_d: "\u062A\u0634\u0637\u064A\u0628\u0627\u062A\u060C \u0646\u062C\u0627\u0631\u0629\u060C \u0625\u0646\u0627\u0631\u0629\u060C \u0644\u0627\u0641\u062A\u0627\u062A\u060C MEP\u060C \u0648\u062A\u0646\u0641\u064A\u0630 \u0623\u0646\u0638\u0645\u0629 \u0648\u0641\u0642 \u0645\u0639\u0627\u064A\u064A\u0631 SAMOE.",
+      offer_title: "ماذا نقدم",
+      offer_sub: "الخدمات الأساسية",
+      s1_t: "عمارة + تصميم داخلي",
+      s1_d: "من الفكرة إلى تصميم تفصيلي جاهز للتنفيذ.",
+      s2_t: "تصميم تجزئة + أنظمة تشغيل",
+      s2_d: "فروع رئيسية، توسعات، تجديدات، ومواءمة تشغيلية.",
+      s3_t: "تنفيذ إعادة العلامة",
+      s3_d: "ربط هوية العلامة بالمكان والتفاصيل والتجربة.",
+      s4_t: "توثيق فني + BOQ",
+      s4_d: "حزم تنفيذية وتوافق BOQ لضمان جاهزية التنفيذ.",
+      s5_t: "مشتريات + إدارة موردين",
+      s5_d: "اعتمادات مواد، استراتيجية موردين، وتوريد مضبوط الجودة.",
+      s6_t: "التسليم عبر شبكة شركاء",
+      s6_d: "تشطيبات، نجارة، إنارة، لافتات، MEP، وتنفيذ أنظمة وفق معايير SAMOE.",
 
-      delivery_title: "\u0646\u0645\u0648\u0630\u062C \u0627\u0644\u062A\u0633\u0644\u064A\u0645",
-      delivery_sub: "\u0643\u064A\u0641 \u0646\u0646\u0641\u0630",
-      d1: "01 \u2014 \u0627\u0644\u0627\u0643\u062A\u0634\u0627\u0641: \u0627\u0644\u0623\u0647\u062F\u0627\u0641\u060C \u0627\u0644\u0642\u064A\u0648\u062F\u060C \u0645\u0646\u0637\u0642 \u0627\u0644\u0645\u064A\u0632\u0627\u0646\u064A\u0629\u060C \u0627\u0644\u062C\u062F\u0648\u0644 \u0627\u0644\u0632\u0645\u0646\u064A\u060C \u0648\u0645\u0624\u0634\u0631\u0627\u062A \u0627\u0644\u0646\u062C\u0627\u062D.",
-      d2: "02 \u2014 \u0627\u0644\u062A\u0635\u0645\u064A\u0645 + \u0627\u0644\u062A\u0648\u062B\u064A\u0642: \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0625\u0644\u0649 \u062A\u0635\u0645\u064A\u0645 \u062A\u0641\u0635\u064A\u0644\u064A\u060C \u062A\u0648\u0627\u0641\u0642 BOQ\u060C \u062D\u0632\u0645 \u0641\u0646\u064A\u0629\u060C \u0648\u0636\u0648\u062D \u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      d3: "03 \u2014 \u0627\u0644\u0645\u0634\u062A\u0631\u064A\u0627\u062A + \u0627\u0644\u0634\u0631\u0643\u0627\u0621: \u0627\u0633\u062A\u0631\u0627\u062A\u064A\u062C\u064A\u0629 \u0627\u0644\u0645\u0648\u0631\u062F\u064A\u0646\u060C \u0627\u0644\u0627\u0639\u062A\u0645\u0627\u062F\u0627\u062A\u060C \u0648\u0627\u062E\u062A\u064A\u0627\u0631 \u0627\u0644\u0634\u0631\u0643\u0627\u0621 \u0648\u0641\u0642 \u0645\u0639\u0627\u064A\u064A\u0631 SAMOE.",
-      d4: "04 \u2014 \u0627\u0644\u062A\u0646\u0641\u064A\u0630 + \u0636\u0645\u0627\u0646 \u0627\u0644\u062C\u0648\u062F\u0629: \u062A\u0646\u0633\u064A\u0642 \u0627\u0644\u0645\u0648\u0642\u0639\u060C \u0641\u062D\u0648\u0635\u0627\u062A\u060C \u0642\u0648\u0627\u0626\u0645 \u0645\u0644\u0627\u062D\u0638\u0627\u062A\u060C \u062A\u0633\u0644\u064A\u0645 \u2014 \u0645\u0639 \u0636\u0628\u0637 \u062C\u0648\u062F\u0629 \u0642\u0627\u0628\u0644 \u0644\u0644\u0642\u064A\u0627\u0633.",
+      delivery_title: "نموذج التسليم",
+      delivery_sub: "كيف ننفذ",
+      d1: "01 — الاكتشاف: الأهداف، القيود، منطق الميزانية، الجدول الزمني، ومؤشرات النجاح.",
+      d2: "02 — التصميم + التوثيق: من الفكرة إلى تصميم تفصيلي، توافق BOQ، حزم فنية، وضوح التنفيذ.",
+      d3: "03 — المشتريات + الشركاء: استراتيجية الموردين، الاعتمادات، واختيار الشركاء وفق معايير SAMOE.",
+      d4: "04 — التنفيذ + ضمان الجودة: تنسيق الموقع، فحوصات، قوائم ملاحظات، تسليم — مع ضبط جودة قابل للقياس.",
 
-      delivery_step_1_title: "\u0627\u0644\u0627\u0643\u062A\u0634\u0627\u0641",
-      delivery_step_2_title: "\u0627\u0644\u062A\u0635\u0645\u064A\u0645 + \u0627\u0644\u062A\u0648\u062B\u064A\u0642",
-      delivery_step_3_title: "\u0627\u0644\u0645\u0634\u062A\u0631\u064A\u0627\u062A + \u0627\u0644\u0634\u0631\u0643\u0627\u0621",
-      delivery_step_4_title: "\u0627\u0644\u062A\u0646\u0641\u064A\u0630 + \u0636\u0645\u0627\u0646 \u0627\u0644\u062C\u0648\u062F\u0629",
+      delivery_step_1_title: "الاكتشاف",
+      delivery_step_2_title: "التصميم + التوثيق",
+      delivery_step_3_title: "المشتريات + الشركاء",
+      delivery_step_4_title: "التنفيذ + ضمان الجودة",
 
-      name_title: "\u0627\u0644\u0627\u0633\u0645",
-      name_sub: "SAMOE (\u062A\u064F\u0646\u0637\u0642: \u0633\u0627-\u0645\u0648)",
-      name_p: "SAMOE \u0644\u064A\u0633 \u0627\u062E\u062A\u0635\u0627\u0631\u0627\u064B. \u0647\u0648 \u0639\u0644\u0627\u0645\u0629 \u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0642\u0627\u0628\u0644\u0629 \u0644\u0644\u062A\u0643\u064A\u0641 \u0639\u0628\u0631 \u0627\u0644\u0642\u0637\u0627\u0639\u0627\u062A \u0648\u0627\u0644\u0623\u0645\u0627\u0643\u0646 \u0648\u062D\u062C\u0645 \u0627\u0644\u0645\u0634\u0627\u0631\u064A\u0639.",
+      name_title: "الاسم",
+      name_sub: "SAMOE (يُنطق “ساه-مو”)",
+      name_p: "SAMOE ليس اختصاراً مقصوداً. إنه يعمل كعلامة استوديو قابلة للتكيّف عبر القطاعات والأماكن وأحجام المشاريع.",
 
-      work_kicker: "\u0627\u0644\u0623\u0639\u0645\u0627\u0644",
-      work_title: "\u0627\u0644\u0623\u0639\u0645\u0627\u0644",
-      work_sub: "\u062F\u0631\u0627\u0633\u0629 \u062D\u0627\u0644\u0629 \u0645\u062E\u062A\u0627\u0631\u0629",
-      work_case_desc: "\u064A\u0642\u0648\u062F \u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0645\u0634\u0631\u0648\u0639 \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u0639\u0644\u0627\u0645\u0629 \u0648\u0627\u0644\u062A\u0648\u0633\u0639\u0629 \u0627\u0644\u0645\u0643\u0627\u0646\u064A\u0629 \u0644\u0640 Special Lady\u060C \u0645\u0639 \u062F\u0645\u062C \u0625\u0639\u0627\u062F\u0629 \u0627\u0644\u062A\u0635\u0645\u064A\u0645 \u0627\u0644\u0645\u0639\u0645\u0627\u0631\u064A \u0648\u062A\u0646\u0633\u064A\u0642 \u0627\u0644\u062A\u0648\u0633\u0639\u0629 \u0648\u0645\u0648\u0627\u0621\u0645\u0629 \u0627\u0644\u0623\u0646\u0638\u0645\u0629 \u0627\u0644\u062A\u0634\u063A\u064A\u0644\u064A\u0629.",
+      work_kicker: "الأعمال",
+      work_title: "الأعمال",
+      work_sub: "دراسة حالة مختارة في العمارة والتصميم الداخلي وتحويل بيئات التجزئة في أربيل، العراق.",
+      work_case_desc: "يقود SAMOE STUDIOS مشروع إعادة العلامة والتوسع المكاني لـ Special Lady في أربيل، مع دمج إعادة التصميم المعماري، والتخطيط الداخلي، وتنسيق التوسعة، ومواءمة الأنظمة التشغيلية.",
 
-      work_meta_client: "\u0627\u0644\u0639\u0645\u064A\u0644",
-      work_meta_sector: "\u0627\u0644\u0642\u0637\u0627\u0639",
-      work_meta_location: "\u0627\u0644\u0645\u0648\u0642\u0639",
-      work_meta_type: "\u0627\u0644\u0646\u0648\u0639",
-      work_meta_sector_value: "\u062A\u062C\u0632\u0626\u0629",
-      work_meta_location_value: "\u0623\u0631\u0628\u064A\u0644\u060C \u0627\u0644\u0639\u0631\u0627\u0642",
-      work_meta_type_value: "\u0625\u0639\u0627\u062F\u0629 \u0639\u0644\u0627\u0645\u0629 / \u062A\u062C\u062F\u064A\u062F / \u0623\u0646\u0638\u0645\u0629",
+      work_meta_client: "العميل",
+      work_meta_sector: "القطاع",
+      work_meta_location: "الموقع",
+      work_meta_type: "النوع",
+      work_meta_sector_value: "تجزئة",
+      work_meta_location_value: "أربيل، العراق",
+      work_meta_type_value: "إعادة علامة / تجديد / أنظمة",
 
-      scope_t: "\u0627\u0644\u0646\u0637\u0627\u0642",
-      scope_d: "\u0641\u0643\u0631\u0629\u060C \u0625\u0639\u0627\u062F\u0629 \u062A\u0635\u0645\u064A\u0645\u060C \u062F\u0639\u0645 \u062A\u062C\u062F\u064A\u062F\u060C \u0648\u062A\u0646\u0633\u064A\u0642 \u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      systems_t: "\u0627\u0644\u0623\u0646\u0638\u0645\u0629",
-      systems_d: "\u0627\u0646\u0636\u0628\u0627\u0637 \u062A\u0648\u062B\u064A\u0642\u060C \u0636\u0628\u0637 \u0645\u0634\u062A\u0631\u064A\u0627\u062A\u060C \u0648\u0645\u0648\u0627\u0621\u0645\u0629 \u062A\u0634\u063A\u064A\u0644\u064A\u0629.",
-      outcome_t: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629",
-      outcome_d: "\u062A\u0645\u0627\u0633\u0643 \u0627\u0644\u0639\u0644\u0627\u0645\u0629\u060C \u0645\u0633\u0627\u0621\u0644\u0629 \u062A\u0646\u0641\u064A\u0630\u060C \u0648\u062A\u062D\u0633\u064A\u0646 \u062A\u062C\u0631\u0628\u0629 \u0627\u0644\u0639\u0645\u064A\u0644.",
-      more_cases: "\u0633\u064A\u062A\u0645 \u0646\u0634\u0631 \u0627\u0644\u0645\u0632\u064A\u062F \u0645\u0646 \u062F\u0631\u0627\u0633\u0627\u062A \u0627\u0644\u062D\u0627\u0644\u0629 \u0639\u0646\u062F \u0627\u0643\u062A\u0645\u0627\u0644 \u0627\u0644\u062A\u0648\u062B\u064A\u0642.",
+      scope_t: "النطاق",
+      scope_d: "عمارة، وتطوير الفكرة، وإعادة التصميم، ودعم التجديد، وتنسيق التنفيذ.",
+      systems_t: "الأنظمة",
+      systems_d: "انضباط التوثيق، وضبط المشتريات، وتخطيط بيئات التجزئة، والمواءمة التشغيلية.",
+      outcome_t: "النتيجة",
+      outcome_d: "تماسك العلامة، ومساءلة التنفيذ، وتحسين تجربة العميل، ورفع جودة البيئة التجارية.",
+      more_cases: "سيتم نشر المزيد من دراسات الحالة عند اكتمال التوثيق.",
 
-      gallery_kicker: "\u0627\u0644\u062A\u0648\u062B\u064A\u0642",
-      gallery_title: "\u0645\u0639\u0631\u0636 \u0627\u0644\u0645\u0634\u0631\u0648\u0639",
+      gallery_kicker: "التوثيق",
+      gallery_title: "معرض المشروع",
 
-      products_kicker: "\u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A",
-      products_title: "\u0642\u0631\u064A\u0628\u0627\u064B",
-      products_sub: "\u062A\u062C\u0647\u064A\u0632\u0627\u062A \u062A\u062C\u0632\u0626\u0629 (\u0633\u062A\u0627\u0646\u062F\u0627\u062A\u060C \u0631\u0641\u0648\u0641\u060C \u0637\u0627\u0648\u0644\u0627\u062A\u060C \u0643\u0627\u0648\u0646\u062A\u0631\u0627\u062A) \u0648\u0623\u062B\u0627\u062B + \u0625\u0646\u0627\u0631\u0629 \u0644\u0644\u062A\u062C\u0632\u0626\u0629 \u0648\u0627\u0644\u0633\u0643\u0646.",
-      products_panel_label: "\u0627\u0644\u0641\u0626\u0627\u062A \u0627\u0644\u0645\u062E\u0637\u0637\u0629",
-      products_status_label: "\u0627\u0644\u062D\u0627\u0644\u0629",
-      products_status_title: "\u062E\u0637 \u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A \u0642\u064A\u062F \u0627\u0644\u062A\u0637\u0648\u064A\u0631",
-      products_status_copy: "\u0633\u064A\u062A\u0648\u0633\u0639 \u0647\u0630\u0627 \u0627\u0644\u0642\u0633\u0645 \u0645\u0639 \u0627\u0633\u062A\u0643\u0645\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0648\u062F\u064A\u0648 \u0644\u062A\u0637\u0648\u064A\u0631 \u0627\u0644\u0645\u0646\u062A\u062C\u0627\u062A\u060C \u0648\u0627\u0644\u062A\u0648\u0631\u064A\u062F\u060C \u0648\u0627\u0644\u0627\u0633\u062A\u0639\u062F\u0627\u062F \u0644\u0644\u0637\u0631\u062D \u0648\u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      products_cat_1: "\u062A\u062C\u0647\u064A\u0632\u0627\u062A \u062A\u062C\u0632\u0626\u0629",
-      products_cat_2: "\u0623\u0646\u0638\u0645\u0629 \u0639\u0631\u0636",
-      products_cat_3: "\u0643\u0627\u0648\u0646\u062A\u0631\u0627\u062A \u0648\u0637\u0627\u0648\u0644\u0627\u062A",
-      products_cat_4: "\u0631\u0641\u0648\u0641 \u0648\u062A\u062E\u0632\u064A\u0646",
-      products_cat_5: "\u0623\u062B\u0627\u062B",
-      products_cat_6: "\u0625\u0646\u0627\u0631\u0629",
+      products_kicker: "المنتجات",
+      products_title: "قريباً",
+      products_sub: "تجهيزات عرض للبيع بالتجزئة (ستاندات، رفوف، طاولات، كاونترات) وأثاث + إنارة للبيئات التجارية والسكنية.",
+      products_panel_label: "الفئات المخطط لها",
+      products_status_label: "الحالة",
+      products_status_title: "خط المنتجات قيد التطوير",
+      products_status_copy: "سيتوسع هذا القسم مع قيام الاستوديو بتطوير تصميم المنتجات والتوريد وجاهزية الطرح والتنفيذ.",
+      products_cat_1: "تجهيزات تجزئة",
+      products_cat_2: "أنظمة عرض",
+      products_cat_3: "كاونترات وطاولات",
+      products_cat_4: "رفوف وتخزين",
+      products_cat_5: "أثاث",
+      products_cat_6: "إنارة",
 
-      contact_kicker: "\u0627\u0644\u062A\u0648\u0627\u0635\u0644",
-      contact_title: "\u0627\u0633\u062A\u0641\u0633\u0627\u0631",
-      contact_sub: "\u062A\u0648\u0627\u0635\u0644 \u0645\u0639 SAMOE STUDIOS LTD \u0644\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631\u0627\u062A \u0627\u0644\u0639\u0627\u0645\u0629\u060C \u0645\u0646\u0627\u0642\u0634\u0627\u062A \u0627\u0644\u0645\u0634\u0627\u0631\u064A\u0639\u060C \u0648\u0627\u0644\u0639\u0631\u0648\u0636 \u0627\u0644\u062A\u062C\u0627\u0631\u064A\u0629.",
-      contact_form_title: "\u0625\u0631\u0633\u0627\u0644 \u0627\u0633\u062A\u0641\u0633\u0627\u0631",
-      contact_form_sub: "\u0627\u0645\u0644\u0623 \u0628\u064A\u0627\u0646\u0627\u062A\u0643 \u0648\u0623\u0631\u0633\u0644 \u0645\u0628\u0627\u0634\u0631\u0629 \u0645\u0646 \u062E\u0644\u0627\u0644 \u0627\u0644\u0645\u0648\u0642\u0639.",
-      contact_general_label: "\u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631\u0627\u062A \u0627\u0644\u0639\u0627\u0645\u0629",
-      contact_general_desc: "\u0644\u0644\u062A\u0648\u0627\u0635\u0644 \u0627\u0644\u0639\u0627\u0645 \u0648\u0627\u0633\u062A\u0641\u0633\u0627\u0631\u0627\u062A \u0627\u0644\u0645\u0648\u0642\u0639 \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A.",
-      contact_sales_label: "\u0627\u0644\u0639\u0631\u0648\u0636 \u0627\u0644\u062A\u062C\u0627\u0631\u064A\u0629",
-      contact_sales_desc: "\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631\u0627\u062A \u0627\u0644\u0639\u0645\u0644\u0627\u0621 \u0648\u0627\u0644\u0639\u0631\u0648\u0636 \u0627\u0644\u062A\u062C\u0627\u0631\u064A\u0629.",
-      contact_registered_office: "\u0627\u0644\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0633\u062C\u0644",
+      contact_kicker: "التواصل",
+      contact_title: "استفسار",
+      contact_sub: "تواصل مع SAMOE STUDIOS LTD للاستفسارات العامة ومناقشات المشاريع والعروض التجارية.",
+      contact_form_title: "أرسل استفساراً",
+      contact_form_sub: "املأ بياناتك وأرسل مباشرة عبر الموقع.",
+      contact_general_label: "استفسارات عامة",
+      contact_general_desc: "التواصل العام واستفسارات الموقع.",
+      contact_sales_label: "عروض تجارية",
+      contact_sales_desc: "استفسارات العملاء والعروض التجارية.",
+      contact_registered_office: "العنوان المسجل",
 
-      f_department: "\u0646\u0648\u0639 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631",
-      f_department_sales: "\u0627\u0633\u062A\u0641\u0633\u0627\u0631 \u0639\u0645\u064A\u0644 / \u0639\u0631\u0636 \u062A\u062C\u0627\u0631\u064A",
-      f_department_info: "\u0627\u0633\u062A\u0641\u0633\u0627\u0631 \u0639\u0627\u0645",
-      f_name: "\u0627\u0644\u0627\u0633\u0645",
-      f_company: "\u0627\u0644\u0634\u0631\u0643\u0629",
-      f_phone: "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062A\u0641",
-      f_email: "\u0627\u0644\u0628\u0631\u064A\u062F \u0627\u0644\u0625\u0644\u0643\u062A\u0631\u0648\u0646\u064A",
-      f_location: "\u0645\u0648\u0642\u0639 \u0627\u0644\u0645\u0634\u0631\u0648\u0639",
-      f_desc: "\u0627\u0644\u0645\u0634\u0631\u0648\u0639 / \u0627\u0644\u0648\u0635\u0641",
-      f_desc_ph: "\u0646\u0637\u0627\u0642 \u0645\u062E\u062A\u0635\u0631\u060C \u0627\u0644\u0645\u0648\u0642\u0639\u060C \u0627\u0644\u062C\u062F\u0648\u0644 \u0627\u0644\u0632\u0645\u0646\u064A\u060C \u0623\u064A \u0642\u064A\u0648\u062F...",
-      send_inquiry: "\u0625\u0631\u0633\u0627\u0644 \u0627\u0644\u0627\u0633\u062A\u0641\u0633\u0627\u0631",
+      f_department: "نوع الاستفسار",
+      f_department_sales: "استفسار عميل / عرض تجاري",
+      f_department_info: "استفسار عام",
+      f_name: "الاسم",
+      f_company: "الشركة",
+      f_phone: "الهاتف",
+      f_email: "البريد الإلكتروني",
+      f_location: "موقع المشروع",
+      f_desc: "المشروع / الوصف",
+      f_desc_ph: "نبذة عن النطاق، الموقع، الجدول الزمني، وأي قيود...",
+      send_inquiry: "إرسال الاستفسار",
 
-      footer_nav_title: "\u0627\u0644\u062A\u0646\u0642\u0644",
-      footer_contact_title: "\u0627\u0644\u062A\u0648\u0627\u0635\u0644",
-      footer_social_title: "\u0627\u0644\u062D\u0633\u0627\u0628\u0627\u062A",
-      footer_copy: "\u0639\u0645\u0627\u0631\u0629\u060C \u062A\u0635\u0645\u064A\u0645 \u062F\u0627\u062E\u0644\u064A\u060C \u0648\u062A\u0633\u0644\u064A\u0645 \u2014 \u0645\u0646 \u0627\u0644\u0641\u0643\u0631\u0629 \u0625\u0644\u0649 \u0627\u0644\u062A\u0646\u0641\u064A\u0630.",
-      footer_rights: "\u00A9 2025\u20132026 SAMOE STUDIOS LTD"
+      footer_nav_title: "التنقل",
+      footer_contact_title: "التواصل",
+      footer_social_title: "اجتماعي",
+      footer_copy: "عمارة، تصميم داخلي، وتسليم — من الفكرة إلى التنفيذ.",
+      footer_rights: "© 2025–2026 SAMOE STUDIOS LTD"
     }
   };
 
   function getLang() {
-    try {
-      return localStorage.getItem(STORAGE_KEY) || "en";
-    } catch (error) {
-      return "en";
-    }
+    return localStorage.getItem(STORAGE_KEY) || "en";
   }
 
   function setLang(lang) {
-    try {
-      localStorage.setItem(STORAGE_KEY, lang);
-    } catch (error) {}
-    applyLang(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+    applyLanguage(lang);
   }
 
-  function applyLang(lang) {
-    var current = dict[lang] || dict.en;
-    var isArabic = lang === "ar";
+  function applyLanguage(lang) {
+    var active = dict[lang] || dict.en;
 
     document.documentElement.lang = lang;
-    document.documentElement.dir = isArabic ? "rtl" : "ltr";
-    document.body.classList.toggle("rtl", isArabic);
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.body.classList.toggle("rtl", lang === "ar");
 
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var key = el.getAttribute("data-i18n");
-      if (current[key] !== undefined) {
-        el.textContent = current[key];
+      if (active[key]) {
+        el.textContent = active[key];
       }
     });
 
-    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
-      var key = el.getAttribute("data-i18n-ph");
-      if (current[key] !== undefined) {
-        el.setAttribute("placeholder", current[key]);
+    document.querySelectorAll("[data-i18n-placeholder]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-placeholder");
+      if (active[key]) {
+        el.setAttribute("placeholder", active[key]);
       }
     });
   }
 
-  function initLanguageSwitcher(enButtonId, arButtonId) {
-    var enBtn = document.getElementById(enButtonId);
-    var arBtn = document.getElementById(arButtonId);
+  function initLanguageSwitcher(enId, arId) {
+    var enBtn = document.getElementById(enId);
+    var arBtn = document.getElementById(arId);
 
-    if (!enBtn || !arBtn) return;
+    if (enBtn) {
+      enBtn.addEventListener("click", function () {
+        setLang("en");
+      });
+    }
 
-    var updateState = function (lang) {
-      enBtn.classList.toggle("active", lang === "en");
-      arBtn.classList.toggle("active", lang === "ar");
-    };
+    if (arBtn) {
+      arBtn.addEventListener("click", function () {
+        setLang("ar");
+      });
+    }
 
-    var current = getLang();
-    updateState(current);
-
-    enBtn.addEventListener("click", function () {
-      setLang("en");
-      updateState("en");
-    });
-
-    arBtn.addEventListener("click", function () {
-      setLang("ar");
-      updateState("ar");
-    });
+    applyLanguage(getLang());
   }
 
-  window.SAMOE = {
-    getLang: getLang,
-    setLang: setLang,
-    applyLang: applyLang,
-    initLanguageSwitcher: initLanguageSwitcher
-  };
-
-  document.addEventListener("DOMContentLoaded", function () {
-    applyLang(getLang());
-  });
+  window.SAMOE = window.SAMOE || {};
+  window.SAMOE.dict = dict;
+  window.SAMOE.getLang = getLang;
+  window.SAMOE.setLang = setLang;
+  window.SAMOE.applyLanguage = applyLanguage;
+  window.SAMOE.initLanguageSwitcher = initLanguageSwitcher;
 })();
